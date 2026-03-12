@@ -1,0 +1,131 @@
+---
+title: "Trip Aggregation Report"
+format:
+  html:
+    self-contained: true
+    theme: cosmo
+    toc: false
+    code-fold: true
+    code-summary: "Show code"
+jupyter: python3
+---
+
+```{python}
+#| tags: [parameters]
+summary_json_path: str = ""
+```
+
+```{python}
+#| echo: false
+import json
+from pathlib import Path
+from IPython.display import display, HTML
+
+with open(summary_json_path, "r") as f:
+    s = json.load(f)
+
+bi = s["base_indicators"]
+ds = s["detailed_summary"]
+dr = s["date_range"]
+verdict = bi["verdict"]
+verdict_color = {"PASS": "#198754", "WARN": "#fd7e14", "FAIL": "#dc3545"}.get(verdict, "#6c757d")
+
+report_dir = Path(summary_json_path).parent
+
+display(HTML(f"""
+<div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
+  <div style="font-size:1.1rem; color:#555;">
+    <strong>Account:</strong> {s['account_id']}<br>
+    <strong>Period:</strong> {dr['start']} &ndash; {dr['end']}<br>
+    <strong>Run:</strong> {s['run_timestamp']}
+  </div>
+  <div style="margin-left:auto; background:{verdict_color}; color:white;
+              padding:10px 24px; border-radius:6px; font-size:1.4rem; font-weight:bold;">
+    {verdict}
+  </div>
+</div>
+"""))
+```
+
+## Base Indicators
+
+```{python}
+#| echo: false
+rows = [
+    ("Trip Coverage", f"{bi['trip_coverage_pct']}%"),
+    ("Total Trips in Collection", bi['total_trips_in_collection']),
+    ("Missing from trip_agg", bi['missing_trip_count']),
+    ("Complete Trips", bi['complete_trips']),
+    ("Unbroken Unmatched", bi['unbroken_unmatched_count']),
+    ("Broken Unmatched", bi['broken_unmatched_count']),
+]
+
+table_rows = "".join(
+    f"<tr><td style='padding:6px 12px;color:#555;'>{k}</td>"
+    f"<td style='padding:6px 12px;font-weight:600;'>{v}</td></tr>"
+    for k, v in rows
+)
+
+display(HTML(f"""
+<table style="border-collapse:collapse; width:100%; max-width:480px;">
+  <tbody>{table_rows}</tbody>
+</table>
+"""))
+```
+
+## Alert Mismatches
+
+```{python}
+#| echo: false
+mismatched = ds.get("mismatched_alerts", [])
+passed = ds.get("passed_alerts", [])
+total_joined = ds.get("total_joined_trips_for_alert_comparison", 0)
+
+if mismatched:
+    header = "<tr><th style='text-align:left;padding:6px 12px;border-bottom:2px solid #dee2e6;'>Alert</th><th style='padding:6px 12px;border-bottom:2px solid #dee2e6;'>Mismatches</th><th style='padding:6px 12px;border-bottom:2px solid #dee2e6;'>Mismatch %</th></tr>"
+    rows_html = "".join(
+        f"<tr><td style='padding:6px 12px;'>{r['alert_name']}</td>"
+        f"<td style='padding:6px 12px;text-align:center;'>{r['mismatch_count']}</td>"
+        f"<td style='padding:6px 12px;text-align:center;'>{r['mismatch_pct']}%</td></tr>"
+        for r in mismatched
+    )
+    display(HTML(f"""
+    <p style="color:#555;font-size:0.9rem;">Compared across {total_joined} trips</p>
+    <table style="border-collapse:collapse;width:100%;max-width:560px;">
+      <thead>{header}</thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+    """))
+else:
+    display(HTML("<p style='color:#198754;'>✓ No alert mismatches found.</p>"))
+
+if passed:
+    passed_str = ", ".join(passed)
+    display(HTML(f"""
+    <details style="margin-top:16px;">
+      <summary style="cursor:pointer;color:#555;">Passed alerts ({len(passed)})</summary>
+      <p style="margin-top:8px;color:#555;font-size:0.9rem;">{passed_str}</p>
+    </details>
+    """))
+```
+
+## Files
+
+```{python}
+#| echo: false
+links = []
+
+log_path = report_dir / "run.log"
+if log_path.exists():
+    links.append(f'<a href="run.log">📋 Execution Log</a>')
+
+csvs = sorted(report_dir.glob("*.csv"))
+if csvs:
+    csv_links = " &nbsp;|&nbsp; ".join(
+        f'<a href="{c.name}">{c.stem}</a>' for c in csvs
+    )
+    links.append(f"📂 CSVs: {csv_links}")
+
+if links:
+    display(HTML("<br>".join(links)))
+```
