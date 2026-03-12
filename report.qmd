@@ -32,10 +32,16 @@ verdict_color = {"PASS": "#198754", "WARN": "#fd7e14", "FAIL": "#dc3545"}.get(ve
 
 report_dir = Path(summary_json_path).parent
 
+account_name = s.get("account_name")
+account_display = (
+    f"{account_name} <span style='color:#888;font-size:0.9em;'>({s['account_id']})</span>"
+    if account_name else s["account_id"]
+)
+
 display(HTML(f"""
 <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
   <div style="font-size:1.1rem; color:#555;">
-    <strong>Account:</strong> {s['account_id']}<br>
+    <strong>Account:</strong> {account_display}<br>
     <strong>Period:</strong> {dr['start']} &ndash; {dr['end']}<br>
     <strong>Run:</strong> {s['run_timestamp']}
   </div>

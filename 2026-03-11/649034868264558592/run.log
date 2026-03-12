@@ -19,3 +19,25 @@
   drowsiness               1                 293          0.34
 mobile_phone               1                 293          0.34
 2026-03-12 10:59:35  INFO      Reports written to: /Users/satyamsaurav/Intangles/trip_agg_analysis_script/output/2026-03-11/649034868264558592
+2026-03-12 11:06:40  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-12 11:06:43  INFO      Account name: RajRatan Travels
+2026-03-12 11:06:43  INFO      Fetching trip_agg page: 1
+2026-03-12 11:06:47  INFO      Total trip-agg records collected: 401
+2026-03-12 11:06:47  INFO      Fetching vehicle page: 1
+2026-03-12 11:06:51  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-12 11:09:25  INFO      Total trips collected for account 649034868264558592: 303
+2026-03-12 11:12:36  INFO      Summary written to: ./output/2026-03-11/649034868264558592/summary.json
+2026-03-12 11:12:36  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-12 11:12:36  INFO      Trips after merge/filters: 142
+2026-03-12 11:12:36  INFO      Completely processed trips: 142
+2026-03-12 11:12:36  INFO      Missing trips in trip_agg: 8
+2026-03-12 11:12:36  INFO      Unbroken unmatched trips: 0
+2026-03-12 11:12:36  INFO      Broken unmatched trips: 2
+2026-03-12 11:12:36  INFO      Top alert mismatches:
+  alert_name  mismatch_count  total_joined_trips  mismatch_pct
+      idling               5                 295          1.69
+         fcw               4                 295          1.36
+ eyes_closed               3                 295          1.02
+  drowsiness               1                 295          0.34
+mobile_phone               1                 295          0.34
+2026-03-12 11:12:36  INFO      Reports written to: /Users/satyamsaurav/Intangles/trip_agg_analysis_script/output/2026-03-11/649034868264558592
