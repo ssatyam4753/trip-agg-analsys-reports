@@ -142,10 +142,16 @@ def build_report(summary_json_path: str) -> str:
     bg = VERDICT_BG.get(verdict, "#e2e3e5")
     report_dir = Path(summary_json_path).parent
 
+    account_name = s.get("account_name")
+    account_display = (
+        f"{account_name} <span style='color:#888;font-size:0.9em;'>({s['account_id']})</span>"
+        if account_name else s["account_id"]
+    )
+
     header = f"""
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
   <div style="font-size:1rem;color:#555;line-height:1.7;">
-    <strong>Account:</strong> {s['account_id']}<br>
+    <strong>Account:</strong> {account_display}<br>
     <strong>Period:</strong> {dr['start']} &ndash; {dr['end']}<br>
     <strong>Run:</strong> {s['run_timestamp']}
   </div>
@@ -168,7 +174,7 @@ def build_report(summary_json_path: str) -> str:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trip Aggregation Report — {s['account_id']} — {dr['start'][:10]}</title>
+  <title>Trip Aggregation Report — {account_name or s['account_id']} — {dr['start'][:10]}</title>
   <style>
     body {{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
