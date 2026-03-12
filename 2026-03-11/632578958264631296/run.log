@@ -1,0 +1,35 @@
+2026-03-12 12:04:11  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-03-12 12:04:13  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-03-12 12:04:13  INFO      Fetching trip_agg page: 1
+2026-03-12 12:04:31  INFO      Fetching trip_agg page: 2
+2026-03-12 12:04:45  INFO      Fetching trip_agg page: 3
+2026-03-12 12:04:50  INFO      Fetching trip_agg page: 4
+2026-03-12 12:05:01  INFO      Fetching trip_agg page: 5
+2026-03-12 12:05:07  INFO      Fetching trip_agg page: 6
+2026-03-12 12:05:12  INFO      Fetching trip_agg page: 7
+2026-03-12 12:05:17  INFO      Fetching trip_agg page: 8
+2026-03-12 12:05:26  INFO      Fetching trip_agg page: 9
+2026-03-12 12:05:33  INFO      Fetching trip_agg page: 10
+2026-03-12 12:05:40  INFO      Fetching trip_agg page: 11
+2026-03-12 12:05:43  INFO      Total trip-agg records collected: 5004
+2026-03-12 12:05:43  INFO      Fetching vehicle page: 1
+2026-03-12 12:05:47  INFO      Fetching vehicle page: 2
+2026-03-12 12:05:53  INFO      Fetching vehicle page: 3
+2026-03-12 12:05:58  INFO      Fetching vehicle page: 4
+2026-03-12 12:06:04  INFO      Total vehicles collected for account 632578958264631296: 1854
+2026-03-12 12:30:38  INFO      Total trips collected for account 632578958264631296: 5022
+2026-03-12 13:07:51  INFO      Summary written to: ./output/2026-03-11/632578958264631296/summary.json
+2026-03-12 13:07:51  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-12 13:07:51  INFO      Trips after merge/filters: 2478
+2026-03-12 13:07:51  INFO      Completely processed trips: 2477
+2026-03-12 13:07:51  INFO      Missing trips in trip_agg: 37
+2026-03-12 13:07:51  INFO      Unbroken unmatched trips: 0
+2026-03-12 13:07:51  INFO      Broken unmatched trips: 0
+2026-03-12 13:07:51  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+unscheduled_driving              12                4985          0.24
+         fuel_chori               3                4985          0.06
+       slow_running               2                4985          0.04
+             idling               0                4985          0.00
+         over_speed               0                4985          0.00
+2026-03-12 13:07:51  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-11/632578958264631296
