@@ -1,0 +1,21 @@
+2026-03-12 10:55:16  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-12 10:55:16  INFO      Fetching trip_agg page: 1
+2026-03-12 10:55:31  INFO      Total trip-agg records collected: 399
+2026-03-12 10:55:31  INFO      Fetching vehicle page: 1
+2026-03-12 10:55:32  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-12 10:57:02  INFO      Total trips collected for account 649034868264558592: 303
+2026-03-12 10:59:35  INFO      Summary written to: ./output/2026-03-11/649034868264558592/summary.json
+2026-03-12 10:59:35  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-12 10:59:35  INFO      Trips after merge/filters: 140
+2026-03-12 10:59:35  INFO      Completely processed trips: 140
+2026-03-12 10:59:35  INFO      Missing trips in trip_agg: 10
+2026-03-12 10:59:35  INFO      Unbroken unmatched trips: 0
+2026-03-12 10:59:35  INFO      Broken unmatched trips: 2
+2026-03-12 10:59:35  INFO      Top alert mismatches:
+  alert_name  mismatch_count  total_joined_trips  mismatch_pct
+      idling               5                 293          1.71
+         fcw               4                 293          1.37
+ eyes_closed               3                 293          1.02
+  drowsiness               1                 293          0.34
+mobile_phone               1                 293          0.34
+2026-03-12 10:59:35  INFO      Reports written to: /Users/satyamsaurav/Intangles/trip_agg_analysis_script/output/2026-03-11/649034868264558592
