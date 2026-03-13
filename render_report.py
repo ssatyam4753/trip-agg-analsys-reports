@@ -36,6 +36,15 @@ def _metric_card(title: str, rows: list, accent: str = "#dee2e6") -> str:
 
 
 def render_base_indicators(bi: dict) -> str:
+    total = bi["total_trips_in_collection"] or 1  # guard against division by zero
+
+    def _pv(n: int) -> str:
+        pct = n / total * 100
+        return (
+            f"{n}&ensp;"
+            f"<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>({pct:.1f}%)</span>"
+        )
+
     cards = [
         _metric_card("Trip Collection", [
             ("Total Trips", bi["total_trips_in_collection"]),
@@ -46,10 +55,13 @@ def render_base_indicators(bi: dict) -> str:
             ("Unique Trips", bi.get("total_trips_in_trip_agg", "—")),
             ("Fragmented (>1 seg)", bi.get("fragmented_trips_in_trip_agg", "—")),
         ], accent="#6610f2"),
-        _metric_card("Coverage", [
-            ("Coverage %", f"{bi['trip_coverage_pct']}%"),
-            ("Missing from trip_agg", bi["missing_trip_count"]),
-            ("Complete (compared)", bi["complete_trips"]),
+        _metric_card("Trip Breakdown", [
+            ("Total", bi["total_trips_in_collection"]),
+            ("Compared", _pv(bi["complete_trips"])),
+            ("Missing from agg", _pv(bi["missing_trip_count"])),
+            ("Excl. — no end_time", _pv(bi.get("trips_without_end_time", 0))),
+            ("Short (< 1 km)", _pv(bi.get("short_trips_excluded", 0))),
+            ("Partial after refetch", _pv(bi.get("partial_trips_after_refetch", 0))),
         ], accent="#198754"),
         _metric_card("Mismatches", [
             ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),

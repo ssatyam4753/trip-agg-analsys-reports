@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-03-13 11:36:36",
+  "run_timestamp": "2026-03-13 12:05:48",
   "account_id": "649034868264558592",
   "account_name": "RajRatan Travels",
   "date_range": {
@@ -74,10 +74,10 @@
     "alert_fetch_total": 281
   },
   "step_timings": {
-    "fetch_trip_agg_data": 3.12,
-    "get_trips_for_account": 13.49,
+    "fetch_trip_agg_data": 1.65,
+    "get_trips_for_account": 11.02,
     "prepare_dataframes": 0.04,
     "analyze_trip_agg": 1.53,
-    "analyze_alerts": 7.68
+    "analyze_alerts": 38.14
   }
 }
