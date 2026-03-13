@@ -40,3 +40,45 @@ unscheduled_driving              20                5183          0.39
 2026-03-13 12:19:43  INFO        analyze_alerts                      121.62s
 2026-03-13 12:19:43  INFO        total                               243.20s
 2026-03-13 12:19:43  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-12/632578958264631296
+2026-03-13 12:46:07  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-03-13 12:46:07  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-03-13 12:46:07  INFO      Fetching trip_agg page: 1
+2026-03-13 12:46:07  INFO      Fetching vehicle page: 1
+2026-03-13 12:46:09  INFO      Fetching vehicle page: 2
+2026-03-13 12:46:11  INFO      Fetching vehicle page: 3
+2026-03-13 12:46:13  INFO      Fetching vehicle page: 4
+2026-03-13 12:46:15  INFO      Total vehicles collected for account 632578958264631296: 1854
+2026-03-13 12:46:19  INFO      Fetching trip_agg page: 2
+2026-03-13 12:46:32  INFO      Fetching trip_agg page: 3
+2026-03-13 12:46:33  INFO      Fetching trip_agg page: 4
+2026-03-13 12:46:40  INFO      Fetching trip_agg page: 5
+2026-03-13 12:46:42  INFO      Fetching trip_agg page: 6
+2026-03-13 12:46:45  INFO      Fetching trip_agg page: 7
+2026-03-13 12:46:47  INFO      Fetching trip_agg page: 8
+2026-03-13 12:46:49  INFO      Fetching trip_agg page: 9
+2026-03-13 12:46:51  INFO      Fetching trip_agg page: 10
+2026-03-13 12:46:54  INFO      Fetching trip_agg page: 11
+2026-03-13 12:46:55  INFO      Total trip-agg records collected: 5221
+2026-03-13 12:48:12  INFO      Total trips collected for account 632578958264631296: 5244
+2026-03-13 12:50:58  INFO      Summary written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-12/632578958264631296/summary.json
+2026-03-13 12:50:58  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-13 12:50:58  INFO      Trips after merge/filters: 2599
+2026-03-13 12:50:58  INFO      Completely processed trips: 2597
+2026-03-13 12:50:58  INFO      Missing trips in trip_agg: 61
+2026-03-13 12:50:58  INFO      Unbroken unmatched trips: 1
+2026-03-13 12:50:58  INFO      Broken unmatched trips: 0
+2026-03-13 12:50:58  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+unscheduled_driving              20                5183          0.39
+       slow_running               2                5183          0.04
+         fuel_chori               1                5183          0.02
+             idling               0                5183          0.00
+         over_speed               0                5183          0.00
+2026-03-13 12:50:58  INFO      ----- Step Timings -----
+2026-03-13 12:50:58  INFO        fetch_trip_agg_data                  47.95s
+2026-03-13 12:50:58  INFO        get_trips_for_account               124.42s
+2026-03-13 12:50:58  INFO        prepare_dataframes                    0.17s
+2026-03-13 12:50:58  INFO        analyze_trip_agg                      1.51s
+2026-03-13 12:50:58  INFO        analyze_alerts                      164.89s
+2026-03-13 12:50:58  INFO        total                               338.94s
+2026-03-13 12:50:58  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-12/632578958264631296

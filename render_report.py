@@ -337,6 +337,8 @@ def render_csv_previews(report_dir: Path) -> str:
   </details>"""
             continue
         cols = list(rows[0].keys())
+        table_id = f"csv-{csv_path.stem}"
+        has_timestamps = any(c in ("start_time", "end_time") for c in cols)
         th = "".join(
             f"<th style='padding:4px 8px;border-bottom:2px solid #dee2e6;color:#555;white-space:nowrap;font-size:0.8rem;'>{c}</th>"
             for c in cols
@@ -352,10 +354,16 @@ def render_csv_previews(report_dir: Path) -> str:
         truncation = f"<p style='color:#888;font-size:0.8rem;margin-top:4px;'>Showing 200 of {len(rows)} rows</p>" if len(rows) > 200 else ""
         table = (
             f"<div style='overflow-x:auto;margin-top:6px;'>"
-            f"<table style='border-collapse:collapse;width:100%;font-size:0.85rem;'>"
+            f"<table id='{table_id}' style='border-collapse:collapse;width:100%;font-size:0.85rem;'>"
             f"<thead><tr style='background:#f8f9fa;'>{th}</tr></thead>"
             f"<tbody>{tr_rows}</tbody>"
             f"</table></div>{truncation}"
+        )
+        ts_btn = (
+            f"&nbsp;<button data-converted='0' onclick=\"event.stopPropagation();toggleTimestamps(this,'{table_id}')\" "
+            f"style='font-size:0.75rem;padding:1px 7px;cursor:pointer;border:1px solid #ccc;"
+            f"border-radius:4px;background:#f8f9fa;color:#555;'>&#x23f0; timestamps</button>"
+            if has_timestamps else ""
         )
         sections += f"""
   <details style="margin-top:8px;">
@@ -363,6 +371,7 @@ def render_csv_previews(report_dir: Path) -> str:
       {csv_path.stem}
       <span style="font-weight:400;font-size:0.82rem;color:#888;margin-left:8px;">{len(rows)} rows</span>
       &nbsp;<a href="{csv_path.name}" style="font-size:0.8rem;font-weight:400;" onclick="event.stopPropagation();">download</a>
+      {ts_btn}
     </summary>
     {table}
   </details>"""
@@ -436,6 +445,44 @@ def build_report(summary_json_path: str) -> str:
     a {{ color: #0d6efd; }}
     table {{ font-size: 0.95rem; }}
   </style>
+  <script>
+    function toggleTimestamps(btn, tableId) {{
+      var table = document.getElementById(tableId);
+      if (!table) return;
+      var headers = table.querySelectorAll('thead th');
+      var tsIdxs = [];
+      headers.forEach(function(th, i) {{
+        var t = th.textContent.trim().toLowerCase();
+        if (t === 'start_time' || t === 'end_time') tsIdxs.push(i);
+      }});
+      if (tsIdxs.length === 0) return;
+      var converted = btn.dataset.converted === '1';
+      table.querySelectorAll('tbody tr').forEach(function(tr) {{
+        tsIdxs.forEach(function(idx) {{
+          var td = tr.cells[idx];
+          if (!td) return;
+          if (!converted) {{
+            var raw = td.textContent.trim();
+            td.dataset.orig = raw;
+            var ms = Number(raw);
+            if (!isNaN(ms) && ms > 1e10) {{
+              var d = new Date(ms);
+              td.textContent = d.getFullYear() + '-' +
+                String(d.getMonth()+1).padStart(2,'0') + '-' +
+                String(d.getDate()).padStart(2,'0') + ' ' +
+                String(d.getHours()).padStart(2,'0') + ':' +
+                String(d.getMinutes()).padStart(2,'0') + ':' +
+                String(d.getSeconds()).padStart(2,'0');
+            }}
+          }} else {{
+            td.textContent = td.dataset.orig || td.textContent;
+          }}
+        }});
+      }});
+      btn.dataset.converted = converted ? '0' : '1';
+      btn.textContent = converted ? '\u23f0 timestamps' : '\u23f0 raw';
+    }}
+  </script>
 </head>
 <body>
   <h1>Trip Aggregation Report</h1>
