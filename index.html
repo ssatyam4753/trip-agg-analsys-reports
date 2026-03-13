@@ -29,10 +29,10 @@
                     <a href="2026-03-12/649034868264558592/report.html" style="text-decoration:none;color:#0d6efd;font-weight:500;">649034868264558592</a>
                   </td>
                   <td style="padding:8px 12px;">
-                    <span style="background:#d1e7dd;color:#198754;padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">PASS</span>
+                    <span style="background:#fff3cd;color:#fd7e14;padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">WARN</span>
                   </td>
                   <td style="padding:8px 12px;">
-                    <a href="2026-03-12/649034868264558592/run.log" style="font-size:0.85rem;color:#6c757d;">log</a>
+                    <button onclick="openLog('2026-03-12/649034868264558592/run.log','2026-03-12 / 649034868264558592')" style="background:none;border:none;color:#6c757d;font-size:0.85rem;cursor:pointer;padding:0;text-decoration:underline;">log</button>
                   </td>
                 </tr></tbody>
               </table>
@@ -57,7 +57,7 @@
                     <span style="background:#fff3cd;color:#fd7e14;padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">WARN</span>
                   </td>
                   <td style="padding:8px 12px;">
-                    <a href="2026-03-11/632578958264631296/run.log" style="font-size:0.85rem;color:#6c757d;">log</a>
+                    <button onclick="openLog('2026-03-11/632578958264631296/run.log','2026-03-11 / 632578958264631296')" style="background:none;border:none;color:#6c757d;font-size:0.85rem;cursor:pointer;padding:0;text-decoration:underline;">log</button>
                   </td>
                 </tr>
                 <tr>
@@ -68,10 +68,35 @@
                     <span style="background:#d1e7dd;color:#198754;padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">PASS</span>
                   </td>
                   <td style="padding:8px 12px;">
-                    <a href="2026-03-11/649034868264558592/run.log" style="font-size:0.85rem;color:#6c757d;">log</a>
+                    <button onclick="openLog('2026-03-11/649034868264558592/run.log','2026-03-11 / 649034868264558592')" style="background:none;border:none;color:#6c757d;font-size:0.85rem;cursor:pointer;padding:0;text-decoration:underline;">log</button>
                   </td>
                 </tr></tbody>
               </table>
             </div>
+
+  <dialog id="log-modal" style="width:92%;max-width:960px;border:none;border-radius:8px;padding:0;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #dee2e6;background:#f8f9fa;border-radius:8px 8px 0 0;">
+      <span id="log-modal-title" style="font-weight:600;font-size:0.9rem;color:#333;"></span>
+      <button onclick="document.getElementById('log-modal').close()" style="background:none;border:none;font-size:1.1rem;cursor:pointer;color:#666;line-height:1;">&#x2715;</button>
+    </div>
+    <pre id="log-modal-content" style="background:#1e1e1e;color:#d4d4d4;padding:16px;margin:0;font-size:0.73rem;line-height:1.5;max-height:72vh;overflow-y:auto;white-space:pre-wrap;word-break:break-all;border-radius:0 0 8px 8px;">Loading…</pre>
+  </dialog>
+  <script>
+    function openLog(path, title) {
+      var modal = document.getElementById('log-modal');
+      var pre   = document.getElementById('log-modal-content');
+      document.getElementById('log-modal-title').textContent = title;
+      pre.textContent = 'Loading…';
+      modal.showModal();
+      fetch(path).then(function(r) { return r.text(); }).then(function(t) {
+        pre.textContent = t;
+      }).catch(function() {
+        pre.textContent = 'Failed to load log.';
+      });
+    }
+    document.getElementById('log-modal').addEventListener('click', function(e) {
+      if (e.target === this) this.close();
+    });
+  </script>
 </body>
 </html>

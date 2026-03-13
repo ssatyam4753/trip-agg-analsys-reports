@@ -123,13 +123,6 @@ def _read_csv(path: Path) -> list:
         return list(csv.DictReader(f))
 
 
-def _fmt(val: str, decimals: int = 3) -> str:
-    try:
-        return str(round(float(val), decimals))
-    except (ValueError, TypeError):
-        return val or "—"
-
-
 def _trip_table(rows: list, columns: list, col_labels: list) -> str:
     if not rows:
         return ""
@@ -141,7 +134,7 @@ def _trip_table(rows: list, columns: list, col_labels: list) -> str:
     for i, row in enumerate(rows):
         bg = "#f8f9fa" if i % 2 == 0 else "#fff"
         cells = "".join(
-            f"<td style='padding:5px 10px;border-bottom:1px solid #f0f0f0;font-size:0.85rem;'>{_fmt(row.get(col, ''))}</td>"
+            f"<td style='padding:5px 10px;border-bottom:1px solid #f0f0f0;font-size:0.85rem;'>{row.get(col, '') if row.get(col, '') != '' else '—'}</td>"
             for col in columns
         )
         tr_rows += f"<tr style='background:{bg};'>{cells}</tr>"
@@ -244,10 +237,30 @@ def render_csv_previews(report_dir: Path) -> str:
     sections = ""
 
     if (report_dir / "run.log").exists():
-        sections += f"""
-  <div style="margin-bottom:8px;">
-    <a href="run.log" style="font-size:0.9rem;">&#x1F4CB; Execution Log</a>
-  </div>"""
+        sections += """
+  <details style="margin-bottom:16px;" id="log-details">
+    <summary style="cursor:pointer;font-size:0.9rem;font-weight:600;color:#333;padding:4px 0;">&#x1F4CB; Execution Log</summary>
+    <div style="margin-top:8px;">
+      <pre id="log-content" style="background:#1e1e1e;color:#d4d4d4;padding:14px 16px;border-radius:6px;font-size:0.73rem;line-height:1.5;max-height:520px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;">Loading\u2026</pre>
+    </div>
+  </details>
+  <script>
+    (function() {
+      var det = document.getElementById('log-details');
+      var pre = document.getElementById('log-content');
+      var loaded = false;
+      det.addEventListener('toggle', function() {
+        if (det.open && !loaded) {
+          loaded = true;
+          fetch('run.log').then(function(r) { return r.text(); }).then(function(t) {
+            pre.textContent = t;
+          }).catch(function() {
+            pre.textContent = 'Failed to load log.';
+          });
+        }
+      });
+    })();
+  </script>"""
 
     csvs = sorted(report_dir.glob("*.csv"))
     for csv_path in csvs:
@@ -270,7 +283,7 @@ def render_csv_previews(report_dir: Path) -> str:
         for i, row in enumerate(rows[:200]):
             bg = "#f8f9fa" if i % 2 == 0 else "#fff"
             cells = "".join(
-                f"<td style='padding:4px 8px;border-bottom:1px solid #f0f0f0;font-size:0.8rem;white-space:nowrap;'>{_fmt(row.get(c, ''))}</td>"
+                f"<td style='padding:4px 8px;border-bottom:1px solid #f0f0f0;font-size:0.8rem;white-space:nowrap;'>{row.get(c, '') if row.get(c, '') != '' else '—'}</td>"
                 for c in cols
             )
             tr_rows += f"<tr style='background:{bg};'>{cells}</tr>"
