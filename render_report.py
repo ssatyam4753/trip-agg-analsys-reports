@@ -242,6 +242,11 @@ def render_unmatched_trips(report_dir: Path) -> str:
   </details>"""
 
     if missing:
+        for row in missing:
+            try:
+                row["distance"] = f"{float(row['distance']) / 1000:.3f}"
+            except (ValueError, TypeError, KeyError):
+                pass
         table = _trip_table(missing, MISSING_COLS, MISSING_LABELS)
         sections += f"""
   <details style="margin-top:12px;">
