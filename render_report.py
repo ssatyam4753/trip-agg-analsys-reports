@@ -36,10 +36,13 @@ def _metric_card(title: str, rows: list, accent: str = "#dee2e6") -> str:
 
 
 def render_base_indicators(bi: dict) -> str:
-    total = bi["total_trips_in_collection"] or 1  # guard against division by zero
+    total = bi["total_trips_in_collection"]
+    excluded = bi.get("trips_without_end_time", 0)
+    eligible = total - excluded
+    eligible_base = eligible or 1  # guard against division by zero
 
     def _pv(n: int) -> str:
-        pct = n / total * 100
+        pct = n / eligible_base * 100
         return (
             f"{n}&ensp;"
             f"<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>({pct:.1f}%)</span>"
@@ -47,8 +50,9 @@ def render_base_indicators(bi: dict) -> str:
 
     cards = [
         _metric_card("Trip Collection", [
-            ("Total Trips", bi["total_trips_in_collection"]),
-            ("Excl. — no end_time", bi.get("trips_without_end_time", 0)),
+            ("Total", total),
+            ("Excl. — no end_time", excluded),
+            ("Eligible for comparison", eligible),
         ], accent="#0d6efd"),
         _metric_card("trip_agg", [
             ("Total Rows", bi.get("trip_agg_total_rows", "—")),
@@ -56,10 +60,9 @@ def render_base_indicators(bi: dict) -> str:
             ("Fragmented (>1 seg)", bi.get("fragmented_trips_in_trip_agg", "—")),
         ], accent="#6610f2"),
         _metric_card("Trip Breakdown", [
-            ("Total", bi["total_trips_in_collection"]),
+            ("Eligible", eligible),
             ("Compared", _pv(bi["complete_trips"])),
             ("Missing from agg", _pv(bi["missing_trip_count"])),
-            ("Excl. — no end_time", _pv(bi.get("trips_without_end_time", 0))),
             ("Short (< 1 km)", _pv(bi.get("short_trips_excluded", 0))),
             ("Partial after refetch", _pv(bi.get("partial_trips_after_refetch", 0))),
         ], accent="#198754"),
@@ -219,6 +222,7 @@ def render_step_timings(st: dict) -> str:
 def render_unmatched_trips(report_dir: Path) -> str:
     unbroken = _read_csv(report_dir / "unbroken_unmatched_complete_trips_df.csv")
     broken = _read_csv(report_dir / "broken_unmatched_complete_trips_df.csv")
+    broken_chunks = _read_csv(report_dir / "broken_unmatched_chunks_df.csv")
     missing = _read_csv(report_dir / "missing_trips_df.csv")
 
     if not unbroken and not broken and not missing:
@@ -244,13 +248,28 @@ def render_unmatched_trips(report_dir: Path) -> str:
 
     if broken:
         table = _trip_table(broken, UNMATCHED_COLS, UNMATCHED_LABELS)
+        chunks_html = ""
+        if broken_chunks:
+            CHUNK_COLS = ["trip_id", "vehicle_id", "start_time", "end_time", "distance", "fuel_consumed"]
+            CHUNK_LABELS = ["Trip ID", "Vehicle ID", "Start Time", "End Time", "Distance (km)", "Fuel (L)"]
+            available_cols = [c for c in CHUNK_COLS if c in broken_chunks[0]]
+            available_labels = [CHUNK_LABELS[CHUNK_COLS.index(c)] for c in available_cols]
+            chunk_table = _trip_table(broken_chunks, available_cols, available_labels)
+            chunks_html = f"""
+    <details style="margin-top:10px;margin-left:16px;">
+      <summary style="cursor:pointer;font-size:0.88rem;font-weight:600;color:#555;padding:4px 0;">
+        Chunk Detail ({len(broken_chunks)} segments)
+        <span style="font-weight:400;color:#aaa;margin-left:8px;">individual trip_agg rows for each broken trip</span>
+      </summary>
+      <div style="margin-top:6px;">{chunk_table}</div>
+    </details>"""
         sections += f"""
   <details style="margin-top:12px;">
     <summary style="cursor:pointer;font-weight:600;color:#333;padding:6px 0;">
       Broken Unmatched ({len(broken)})
       <span style="font-weight:400;font-size:0.85rem;color:#888;margin-left:8px;">multi-segment trips with metric mismatch</span>
     </summary>
-    <div style="margin-top:8px;">{table}</div>
+    <div style="margin-top:8px;">{table}{chunks_html}</div>
   </details>"""
 
     if missing:
