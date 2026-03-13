@@ -143,3 +143,32 @@ distracted_driving               2                 272          0.74
 2026-03-13 09:41:08  INFO        analyze_alerts                        4.58s
 2026-03-13 09:41:08  INFO        total                                15.43s
 2026-03-13 09:41:08  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-12/649034868264558592
+2026-03-13 09:47:56  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-13 09:47:56  WARNING   Could not resolve account name for 649034868264558592
+2026-03-13 09:47:56  INFO      Fetching trip_agg page: 1
+2026-03-13 09:47:56  INFO      Fetching vehicle page: 1
+2026-03-13 09:47:57  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-13 09:48:00  INFO      Total trip-agg records collected: 381
+2026-03-13 09:48:08  INFO      Total trips collected for account 649034868264558592: 281
+2026-03-13 09:48:14  INFO      Summary written to: ./output/2026-03-12/649034868264558592/summary.json
+2026-03-13 09:48:14  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-13 09:48:14  INFO      Trips after merge/filters: 149
+2026-03-13 09:48:14  INFO      Completely processed trips: 149
+2026-03-13 09:48:14  INFO      Missing trips in trip_agg: 8
+2026-03-13 09:48:14  INFO      Unbroken unmatched trips: 0
+2026-03-13 09:48:14  INFO      Broken unmatched trips: 2
+2026-03-13 09:48:14  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+       eyes_closed               5                 273          1.83
+               fcw               5                 273          1.83
+            idling               4                 273          1.47
+distracted_driving               2                 273          0.73
+      mobile_phone               2                 273          0.73
+2026-03-13 09:48:14  INFO      ----- Step Timings -----
+2026-03-13 09:48:14  INFO        fetch_trip_agg_data                   3.06s
+2026-03-13 09:48:14  INFO        get_trips_for_account                11.78s
+2026-03-13 09:48:14  INFO        prepare_dataframes                    0.01s
+2026-03-13 09:48:14  INFO        analyze_trip_agg                      0.41s
+2026-03-13 09:48:14  INFO        analyze_alerts                        5.19s
+2026-03-13 09:48:14  INFO        total                                20.46s
+2026-03-13 09:48:14  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/trip_agg_analysis_script/output/2026-03-12/649034868264558592

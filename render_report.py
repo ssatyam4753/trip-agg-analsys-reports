@@ -7,6 +7,7 @@ Usage:
 """
 
 import argparse
+import csv
 import json
 import os
 from pathlib import Path
@@ -114,23 +115,189 @@ def render_alerts(ds: dict) -> str:
 </section>"""
 
 
-def render_files(report_dir: Path) -> str:
-    links = []
-    if (report_dir / "run.log").exists():
-        links.append('<a href="run.log">&#x1F4CB; Execution Log</a>')
-    csvs = sorted(report_dir.glob("*.csv"))
-    if csvs:
-        csv_links = " &nbsp;|&nbsp; ".join(
-            f'<a href="{c.name}">{c.stem}</a>' for c in csvs
-        )
-        links.append(f"&#x1F4C2; CSVs: {csv_links}")
+def _read_csv(path: Path) -> list:
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f))
 
-    if not links:
+
+def _fmt(val: str, decimals: int = 3) -> str:
+    try:
+        return str(round(float(val), decimals))
+    except (ValueError, TypeError):
+        return val or "—"
+
+
+def _trip_table(rows: list, columns: list, col_labels: list) -> str:
+    if not rows:
+        return ""
+    th = "".join(
+        f"<th style='padding:5px 10px;border-bottom:2px solid #dee2e6;color:#555;white-space:nowrap;'>{lbl}</th>"
+        for lbl in col_labels
+    )
+    tr_rows = ""
+    for i, row in enumerate(rows):
+        bg = "#f8f9fa" if i % 2 == 0 else "#fff"
+        cells = "".join(
+            f"<td style='padding:5px 10px;border-bottom:1px solid #f0f0f0;font-size:0.85rem;'>{_fmt(row.get(col, ''))}</td>"
+            for col in columns
+        )
+        tr_rows += f"<tr style='background:{bg};'>{cells}</tr>"
+    return (
+        f"<div style='overflow-x:auto;'>"
+        f"<table style='border-collapse:collapse;width:100%;font-size:0.9rem;'>"
+        f"<thead><tr style='background:#f8f9fa;'>{th}</tr></thead>"
+        f"<tbody>{tr_rows}</tbody>"
+        f"</table></div>"
+    )
+
+
+def render_step_timings(st: dict) -> str:
+    if not st:
+        return ""
+    total = sum(st.values())
+    rows_html = "".join(
+        f"<tr>"
+        f"<td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>{step}</td>"
+        f"<td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>{secs:.2f}s</td>"
+        f"<td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'>"
+        f"<div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'>"
+        f"<div style='background:#0d6efd;border-radius:3px;height:10px;width:{min(secs/total*160, 160):.1f}px;'></div>"
+        f"</div></td>"
+        f"</tr>"
+        for step, secs in st.items()
+    )
+    rows_html += (
+        f"<tr style='font-weight:600;background:#f8f9fa;'>"
+        f"<td style='padding:5px 12px;border-top:2px solid #dee2e6;'>total</td>"
+        f"<td style='padding:5px 12px;border-top:2px solid #dee2e6;text-align:right;'>{total:.2f}s</td>"
+        f"<td style='padding:5px 12px;border-top:2px solid #dee2e6;'></td>"
+        f"</tr>"
+    )
+    return f"""
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Step Timings</h2>
+  <table style="border-collapse:collapse;width:100%;max-width:560px;">
+    <tbody>{rows_html}</tbody>
+  </table>
+</section>"""
+
+
+def render_unmatched_trips(report_dir: Path) -> str:
+    unbroken = _read_csv(report_dir / "unbroken_unmatched_complete_trips_df.csv")
+    broken = _read_csv(report_dir / "broken_unmatched_complete_trips_df.csv")
+    missing = _read_csv(report_dir / "missing_trips_df.csv")
+
+    if not unbroken and not broken and not missing:
+        return ""
+
+    UNMATCHED_COLS = ["trip_id", "vehicle_id", "counts", "total_distance", "distance", "total_fuel_consumed", "fuel_consumed"]
+    UNMATCHED_LABELS = ["Trip ID", "Vehicle ID", "Segments", "Dist (agg) km", "Dist (trips) km", "Fuel (agg) L", "Fuel (trips) L"]
+    MISSING_COLS = ["id", "vehicle_id", "start_time", "end_time", "distance"]
+    MISSING_LABELS = ["Trip ID", "Vehicle ID", "Start Time", "End Time", "Distance (km)"]
+
+    sections = ""
+
+    if unbroken:
+        table = _trip_table(unbroken, UNMATCHED_COLS, UNMATCHED_LABELS)
+        sections += f"""
+  <details style="margin-top:12px;">
+    <summary style="cursor:pointer;font-weight:600;color:#333;padding:6px 0;">
+      Unbroken Unmatched ({len(unbroken)})
+      <span style="font-weight:400;font-size:0.85rem;color:#888;margin-left:8px;">single-segment trips with metric mismatch</span>
+    </summary>
+    <div style="margin-top:8px;">{table}</div>
+  </details>"""
+
+    if broken:
+        table = _trip_table(broken, UNMATCHED_COLS, UNMATCHED_LABELS)
+        sections += f"""
+  <details style="margin-top:12px;">
+    <summary style="cursor:pointer;font-weight:600;color:#333;padding:6px 0;">
+      Broken Unmatched ({len(broken)})
+      <span style="font-weight:400;font-size:0.85rem;color:#888;margin-left:8px;">multi-segment trips with metric mismatch</span>
+    </summary>
+    <div style="margin-top:8px;">{table}</div>
+  </details>"""
+
+    if missing:
+        table = _trip_table(missing, MISSING_COLS, MISSING_LABELS)
+        sections += f"""
+  <details style="margin-top:12px;">
+    <summary style="cursor:pointer;font-weight:600;color:#333;padding:6px 0;">
+      Missing Trips ({len(missing)})
+      <span style="font-weight:400;font-size:0.85rem;color:#888;margin-left:8px;">in trips collection but absent from trip_agg</span>
+    </summary>
+    <div style="margin-top:8px;">{table}</div>
+  </details>"""
+
+    return f"""
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Unmatched Trip Details</h2>
+  {sections}
+</section>"""
+
+
+def render_csv_previews(report_dir: Path) -> str:
+    sections = ""
+
+    if (report_dir / "run.log").exists():
+        sections += f"""
+  <div style="margin-bottom:8px;">
+    <a href="run.log" style="font-size:0.9rem;">&#x1F4CB; Execution Log</a>
+  </div>"""
+
+    csvs = sorted(report_dir.glob("*.csv"))
+    for csv_path in csvs:
+        rows = _read_csv(csv_path)
+        if not rows:
+            sections += f"""
+  <details style="margin-top:8px;">
+    <summary style="cursor:pointer;font-weight:600;color:#333;padding:4px 0;font-size:0.95rem;">
+      {csv_path.stem}
+      <span style="font-weight:400;font-size:0.82rem;color:#aaa;margin-left:8px;">(empty)</span>
+    </summary>
+  </details>"""
+            continue
+        cols = list(rows[0].keys())
+        th = "".join(
+            f"<th style='padding:4px 8px;border-bottom:2px solid #dee2e6;color:#555;white-space:nowrap;font-size:0.8rem;'>{c}</th>"
+            for c in cols
+        )
+        tr_rows = ""
+        for i, row in enumerate(rows[:200]):
+            bg = "#f8f9fa" if i % 2 == 0 else "#fff"
+            cells = "".join(
+                f"<td style='padding:4px 8px;border-bottom:1px solid #f0f0f0;font-size:0.8rem;white-space:nowrap;'>{_fmt(row.get(c, ''))}</td>"
+                for c in cols
+            )
+            tr_rows += f"<tr style='background:{bg};'>{cells}</tr>"
+        truncation = f"<p style='color:#888;font-size:0.8rem;margin-top:4px;'>Showing 200 of {len(rows)} rows</p>" if len(rows) > 200 else ""
+        table = (
+            f"<div style='overflow-x:auto;margin-top:6px;'>"
+            f"<table style='border-collapse:collapse;width:100%;font-size:0.85rem;'>"
+            f"<thead><tr style='background:#f8f9fa;'>{th}</tr></thead>"
+            f"<tbody>{tr_rows}</tbody>"
+            f"</table></div>{truncation}"
+        )
+        sections += f"""
+  <details style="margin-top:8px;">
+    <summary style="cursor:pointer;font-weight:600;color:#333;padding:4px 0;font-size:0.95rem;">
+      {csv_path.stem}
+      <span style="font-weight:400;font-size:0.82rem;color:#888;margin-left:8px;">{len(rows)} rows</span>
+      &nbsp;<a href="{csv_path.name}" style="font-size:0.8rem;font-weight:400;" onclick="event.stopPropagation();">download</a>
+    </summary>
+    {table}
+  </details>"""
+
+    if not sections:
         return ""
 
     return f"""
-<section style="margin-top:32px;padding-top:16px;border-top:1px solid #dee2e6;font-size:0.9rem;">
-  {"<br>".join(links)}
+<section style="margin-top:32px;border-top:1px solid #dee2e6;padding-top:16px;">
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:0;">Data Files</h2>
+  {sections}
 </section>"""
 
 
@@ -170,8 +337,10 @@ def build_report(summary_json_path: str) -> str:
         header
         + render_base_indicators(bi)
         + render_api_health(ah)
+        + render_step_timings(s.get("step_timings", {}))
+        + render_unmatched_trips(report_dir)
         + render_alerts(ds)
-        + render_files(report_dir)
+        + render_csv_previews(report_dir)
     )
 
     return f"""<!DOCTYPE html>

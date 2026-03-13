@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-03-13 09:41:08",
+  "run_timestamp": "2026-03-13 09:48:14",
   "account_id": "649034868264558592",
   "account_name": null,
   "date_range": {
@@ -8,12 +8,12 @@
   },
   "base_indicators": {
     "total_trips_in_collection": 281,
-    "trip_agg_total_rows": 400,
-    "total_trips_in_trip_agg": 317,
-    "fragmented_trips_in_trip_agg": 66,
-    "missing_trip_count": 9,
-    "trip_coverage_pct": 96.8,
-    "complete_trips": 148,
+    "trip_agg_total_rows": 404,
+    "total_trips_in_trip_agg": 318,
+    "fragmented_trips_in_trip_agg": 67,
+    "missing_trip_count": 8,
+    "trip_coverage_pct": 97.15,
+    "complete_trips": 149,
     "unbroken_unmatched_count": 0,
     "broken_unmatched_count": 2,
     "short_trips_excluded": 124,
@@ -21,17 +21,17 @@
     "verdict": "FAIL"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 272,
+    "total_joined_trips_for_alert_comparison": 273,
     "mismatched_alerts": [
       {
         "alert_name": "eyes_closed",
         "mismatch_count": 5,
-        "mismatch_pct": 1.84
+        "mismatch_pct": 1.83
       },
       {
         "alert_name": "fcw",
         "mismatch_count": 5,
-        "mismatch_pct": 1.84
+        "mismatch_pct": 1.83
       },
       {
         "alert_name": "idling",
@@ -41,12 +41,12 @@
       {
         "alert_name": "distracted_driving",
         "mismatch_count": 2,
-        "mismatch_pct": 0.74
+        "mismatch_pct": 0.73
       },
       {
         "alert_name": "mobile_phone",
         "mismatch_count": 2,
-        "mismatch_pct": 0.74
+        "mismatch_pct": 0.73
       },
       {
         "alert_name": "drowsiness",
@@ -73,10 +73,10 @@
     "alert_fetch_total": 281
   },
   "step_timings": {
-    "fetch_trip_agg_data": 1.47,
-    "get_trips_for_account": 8.95,
+    "fetch_trip_agg_data": 3.06,
+    "get_trips_for_account": 11.78,
     "prepare_dataframes": 0.01,
-    "analyze_trip_agg": 0.42,
-    "analyze_alerts": 4.58
+    "analyze_trip_agg": 0.41,
+    "analyze_alerts": 5.19
   }
 }
