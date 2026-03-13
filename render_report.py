@@ -338,7 +338,7 @@ def render_csv_previews(report_dir: Path) -> str:
             continue
         cols = list(rows[0].keys())
         table_id = f"csv-{csv_path.stem}"
-        has_timestamps = any(c in ("start_time", "end_time") for c in cols)
+        has_timestamps = any("start_time" in c or "end_time" in c for c in cols)
         th = "".join(
             f"<th style='padding:4px 8px;border-bottom:2px solid #dee2e6;color:#555;white-space:nowrap;font-size:0.8rem;'>{c}</th>"
             for c in cols
@@ -453,7 +453,7 @@ def build_report(summary_json_path: str) -> str:
       var tsIdxs = [];
       headers.forEach(function(th, i) {{
         var t = th.textContent.trim().toLowerCase();
-        if (t === 'start_time' || t === 'end_time') tsIdxs.push(i);
+        if (t.indexOf('start_time') !== -1 || t.indexOf('end_time') !== -1) tsIdxs.push(i);
       }});
       if (tsIdxs.length === 0) return;
       var converted = btn.dataset.converted === '1';
