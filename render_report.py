@@ -295,6 +295,19 @@ def render_unmatched_trips(report_dir: Path) -> str:
 </section>"""
 
 
+CSV_DESCRIPTIONS = {
+    "combined_trip_agg_df": "All trip_agg rows after partial-trip refetch (raw segments, one row per segment)",
+    "agg_df": "trip_agg segments grouped by trip_id — sums distance/fuel, counts segments per trip",
+    "remerged_df": "Inner join of agg_df + trips collection after distance filter (≥ 1 km) — base for metric comparison",
+    "missing_trips_df": "Trips present in the trips collection but absent from trip_agg entirely",
+    "complete_trips_df": "Trips with matching start/end times in both sources — candidates for metric comparison",
+    "unbroken_unmatched_complete_trips_df": "Single-segment complete trips where distance or fuel diverges beyond tolerance",
+    "broken_unmatched_complete_trips_df": "Multi-segment complete trips where aggregated distance or fuel diverges > 3%",
+    "broken_unmatched_chunks_df": "Individual trip_agg rows for each broken unmatched trip — use to inspect per-segment values",
+    "alert_mismatch_summary": "Per-alert-type mismatch counts between trip_agg counts and the alerts API",
+}
+
+
 def render_csv_previews(report_dir: Path) -> str:
     sections = ""
 
@@ -328,11 +341,17 @@ def render_csv_previews(report_dir: Path) -> str:
     for csv_path in csvs:
         rows = _read_csv(csv_path)
         if not rows:
+            desc = CSV_DESCRIPTIONS.get(csv_path.stem, "")
+            desc_html = (
+                f"<div style='font-size:0.78rem;color:#aaa;margin-top:2px;font-weight:400;'>{desc}</div>"
+                if desc else ""
+            )
             sections += f"""
   <details style="margin-top:8px;">
     <summary style="cursor:pointer;font-weight:600;color:#333;padding:4px 0;font-size:0.95rem;">
       {csv_path.stem}
       <span style="font-weight:400;font-size:0.82rem;color:#aaa;margin-left:8px;">(empty)</span>
+      {desc_html}
     </summary>
   </details>"""
             continue
@@ -365,6 +384,11 @@ def render_csv_previews(report_dir: Path) -> str:
             f"border-radius:4px;background:#f8f9fa;color:#555;'>&#x23f0; timestamps</button>"
             if has_timestamps else ""
         )
+        desc = CSV_DESCRIPTIONS.get(csv_path.stem, "")
+        desc_html = (
+            f"<div style='font-size:0.78rem;color:#888;margin-top:2px;font-weight:400;'>{desc}</div>"
+            if desc else ""
+        )
         sections += f"""
   <details style="margin-top:8px;">
     <summary style="cursor:pointer;font-weight:600;color:#333;padding:4px 0;font-size:0.95rem;">
@@ -372,6 +396,7 @@ def render_csv_previews(report_dir: Path) -> str:
       <span style="font-weight:400;font-size:0.82rem;color:#888;margin-left:8px;">{len(rows)} rows</span>
       &nbsp;<a href="{csv_path.name}" style="font-size:0.8rem;font-weight:400;" onclick="event.stopPropagation();">download</a>
       {ts_btn}
+      {desc_html}
     </summary>
     {table}
   </details>"""
