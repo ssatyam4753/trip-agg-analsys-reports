@@ -1,42 +1,43 @@
 {
-  "run_timestamp": "2026-03-13 09:48:14",
+  "run_timestamp": "2026-03-13 10:23:53",
   "account_id": "649034868264558592",
-  "account_name": null,
+  "account_name": "RajRatan Travels",
   "date_range": {
     "start": "2026-03-12 00:00:00",
     "end": "2026-03-12 23:59:59"
   },
   "base_indicators": {
-    "total_trips_in_collection": 281,
-    "trip_agg_total_rows": 404,
-    "total_trips_in_trip_agg": 318,
-    "fragmented_trips_in_trip_agg": 67,
-    "missing_trip_count": 8,
-    "trip_coverage_pct": 97.15,
-    "complete_trips": 149,
+    "total_trips_in_collection": 274,
+    "trips_without_end_time": 7,
+    "trip_agg_total_rows": 406,
+    "total_trips_in_trip_agg": 319,
+    "fragmented_trips_in_trip_agg": 68,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 150,
     "unbroken_unmatched_count": 0,
     "broken_unmatched_count": 2,
     "short_trips_excluded": 124,
     "partial_trips_after_refetch": 0,
-    "verdict": "FAIL"
+    "verdict": "PASS"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 273,
+    "total_joined_trips_for_alert_comparison": 274,
     "mismatched_alerts": [
       {
         "alert_name": "eyes_closed",
         "mismatch_count": 5,
-        "mismatch_pct": 1.83
+        "mismatch_pct": 1.82
       },
       {
         "alert_name": "fcw",
         "mismatch_count": 5,
-        "mismatch_pct": 1.83
+        "mismatch_pct": 1.82
       },
       {
         "alert_name": "idling",
         "mismatch_count": 4,
-        "mismatch_pct": 1.47
+        "mismatch_pct": 1.46
       },
       {
         "alert_name": "distracted_driving",
@@ -51,7 +52,7 @@
       {
         "alert_name": "drowsiness",
         "mismatch_count": 1,
-        "mismatch_pct": 0.37
+        "mismatch_pct": 0.36
       }
     ],
     "passed_alerts": [
@@ -73,10 +74,10 @@
     "alert_fetch_total": 281
   },
   "step_timings": {
-    "fetch_trip_agg_data": 3.06,
-    "get_trips_for_account": 11.78,
-    "prepare_dataframes": 0.01,
-    "analyze_trip_agg": 0.41,
-    "analyze_alerts": 5.19
+    "fetch_trip_agg_data": 2.12,
+    "get_trips_for_account": 13.23,
+    "prepare_dataframes": 0.02,
+    "analyze_trip_agg": 6.99,
+    "analyze_alerts": 7.45
   }
 }
