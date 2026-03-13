@@ -21,9 +21,11 @@ def render_base_indicators(bi: dict) -> str:
         ("Trip Coverage", f"{bi['trip_coverage_pct']}%"),
         ("Total Trips in Collection", bi["total_trips_in_collection"]),
         ("Missing from trip_agg", bi["missing_trip_count"]),
-        ("Complete Trips", bi["complete_trips"]),
+        ("Complete Trips (compared)", bi["complete_trips"]),
         ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),
         ("Broken Unmatched", bi["broken_unmatched_count"]),
+        ("Excluded — distance < 1 km", bi.get("short_trips_excluded", 0)),
+        ("Excluded — partial after refetch", bi.get("partial_trips_after_refetch", 0)),
     ]
     rows_html = "".join(
         f"<tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>{k}</td>"
