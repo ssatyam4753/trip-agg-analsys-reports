@@ -1,0 +1,79 @@
+{
+  "run_timestamp": "2026-03-13 09:32:47",
+  "account_id": "649034868264558592",
+  "account_name": null,
+  "date_range": {
+    "start": "2026-03-12 00:00:00",
+    "end": "2026-03-12 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 281,
+    "missing_trip_count": 9,
+    "trip_coverage_pct": 96.8,
+    "complete_trips": 148,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 2,
+    "short_trips_excluded": 124,
+    "partial_trips_after_refetch": 0,
+    "verdict": "FAIL"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 272,
+    "mismatched_alerts": [
+      {
+        "alert_name": "eyes_closed",
+        "mismatch_count": 5,
+        "mismatch_pct": 1.84
+      },
+      {
+        "alert_name": "fcw",
+        "mismatch_count": 5,
+        "mismatch_pct": 1.84
+      },
+      {
+        "alert_name": "idling",
+        "mismatch_count": 4,
+        "mismatch_pct": 1.47
+      },
+      {
+        "alert_name": "distracted_driving",
+        "mismatch_count": 2,
+        "mismatch_pct": 0.74
+      },
+      {
+        "alert_name": "mobile_phone",
+        "mismatch_count": 2,
+        "mismatch_pct": 0.74
+      },
+      {
+        "alert_name": "drowsiness",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.37
+      }
+    ],
+    "passed_alerts": [
+      "emergency_recording",
+      "tailgating",
+      "smoking",
+      "over_speed",
+      "over_acc",
+      "hard_brake"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 117,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 281
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 1.64,
+    "get_trips_for_account": 12.14,
+    "prepare_dataframes": 0.02,
+    "analyze_trip_agg": 0.35,
+    "analyze_alerts": 5.87
+  }
+}
