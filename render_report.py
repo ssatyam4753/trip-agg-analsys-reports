@@ -17,32 +17,58 @@ VERDICT_COLOR = {"PASS": "#198754", "WARN": "#fd7e14", "FAIL": "#dc3545"}
 VERDICT_BG = {"PASS": "#d1e7dd", "WARN": "#fff3cd", "FAIL": "#f8d7da"}
 
 
-def render_base_indicators(bi: dict) -> str:
-    rows = [
-        ("Trip Coverage", f"{bi['trip_coverage_pct']}%"),
-        ("Total Trips in Collection", bi["total_trips_in_collection"]),
-        ("Excluded — no end_time (in-progress)", bi.get("trips_without_end_time", 0)),
-        ("trip_agg — Total Rows", bi.get("trip_agg_total_rows", "—")),
-        ("trip_agg — Unique Trips", bi.get("total_trips_in_trip_agg", "—")),
-        ("trip_agg — Fragmented Trips (>1 segment)", bi.get("fragmented_trips_in_trip_agg", "—")),
-        ("Missing from trip_agg", bi["missing_trip_count"]),
-        ("Complete Trips (compared)", bi["complete_trips"]),
-        ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),
-        ("Broken Unmatched", bi["broken_unmatched_count"]),
-        ("Excluded — distance < 1 km", bi.get("short_trips_excluded", 0)),
-        ("Excluded — partial after refetch", bi.get("partial_trips_after_refetch", 0)),
-    ]
-    rows_html = "".join(
-        f"<tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>{k}</td>"
-        f"<td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>{v}</td></tr>"
+def _metric_card(title: str, rows: list, accent: str = "#dee2e6") -> str:
+    items = "".join(
+        f"<div style='display:flex;justify-content:space-between;align-items:baseline;"
+        f"padding:5px 0;border-bottom:1px solid #f0f0f0;'>"
+        f"<span style='color:#555;font-size:0.82rem;'>{k}</span>"
+        f"<span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>{v}</span>"
+        f"</div>"
         for k, v in rows
+    )
+    return (
+        f"<div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid {accent};"
+        f"border-radius:6px;padding:14px 16px;min-width:0;'>"
+        f"<div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;"
+        f"color:#888;margin-bottom:10px;'>{title}</div>"
+        f"{items}</div>"
+    )
+
+
+def render_base_indicators(bi: dict) -> str:
+    cards = [
+        _metric_card("Trip Collection", [
+            ("Total Trips", bi["total_trips_in_collection"]),
+            ("Excl. — no end_time", bi.get("trips_without_end_time", 0)),
+        ], accent="#0d6efd"),
+        _metric_card("trip_agg", [
+            ("Total Rows", bi.get("trip_agg_total_rows", "—")),
+            ("Unique Trips", bi.get("total_trips_in_trip_agg", "—")),
+            ("Fragmented (>1 seg)", bi.get("fragmented_trips_in_trip_agg", "—")),
+        ], accent="#6610f2"),
+        _metric_card("Coverage", [
+            ("Coverage %", f"{bi['trip_coverage_pct']}%"),
+            ("Missing from trip_agg", bi["missing_trip_count"]),
+            ("Complete (compared)", bi["complete_trips"]),
+        ], accent="#198754"),
+        _metric_card("Mismatches", [
+            ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),
+            ("Broken Unmatched", bi["broken_unmatched_count"]),
+        ], accent="#dc3545"),
+        _metric_card("Exclusions", [
+            ("Distance < 1 km", bi.get("short_trips_excluded", 0)),
+            ("Partial after refetch", bi.get("partial_trips_after_refetch", 0)),
+        ], accent="#fd7e14"),
+    ]
+    grid = (
+        "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:14px;'>"
+        + "".join(cards)
+        + "</div>"
     )
     return f"""
 <section>
   <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Base Indicators</h2>
-  <table style="border-collapse:collapse;width:100%;max-width:480px;">
-    <tbody>{rows_html}</tbody>
-  </table>
+  {grid}
 </section>"""
 
 
@@ -53,7 +79,7 @@ def render_api_health(ah: dict) -> str:
         ("Vehicle Trip Fetch Failures", ah.get("vehicle_trip_fetch_failures", 0)),
         ("Trip Agg Pagination Aborted", "Yes ⚠" if ah.get("trip_agg_pagination_aborted") else "No"),
         ("Partial Trip Refetch Failures", ah.get("partial_trip_refetch_failures", 0)),
-        (f"Alert Fetch Failures", f"{ah.get('alert_fetch_failures', 0)} / {ah.get('alert_fetch_total', 0)}"),
+        ("Alert Fetch Failures", f"{ah.get('alert_fetch_failures', 0)} / {ah.get('alert_fetch_total', 0)}"),
     ]
     rows_html = "".join(
         f"<tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>{k}</td>"
@@ -157,7 +183,7 @@ def render_step_timings(st: dict) -> str:
         f"<td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>{secs:.2f}s</td>"
         f"<td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'>"
         f"<div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'>"
-        f"<div style='background:#0d6efd;border-radius:3px;height:10px;width:{min(secs/total*160, 160):.1f}px;'></div>"
+        f"<div style='background:#0d6efd;border-radius:3px;height:10px;width:{min(secs/total*160, 160) if total else 0:.1f}px;'></div>"
         f"</div></td>"
         f"</tr>"
         for step, secs in st.items()
@@ -186,7 +212,7 @@ def render_unmatched_trips(report_dir: Path) -> str:
     if not unbroken and not broken and not missing:
         return ""
 
-    UNMATCHED_COLS = ["trip_id", "vehicle_id", "counts", "total_distance", "distance", "total_fuel_consumed", "fuel_consumed"]
+    UNMATCHED_COLS = ["trip_id", "vehicle_id_agg", "counts", "total_distance", "distance", "total_fuel_consumed", "fuel_consumed"]
     UNMATCHED_LABELS = ["Trip ID", "Vehicle ID", "Segments", "Dist (agg) km", "Dist (trips) km", "Fuel (agg) L", "Fuel (trips) L"]
     MISSING_COLS = ["id", "vehicle_id", "start_time", "end_time", "distance"]
     MISSING_LABELS = ["Trip ID", "Vehicle ID", "Start Time", "End Time", "Distance (km)"]
@@ -325,7 +351,6 @@ def build_report(summary_json_path: str) -> str:
     dr = s["date_range"]
     verdict = bi["verdict"]
     color = VERDICT_COLOR.get(verdict, "#6c757d")
-    bg = VERDICT_BG.get(verdict, "#e2e3e5")
     report_dir = Path(summary_json_path).parent
 
     account_name = s.get("account_name")
