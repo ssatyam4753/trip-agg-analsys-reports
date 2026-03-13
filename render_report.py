@@ -20,6 +20,9 @@ def render_base_indicators(bi: dict) -> str:
     rows = [
         ("Trip Coverage", f"{bi['trip_coverage_pct']}%"),
         ("Total Trips in Collection", bi["total_trips_in_collection"]),
+        ("trip_agg — Total Rows", bi.get("trip_agg_total_rows", "—")),
+        ("trip_agg — Unique Trips", bi.get("total_trips_in_trip_agg", "—")),
+        ("trip_agg — Fragmented Trips (>1 segment)", bi.get("fragmented_trips_in_trip_agg", "—")),
         ("Missing from trip_agg", bi["missing_trip_count"]),
         ("Complete Trips (compared)", bi["complete_trips"]),
         ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),
