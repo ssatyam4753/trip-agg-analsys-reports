@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-03-15 11:56:50",
+  "run_timestamp": "2026-03-15 17:36:56",
   "account_id": "632578958264631296",
   "account_name": "K M Translogistics  Pvt Ltd ( KMT)",
   "date_range": {
@@ -7,27 +7,27 @@
     "end": "2026-03-14 23:59:59"
   },
   "base_indicators": {
-    "total_trips_in_collection": 5344,
-    "trips_without_end_time": 1,
-    "trip_agg_total_rows": 5344,
-    "total_trips_in_trip_agg": 5344,
+    "total_trips_in_collection": 5348,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 5349,
+    "total_trips_in_trip_agg": 5349,
     "fragmented_trips_in_trip_agg": 0,
-    "missing_trip_count": 38,
-    "trip_coverage_pct": 99.29,
-    "complete_trips": 2713,
-    "unbroken_unmatched_count": 11,
+    "missing_trip_count": 37,
+    "trip_coverage_pct": 99.31,
+    "complete_trips": 2723,
+    "unbroken_unmatched_count": 13,
     "broken_unmatched_count": 0,
-    "short_trips_excluded": 2593,
+    "short_trips_excluded": 2588,
     "partial_trips_after_refetch": 0,
     "verdict": "WARN"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 5306,
+    "total_joined_trips_for_alert_comparison": 5311,
     "mismatched_alerts": [
       {
         "alert_name": "idling",
-        "mismatch_count": 66,
-        "mismatch_pct": 1.24
+        "mismatch_count": 71,
+        "mismatch_pct": 1.34
       },
       {
         "alert_name": "unscheduled_driving",
@@ -63,13 +63,13 @@
     "trip_agg_pagination_aborted": false,
     "partial_trip_refetch_failures": 0,
     "alert_fetch_failures": 0,
-    "alert_fetch_total": 5345
+    "alert_fetch_total": 5348
   },
   "step_timings": {
-    "fetch_trip_agg_data": 52.81,
-    "get_trips_for_account": 103.8,
-    "prepare_dataframes": 0.15,
-    "analyze_trip_agg": 0.04,
-    "analyze_alerts": 132.79
+    "fetch_trip_agg_data": 46.48,
+    "get_trips_for_account": 90.03,
+    "prepare_dataframes": 0.19,
+    "analyze_trip_agg": 0.05,
+    "analyze_alerts": 181.96
   }
 }

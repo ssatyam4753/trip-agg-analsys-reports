@@ -27,9 +27,12 @@ def read_summary_metrics(account_dir: Path) -> dict:
             mismatched = ds.get("mismatched_alerts", [])
             passed = ds.get("passed_alerts", [])
             total_alert_types = len(mismatched) + len(passed)
+            total_joined = ds.get("total_joined_trips_for_alert_comparison", 0)
+            total_mismatch_count = sum(a.get("mismatch_count", 0) for a in mismatched)
+            total_possible = total_joined * total_alert_types
             alert_mismatch_pct = (
-                f"{round(len(mismatched) / total_alert_types * 100, 1)}%"
-                if total_alert_types else "—"
+                f"{round(total_mismatch_count / total_possible * 100, 1)}%"
+                if total_possible else "—"
             )
             return {
                 "verdict": bi.get("verdict", "?"),
