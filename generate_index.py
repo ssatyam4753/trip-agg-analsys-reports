@@ -16,16 +16,21 @@ VERDICT_COLOR = {"PASS": "#198754", "WARN": "#fd7e14", "FAIL": "#dc3545"}
 VERDICT_BG = {"PASS": "#d1e7dd", "WARN": "#fff3cd", "FAIL": "#f8d7da"}
 
 
-def read_verdict(account_dir: Path) -> str:
+def read_summary_metrics(account_dir: Path) -> dict:
     summary = account_dir / "summary.json"
     if summary.exists():
         try:
             with open(summary) as f:
                 data = json.load(f)
-            return data.get("base_indicators", {}).get("verdict", "?")
+            bi = data.get("base_indicators", {})
+            return {
+                "verdict": bi.get("verdict", "?"),
+                "unbroken_unmatched": bi.get("unbroken_unmatched_count", "—"),
+                "broken_unmatched": bi.get("broken_unmatched_count", "—"),
+            }
         except Exception:
             pass
-    return "?"
+    return {"verdict": "?", "unbroken_unmatched": "—", "broken_unmatched": "—"}
 
 
 def build_index(repo_dir: Path) -> str:
@@ -38,9 +43,9 @@ def build_index(repo_dir: Path) -> str:
         # Skip non-date directories (e.g. root files)
         if not date_str[0].isdigit():
             continue
-        verdict = read_verdict(report_html.parent)
+        metrics = read_summary_metrics(report_html.parent)
         url = f"{date_str}/{account_id}/report.html"
-        entries.setdefault(date_str, []).append((account_id, verdict, url))
+        entries.setdefault(date_str, []).append((account_id, metrics, url))
 
     if not entries:
         date_sections = "<p style='color:#888;'>No reports published yet.</p>"
@@ -48,9 +53,14 @@ def build_index(repo_dir: Path) -> str:
         sections = []
         for date_str in sorted(entries.keys(), reverse=True):
             account_rows = ""
-            for account_id, verdict, url in sorted(entries[date_str], key=lambda x: x[0]):
+            for account_id, metrics, url in sorted(entries[date_str], key=lambda x: x[0]):
+                verdict = metrics["verdict"]
+                unbroken = metrics["unbroken_unmatched"]
+                broken = metrics["broken_unmatched"]
                 color = VERDICT_COLOR.get(verdict, "#6c757d")
                 bg = VERDICT_BG.get(verdict, "#e2e3e5")
+                unbroken_style = "color:#dc3545;font-weight:600;" if unbroken not in ("—", 0, "0") else "color:#555;"
+                broken_style = "color:#dc3545;font-weight:600;" if broken not in ("—", 0, "0") else "color:#555;"
                 account_rows += f"""
                 <tr>
                   <td style="padding:8px 12px;">
@@ -59,6 +69,8 @@ def build_index(repo_dir: Path) -> str:
                   <td style="padding:8px 12px;">
                     <span style="background:{bg};color:{color};padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">{verdict}</span>
                   </td>
+                  <td style="padding:8px 12px;text-align:center;{unbroken_style}">{unbroken}</td>
+                  <td style="padding:8px 12px;text-align:center;{broken_style}">{broken}</td>
                   <td style="padding:8px 12px;">
                     <button onclick="openLog('{date_str}/{account_id}/run.log','{date_str} / {account_id}')" style="background:none;border:none;color:#6c757d;font-size:0.85rem;cursor:pointer;padding:0;text-decoration:underline;">log</button>
                   </td>
@@ -67,11 +79,13 @@ def build_index(repo_dir: Path) -> str:
             sections.append(f"""
             <div style="margin-bottom:32px;">
               <h2 style="font-size:1.1rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;">{date_str}</h2>
-              <table style="border-collapse:collapse;width:100%;max-width:600px;">
+              <table style="border-collapse:collapse;width:100%;max-width:760px;">
                 <thead>
                   <tr style="background:#f8f9fa;">
                     <th style="text-align:left;padding:8px 12px;color:#555;">Account</th>
                     <th style="text-align:left;padding:8px 12px;color:#555;">Verdict</th>
+                    <th style="text-align:center;padding:8px 12px;color:#555;">Unbroken Unmatched</th>
+                    <th style="text-align:center;padding:8px 12px;color:#555;">Broken Unmatched</th>
                     <th style="padding:8px 12px;color:#555;"></th>
                   </tr>
                 </thead>
