@@ -67,6 +67,7 @@ def render_base_indicators(bi: dict) -> str:
             ("Partial after refetch", _pv(bi.get("partial_trips_after_refetch", 0))),
         ], accent="#198754"),
         _metric_card("Mismatches", [
+            ("Missing from agg", bi["missing_trip_count"]),
             ("Unbroken Unmatched", bi["unbroken_unmatched_count"]),
             ("Broken Unmatched", bi["broken_unmatched_count"]),
         ], accent="#dc3545"),
