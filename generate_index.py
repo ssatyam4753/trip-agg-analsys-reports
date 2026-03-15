@@ -23,14 +23,24 @@ def read_summary_metrics(account_dir: Path) -> dict:
             with open(summary) as f:
                 data = json.load(f)
             bi = data.get("base_indicators", {})
+            ds = data.get("detailed_summary", {})
+            mismatched = ds.get("mismatched_alerts", [])
+            passed = ds.get("passed_alerts", [])
+            total_alert_types = len(mismatched) + len(passed)
+            alert_mismatch_pct = (
+                f"{round(len(mismatched) / total_alert_types * 100, 1)}%"
+                if total_alert_types else "—"
+            )
             return {
                 "verdict": bi.get("verdict", "?"),
                 "unbroken_unmatched": bi.get("unbroken_unmatched_count", "—"),
                 "broken_unmatched": bi.get("broken_unmatched_count", "—"),
+                "missing_trips": bi.get("missing_trip_count", "—"),
+                "alert_mismatch_pct": alert_mismatch_pct,
             }
         except Exception:
             pass
-    return {"verdict": "?", "unbroken_unmatched": "—", "broken_unmatched": "—"}
+    return {"verdict": "?", "unbroken_unmatched": "—", "broken_unmatched": "—", "missing_trips": "—", "alert_mismatch_pct": "—"}
 
 
 def build_index(repo_dir: Path) -> str:
@@ -57,10 +67,14 @@ def build_index(repo_dir: Path) -> str:
                 verdict = metrics["verdict"]
                 unbroken = metrics["unbroken_unmatched"]
                 broken = metrics["broken_unmatched"]
+                missing = metrics["missing_trips"]
+                alert_pct = metrics["alert_mismatch_pct"]
                 color = VERDICT_COLOR.get(verdict, "#6c757d")
                 bg = VERDICT_BG.get(verdict, "#e2e3e5")
                 unbroken_style = "color:#dc3545;font-weight:600;" if unbroken not in ("—", 0, "0") else "color:#555;"
                 broken_style = "color:#dc3545;font-weight:600;" if broken not in ("—", 0, "0") else "color:#555;"
+                missing_style = "color:#dc3545;font-weight:600;" if missing not in ("—", 0, "0") else "color:#555;"
+                alert_style = "color:#dc3545;font-weight:600;" if alert_pct not in ("—", "0.0%", "0%") else "color:#555;"
                 account_rows += f"""
                 <tr>
                   <td style="padding:8px 12px;">
@@ -69,8 +83,10 @@ def build_index(repo_dir: Path) -> str:
                   <td style="padding:8px 12px;">
                     <span style="background:{bg};color:{color};padding:3px 10px;border-radius:4px;font-weight:600;font-size:0.85rem;">{verdict}</span>
                   </td>
+                  <td style="padding:8px 12px;text-align:center;{missing_style}">{missing}</td>
                   <td style="padding:8px 12px;text-align:center;{unbroken_style}">{unbroken}</td>
                   <td style="padding:8px 12px;text-align:center;{broken_style}">{broken}</td>
+                  <td style="padding:8px 12px;text-align:center;{alert_style}">{alert_pct}</td>
                   <td style="padding:8px 12px;">
                     <button onclick="openLog('{date_str}/{account_id}/run.log','{date_str} / {account_id}')" style="background:none;border:none;color:#6c757d;font-size:0.85rem;cursor:pointer;padding:0;text-decoration:underline;">log</button>
                   </td>
@@ -79,13 +95,15 @@ def build_index(repo_dir: Path) -> str:
             sections.append(f"""
             <div style="margin-bottom:32px;">
               <h2 style="font-size:1.1rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;">{date_str}</h2>
-              <table style="border-collapse:collapse;width:100%;max-width:760px;">
+              <table style="border-collapse:collapse;width:100%;max-width:1060px;">
                 <thead>
                   <tr style="background:#f8f9fa;">
                     <th style="text-align:left;padding:8px 12px;color:#555;">Account</th>
                     <th style="text-align:left;padding:8px 12px;color:#555;">Verdict</th>
+                    <th style="text-align:center;padding:8px 12px;color:#555;">Missing Trips</th>
                     <th style="text-align:center;padding:8px 12px;color:#555;">Unbroken Unmatched</th>
                     <th style="text-align:center;padding:8px 12px;color:#555;">Broken Unmatched</th>
+                    <th style="text-align:center;padding:8px 12px;color:#555;">Alert Types Mismatched</th>
                     <th style="padding:8px 12px;color:#555;"></th>
                   </tr>
                 </thead>
@@ -101,7 +119,7 @@ def build_index(repo_dir: Path) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trip Aggregation Reports</title>
   <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #212529; }}
+    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 1100px; margin: 40px auto; padding: 0 20px; color: #212529; }}
     a {{ color: #0d6efd; }}
   </style>
 </head>

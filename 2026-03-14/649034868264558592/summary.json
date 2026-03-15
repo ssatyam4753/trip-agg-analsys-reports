@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-03-15 11:46:41",
+  "run_timestamp": "2026-03-15 14:27:34",
   "account_id": "649034868264558592",
   "account_name": "RajRatan Travels",
   "date_range": {
@@ -7,57 +7,57 @@
     "end": "2026-03-14 23:59:59"
   },
   "base_indicators": {
-    "total_trips_in_collection": 277,
-    "trips_without_end_time": 6,
-    "trip_agg_total_rows": 435,
-    "total_trips_in_trip_agg": 329,
-    "fragmented_trips_in_trip_agg": 79,
+    "total_trips_in_collection": 282,
+    "trips_without_end_time": 1,
+    "trip_agg_total_rows": 447,
+    "total_trips_in_trip_agg": 334,
+    "fragmented_trips_in_trip_agg": 83,
     "missing_trip_count": 0,
     "trip_coverage_pct": 100.0,
-    "complete_trips": 114,
+    "complete_trips": 143,
     "unbroken_unmatched_count": 0,
     "broken_unmatched_count": 3,
-    "short_trips_excluded": 163,
+    "short_trips_excluded": 139,
     "partial_trips_after_refetch": 0,
     "verdict": "WARN"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 277,
+    "total_joined_trips_for_alert_comparison": 282,
     "mismatched_alerts": [
       {
         "alert_name": "idling",
-        "mismatch_count": 19,
-        "mismatch_pct": 6.86
+        "mismatch_count": 29,
+        "mismatch_pct": 10.28
       },
       {
         "alert_name": "fcw",
         "mismatch_count": 8,
-        "mismatch_pct": 2.89
+        "mismatch_pct": 2.84
       },
       {
         "alert_name": "eyes_closed",
         "mismatch_count": 6,
-        "mismatch_pct": 2.17
+        "mismatch_pct": 2.13
       },
       {
         "alert_name": "distracted_driving",
         "mismatch_count": 5,
-        "mismatch_pct": 1.81
+        "mismatch_pct": 1.77
       },
       {
         "alert_name": "mobile_phone",
         "mismatch_count": 3,
-        "mismatch_pct": 1.08
+        "mismatch_pct": 1.06
       },
       {
         "alert_name": "drowsiness",
         "mismatch_count": 2,
-        "mismatch_pct": 0.72
+        "mismatch_pct": 0.71
       },
       {
         "alert_name": "over_speed",
         "mismatch_count": 1,
-        "mismatch_pct": 0.36
+        "mismatch_pct": 0.35
       }
     ],
     "passed_alerts": [
@@ -79,10 +79,10 @@
     "alert_fetch_total": 283
   },
   "step_timings": {
-    "fetch_trip_agg_data": 0.83,
-    "get_trips_for_account": 17.81,
-    "prepare_dataframes": 0.02,
-    "analyze_trip_agg": 0.62,
-    "analyze_alerts": 11.87
+    "fetch_trip_agg_data": 10.44,
+    "get_trips_for_account": 15.5,
+    "prepare_dataframes": 0.03,
+    "analyze_trip_agg": 0.68,
+    "analyze_alerts": 12.22
   }
 }
