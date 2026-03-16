@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-03-16 10:11:20",
+  "run_timestamp": "2026-03-16 10:58:43",
   "account_id": "649034868264558592",
   "account_name": "RajRatan Travels",
   "date_range": {
@@ -16,7 +16,7 @@
     "trip_coverage_pct": 100.0,
     "complete_trips": 149,
     "unbroken_unmatched_count": 0,
-    "broken_unmatched_count": 3,
+    "broken_unmatched_count": 2,
     "short_trips_excluded": 134,
     "partial_trips_after_refetch": 0,
     "verdict": "WARN"
@@ -79,10 +79,10 @@
     "alert_fetch_total": 283
   },
   "step_timings": {
-    "fetch_trip_agg_data": 3.0,
-    "get_trips_for_account": 10.68,
-    "prepare_dataframes": 0.03,
-    "analyze_trip_agg": 2.11,
-    "analyze_alerts": 8.09
+    "fetch_trip_agg_data": 16.63,
+    "get_trips_for_account": 30.58,
+    "prepare_dataframes": 0.02,
+    "analyze_trip_agg": 2.03,
+    "analyze_alerts": 21.06
   }
 }
