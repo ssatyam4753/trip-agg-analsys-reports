@@ -1,30 +1,145 @@
-2026-03-16 09:52:52  INFO      === Starting analysis for account: 649034868264558592 ===
-2026-03-16 09:52:52  INFO      Account name: RajRatan Travels
-2026-03-16 09:52:52  INFO      Fetching trip_agg page: 1
-2026-03-16 09:52:52  INFO      Fetching vehicle page: 1
-2026-03-16 09:52:53  INFO      Total vehicles collected for account 649034868264558592: 117
-2026-03-16 09:52:59  INFO      Total trips collected for account 649034868264558592: 305
-2026-03-16 09:53:03  INFO      Total trip-agg records collected: 404
-2026-03-16 09:53:03  WARNING   Excluding 13 trips with missing end_time from comparison
-2026-03-16 09:53:11  INFO      Summary written to: /Users/satyamsaurav/Intangles/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
-2026-03-16 09:53:11  INFO      ===== Trip Aggregation Analysis Summary =====
-2026-03-16 09:53:11  INFO      Trips after merge/filters: 150
-2026-03-16 09:53:11  INFO      Completely processed trips: 149
-2026-03-16 09:53:11  INFO      Missing trips in trip_agg: 1
-2026-03-16 09:53:11  INFO      Unbroken unmatched trips: 4
-2026-03-16 09:53:11  INFO      Broken unmatched trips: 0
-2026-03-16 09:53:11  INFO      Top alert mismatches:
+2026-03-17 00:11:13  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-17 00:11:13  INFO      Account name: RajRatan Travels
+2026-03-17 00:11:13  INFO      Fetching trip_agg page: 1
+2026-03-17 00:11:13  INFO      Fetching vehicle page: 1
+2026-03-17 00:11:13  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-17 00:11:17  INFO      Total trips collected for account 649034868264558592: 305
+2026-03-17 00:11:36  INFO      Total trip-agg records collected: 420
+2026-03-17 00:11:38  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
+2026-03-17 00:11:38  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-17 00:11:38  INFO      Trips after merge/filters: 170
+2026-03-17 00:11:38  INFO      Completely processed trips: 169
+2026-03-17 00:11:38  INFO      Missing trips in trip_agg: 1
+2026-03-17 00:11:38  INFO      Unbroken unmatched trips: 4
+2026-03-17 00:11:38  INFO      Broken unmatched trips: 0
+2026-03-17 00:11:38  INFO      Top alert mismatches:
         alert_name  mismatch_count  total_joined_trips  mismatch_pct
-            idling              58                 291         19.93
-       eyes_closed               3                 291          1.03
-               fcw               2                 291          0.69
-        fuel_chori               1                 291          0.34
-distracted_driving               0                 291          0.00
-2026-03-16 09:53:11  INFO      ----- Step Timings -----
-2026-03-16 09:53:11  INFO        fetch_trip_agg_data                  10.39s
-2026-03-16 09:53:11  INFO        get_trips_for_account                 6.70s
-2026-03-16 09:53:11  INFO        prepare_dataframes                    0.02s
-2026-03-16 09:53:11  INFO        analyze_trip_agg                      0.42s
-2026-03-16 09:53:11  INFO        analyze_alerts                        7.63s
-2026-03-16 09:53:11  INFO        total                                25.15s
-2026-03-16 09:53:11  INFO      Reports written to: /Users/satyamsaurav/Intangles/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
+            idling              69                 304         22.70
+       eyes_closed               6                 304          1.97
+               fcw               5                 304          1.64
+distracted_driving               1                 304          0.33
+        drowsiness               1                 304          0.33
+2026-03-17 00:11:38  INFO      ----- Step Timings -----
+2026-03-17 00:11:38  INFO        fetch_trip_agg_data                  23.33s
+2026-03-17 00:11:38  INFO        get_trips_for_account                 3.72s
+2026-03-17 00:11:38  INFO        prepare_dataframes                    0.02s
+2026-03-17 00:11:38  INFO        analyze_trip_agg                      0.33s
+2026-03-17 00:11:38  INFO        analyze_alerts                        1.89s
+2026-03-17 00:11:38  INFO        total                                29.29s
+2026-03-17 00:11:38  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
+2026-03-17 00:17:01  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-17 00:17:01  INFO      Account name: RajRatan Travels
+2026-03-17 00:17:01  INFO      Fetching trip_agg page: 1
+2026-03-17 00:17:01  INFO      Fetching vehicle page: 1
+2026-03-17 00:17:01  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-17 00:17:02  INFO      Total trip-agg records collected: 420
+2026-03-17 00:17:03  INFO      Total trips collected for account 649034868264558592: 305
+2026-03-17 00:17:06  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
+2026-03-17 00:17:06  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-17 00:17:06  INFO      Trips after merge/filters: 170
+2026-03-17 00:17:06  INFO      Completely processed trips: 169
+2026-03-17 00:17:06  INFO      Missing trips in trip_agg: 1
+2026-03-17 00:17:06  INFO      Unbroken unmatched trips: 4
+2026-03-17 00:17:06  INFO      Broken unmatched trips: 0
+2026-03-17 00:17:06  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+            idling              69                 304         22.70
+       eyes_closed               6                 304          1.97
+               fcw               5                 304          1.64
+distracted_driving               1                 304          0.33
+        drowsiness               1                 304          0.33
+2026-03-17 00:17:06  INFO      ----- Step Timings -----
+2026-03-17 00:17:06  INFO        fetch_trip_agg_data                   1.21s
+2026-03-17 00:17:06  INFO        get_trips_for_account                 2.08s
+2026-03-17 00:17:06  INFO        prepare_dataframes                    0.02s
+2026-03-17 00:17:06  INFO        analyze_trip_agg                      0.33s
+2026-03-17 00:17:06  INFO        analyze_alerts                        2.26s
+2026-03-17 00:17:06  INFO        total                                 5.90s
+2026-03-17 00:17:06  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
+2026-03-17 00:29:42  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-17 00:29:42  INFO      Account name: RajRatan Travels
+2026-03-17 00:29:42  INFO      Fetching trip_agg page: 1
+2026-03-17 00:29:42  INFO      Fetching vehicle page: 1
+2026-03-17 00:29:42  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-17 00:29:44  INFO      Total trips collected for account 649034868264558592: 305
+2026-03-17 00:29:45  INFO      Total trip-agg records collected: 420
+2026-03-17 00:29:47  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
+2026-03-17 00:29:47  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-17 00:29:47  INFO      Trips after merge/filters: 170
+2026-03-17 00:29:47  INFO      Completely processed trips: 169
+2026-03-17 00:29:47  INFO      Missing trips in trip_agg: 1
+2026-03-17 00:29:47  INFO      Unbroken unmatched trips: 4
+2026-03-17 00:29:47  INFO      Broken unmatched trips: 0
+2026-03-17 00:29:47  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+            idling              69                 304         22.70
+       eyes_closed               6                 304          1.97
+               fcw               5                 304          1.64
+distracted_driving               1                 304          0.33
+        drowsiness               1                 304          0.33
+2026-03-17 00:29:47  INFO      ----- Step Timings -----
+2026-03-17 00:29:47  INFO        fetch_trip_agg_data                   2.88s
+2026-03-17 00:29:47  INFO        get_trips_for_account                 1.60s
+2026-03-17 00:29:47  INFO        prepare_dataframes                    0.02s
+2026-03-17 00:29:47  INFO        analyze_trip_agg                      0.38s
+2026-03-17 00:29:47  INFO        analyze_alerts                        1.90s
+2026-03-17 00:29:47  INFO        total                                 6.78s
+2026-03-17 00:29:47  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
+2026-03-17 00:32:12  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-17 00:32:12  INFO      Account name: RajRatan Travels
+2026-03-17 00:32:12  INFO      Fetching trip_agg page: 1
+2026-03-17 00:32:12  INFO      Fetching vehicle page: 1
+2026-03-17 00:32:12  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-17 00:32:13  INFO      Total trip-agg records collected: 420
+2026-03-17 00:32:13  INFO      Total trips collected for account 649034868264558592: 305
+2026-03-17 00:32:16  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
+2026-03-17 00:32:16  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-17 00:32:16  INFO      Trips after merge/filters: 170
+2026-03-17 00:32:16  INFO      Completely processed trips: 169
+2026-03-17 00:32:16  INFO      Missing trips in trip_agg: 1
+2026-03-17 00:32:16  INFO      Unbroken unmatched trips: 4
+2026-03-17 00:32:16  INFO      Broken unmatched trips: 0
+2026-03-17 00:32:16  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+            idling              69                 304         22.70
+       eyes_closed               6                 304          1.97
+               fcw               5                 304          1.64
+distracted_driving               1                 304          0.33
+        drowsiness               1                 304          0.33
+2026-03-17 00:32:16  INFO      ----- Step Timings -----
+2026-03-17 00:32:16  INFO        fetch_trip_agg_data                   1.35s
+2026-03-17 00:32:16  INFO        get_trips_for_account                 1.71s
+2026-03-17 00:32:16  INFO        prepare_dataframes                    0.02s
+2026-03-17 00:32:16  INFO        analyze_trip_agg                      0.35s
+2026-03-17 00:32:16  INFO        analyze_alerts                        1.88s
+2026-03-17 00:32:16  INFO        total                                 5.31s
+2026-03-17 00:32:16  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
+2026-03-17 00:34:42  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-17 00:34:42  INFO      Account name: RajRatan Travels
+2026-03-17 00:34:42  INFO      Fetching trip_agg page: 1
+2026-03-17 00:34:42  INFO      Fetching vehicle page: 1
+2026-03-17 00:34:42  INFO      Total vehicles collected for account 649034868264558592: 117
+2026-03-17 00:34:44  INFO      Total trips collected for account 649034868264558592: 305
+2026-03-17 00:34:44  INFO      Total trip-agg records collected: 420
+2026-03-17 00:34:47  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592/summary.json
+2026-03-17 00:34:47  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-17 00:34:47  INFO      Trips after merge/filters: 170
+2026-03-17 00:34:47  INFO      Completely processed trips: 169
+2026-03-17 00:34:47  INFO      Missing trips in trip_agg: 1
+2026-03-17 00:34:47  INFO      Unbroken unmatched trips: 4
+2026-03-17 00:34:47  INFO      Broken unmatched trips: 0
+2026-03-17 00:34:47  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+            idling              69                 304         22.70
+       eyes_closed               6                 304          1.97
+               fcw               5                 304          1.64
+distracted_driving               1                 304          0.33
+        drowsiness               1                 304          0.33
+2026-03-17 00:34:47  INFO      ----- Step Timings -----
+2026-03-17 00:34:47  INFO        fetch_trip_agg_data                   2.51s
+2026-03-17 00:34:47  INFO        get_trips_for_account                 1.67s
+2026-03-17 00:34:47  INFO        prepare_dataframes                    0.02s
+2026-03-17 00:34:47  INFO        analyze_trip_agg                      0.29s
+2026-03-17 00:34:47  INFO        analyze_alerts                        1.88s
+2026-03-17 00:34:47  INFO        total                                 6.38s
+2026-03-17 00:34:47  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-15/649034868264558592
