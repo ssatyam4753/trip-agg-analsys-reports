@@ -1,0 +1,80 @@
+{
+  "run_timestamp": "2026-03-24 08:00:57",
+  "account_id": "649034868264558592",
+  "account_name": "RajRatan Travels",
+  "date_range": {
+    "start": "2026-03-22 00:00:00",
+    "end": "2026-03-22 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 276,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 435,
+    "total_trips_in_trip_agg": 326,
+    "fragmented_trips_in_trip_agg": 83,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 154,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 3,
+    "short_trips_excluded": 122,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 276,
+    "mismatched_alerts": [
+      {
+        "alert_name": "idling",
+        "mismatch_count": 2,
+        "mismatch_pct": 0.72
+      },
+      {
+        "alert_name": "distracted_driving",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.36
+      },
+      {
+        "alert_name": "emergency_recording",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.36
+      },
+      {
+        "alert_name": "eyes_closed",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.36
+      },
+      {
+        "alert_name": "fcw",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.36
+      }
+    ],
+    "passed_alerts": [
+      "drowsiness",
+      "mobile_phone",
+      "tailgating",
+      "smoking",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 118,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 276
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 51.94,
+    "get_trips_for_account": 3.27,
+    "prepare_dataframes": 0.01,
+    "analyze_trip_agg": 0.33,
+    "analyze_alerts": 1.35
+  }
+}
