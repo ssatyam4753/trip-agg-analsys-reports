@@ -1,0 +1,13 @@
+alert_name,mismatch_count,total_joined_trips,mismatch_pct
+fcw,3,281,1.07
+idling,3,281,1.07
+distracted_driving,2,281,0.71
+emergency_recording,2,281,0.71
+eyes_closed,1,281,0.36
+tailgating,1,281,0.36
+drowsiness,0,281,0.0
+mobile_phone,0,281,0.0
+smoking,0,281,0.0
+over_speed,0,281,0.0
+over_acc,0,281,0.0
+hard_brake,0,281,0.0
