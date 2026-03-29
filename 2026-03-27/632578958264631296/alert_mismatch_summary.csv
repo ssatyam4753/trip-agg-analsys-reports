@@ -1,0 +1,10 @@
+alert_name,mismatch_count,total_joined_trips,mismatch_pct
+unscheduled_driving,13,5315,0.24
+slow_running,2,5315,0.04
+fuel_chori,1,5315,0.02
+idling,0,5315,0.0
+over_speed,0,5315,0.0
+freerun,0,5315,0.0
+over_acc,0,5315,0.0
+hard_brake,0,5315,0.0
+continuous_driving,0,5315,0.0
