@@ -1,0 +1,29 @@
+2026-03-31 08:03:55  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-03-31 08:03:55  INFO      Account name: RajRatan Travels
+2026-03-31 08:03:55  INFO      Fetching trip_agg page: 1
+2026-03-31 08:03:55  INFO      Fetching vehicle page: 1
+2026-03-31 08:03:55  INFO      Total vehicles collected for account 649034868264558592: 118
+2026-03-31 08:04:00  INFO      Total trips collected for account 649034868264558592: 279
+2026-03-31 08:04:07  INFO      Total trip-agg records collected: 399
+2026-03-31 08:04:10  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-29/649034868264558592/summary.json
+2026-03-31 08:04:10  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-03-31 08:04:10  INFO      Trips after merge/filters: 165
+2026-03-31 08:04:10  INFO      Completely processed trips: 165
+2026-03-31 08:04:10  INFO      Missing trips in trip_agg: 2
+2026-03-31 08:04:10  INFO      Unbroken unmatched trips: 0
+2026-03-31 08:04:10  INFO      Broken unmatched trips: 1
+2026-03-31 08:04:10  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+            idling               3                 277          1.08
+distracted_driving               1                 277          0.36
+       eyes_closed               1                 277          0.36
+               fcw               1                 277          0.36
+      mobile_phone               1                 277          0.36
+2026-03-31 08:04:10  INFO      ----- Step Timings -----
+2026-03-31 08:04:10  INFO        fetch_trip_agg_data                  12.21s
+2026-03-31 08:04:10  INFO        get_trips_for_account                 5.38s
+2026-03-31 08:04:10  INFO        prepare_dataframes                    0.03s
+2026-03-31 08:04:10  INFO        analyze_trip_agg                      0.39s
+2026-03-31 08:04:10  INFO        analyze_alerts                        2.55s
+2026-03-31 08:04:10  INFO        total                                20.55s
+2026-03-31 08:04:10  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-03-29/649034868264558592
