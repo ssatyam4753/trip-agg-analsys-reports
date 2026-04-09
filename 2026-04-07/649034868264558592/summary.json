@@ -1,0 +1,72 @@
+{
+  "run_timestamp": "2026-04-09 08:06:35",
+  "account_id": "649034868264558592",
+  "account_name": "RajRatan Travels",
+  "date_range": {
+    "start": "2026-04-07 00:00:00",
+    "end": "2026-04-07 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 285,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 411,
+    "total_trips_in_trip_agg": 334,
+    "fragmented_trips_in_trip_agg": 59,
+    "missing_trip_count": 2,
+    "trip_coverage_pct": 99.3,
+    "complete_trips": 156,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 2,
+    "short_trips_excluded": 126,
+    "partial_trips_after_refetch": 1,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 283,
+    "mismatched_alerts": [
+      {
+        "alert_name": "idling",
+        "mismatch_count": 4,
+        "mismatch_pct": 1.41
+      },
+      {
+        "alert_name": "over_speed",
+        "mismatch_count": 4,
+        "mismatch_pct": 1.41
+      },
+      {
+        "alert_name": "hard_brake",
+        "mismatch_count": 2,
+        "mismatch_pct": 0.71
+      }
+    ],
+    "passed_alerts": [
+      "distracted_driving",
+      "drowsiness",
+      "emergency_recording",
+      "eyes_closed",
+      "fcw",
+      "mobile_phone",
+      "tailgating",
+      "smoking",
+      "freerun",
+      "over_acc"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 118,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 285
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 73.26,
+    "get_trips_for_account": 1.1,
+    "prepare_dataframes": 0.02,
+    "analyze_trip_agg": 0.34,
+    "analyze_alerts": 1.85
+  }
+}
