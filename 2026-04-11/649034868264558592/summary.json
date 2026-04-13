@@ -1,0 +1,64 @@
+{
+  "run_timestamp": "2026-04-13 08:05:29",
+  "account_id": "649034868264558592",
+  "account_name": "RajRatan Travels",
+  "date_range": {
+    "start": "2026-04-11 00:00:00",
+    "end": "2026-04-11 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 336,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 510,
+    "total_trips_in_trip_agg": 384,
+    "fragmented_trips_in_trip_agg": 84,
+    "missing_trip_count": 2,
+    "trip_coverage_pct": 99.4,
+    "complete_trips": 195,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 2,
+    "short_trips_excluded": 139,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 334,
+    "mismatched_alerts": [
+      {
+        "alert_name": "idling",
+        "mismatch_count": 4,
+        "mismatch_pct": 1.2
+      }
+    ],
+    "passed_alerts": [
+      "distracted_driving",
+      "drowsiness",
+      "emergency_recording",
+      "eyes_closed",
+      "fcw",
+      "mobile_phone",
+      "tailgating",
+      "smoking",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 118,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 336
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 80.06,
+    "get_trips_for_account": 14.86,
+    "prepare_dataframes": 0.03,
+    "analyze_trip_agg": 15.71,
+    "analyze_alerts": 3.02
+  }
+}
