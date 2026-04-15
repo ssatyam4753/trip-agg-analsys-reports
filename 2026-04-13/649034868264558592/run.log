@@ -1,0 +1,25 @@
+2026-04-15 08:04:38  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-04-15 08:04:38  INFO      Account name: RajRatan Travels
+2026-04-15 08:04:38  INFO      Fetching trip_agg page: 1
+2026-04-15 08:04:38  INFO      Fetching vehicle page: 1
+2026-04-15 08:04:38  INFO      Total vehicles collected for account 649034868264558592: 120
+2026-04-15 08:04:44  INFO      Total trips collected for account 649034868264558592: 309
+2026-04-15 08:06:51  ERROR     Request failed after 3 attempts: http://internal-apis.intangles.com/trip/aggregated?account_id=649034868264558592&pnum=1&psize=500&start_time=1776018600000&end_time=1776104999000 | error: 504 Server Error: Gateway Time-out for url: http://internal-apis.intangles.com/trip/aggregated?account_id=649034868264558592&pnum=1&psize=500&start_time=1776018600000&end_time=1776104999000
+2026-04-15 08:06:51  WARNING   Skipping failed trip_agg page 1 (1/3)
+2026-04-15 08:06:51  INFO      Fetching trip_agg page: 2
+2026-04-15 08:06:51  INFO      Total trip-agg records collected: 0
+2026-04-15 08:06:51  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-13/649034868264558592/summary.json
+2026-04-15 08:06:51  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-04-15 08:06:51  INFO      Trips after merge/filters: 0
+2026-04-15 08:06:51  INFO      Completely processed trips: 0
+2026-04-15 08:06:51  INFO      Missing trips in trip_agg: 0
+2026-04-15 08:06:51  INFO      Unbroken unmatched trips: 0
+2026-04-15 08:06:51  INFO      Broken unmatched trips: 0
+2026-04-15 08:06:51  INFO      ----- Step Timings -----
+2026-04-15 08:06:51  INFO        fetch_trip_agg_data                 133.64s
+2026-04-15 08:06:51  INFO        get_trips_for_account                 6.69s
+2026-04-15 08:06:51  INFO        prepare_dataframes                    0.01s
+2026-04-15 08:06:51  INFO        analyze_trip_agg                      0.00s
+2026-04-15 08:06:51  INFO        analyze_alerts                        0.00s
+2026-04-15 08:06:51  INFO        total                               140.34s
+2026-04-15 08:06:51  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-13/649034868264558592

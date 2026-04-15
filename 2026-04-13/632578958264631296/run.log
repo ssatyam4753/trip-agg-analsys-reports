@@ -1,0 +1,43 @@
+2026-04-15 08:06:57  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-04-15 08:06:57  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-04-15 08:06:57  INFO      Fetching trip_agg page: 1
+2026-04-15 08:06:57  INFO      Fetching vehicle page: 1
+2026-04-15 08:06:57  INFO      Fetching vehicle page: 2
+2026-04-15 08:06:58  INFO      Fetching vehicle page: 3
+2026-04-15 08:06:59  INFO      Fetching vehicle page: 4
+2026-04-15 08:06:59  INFO      Total vehicles collected for account 632578958264631296: 1906
+2026-04-15 08:07:03  INFO      Fetching trip_agg page: 2
+2026-04-15 08:07:06  INFO      Fetching trip_agg page: 3
+2026-04-15 08:07:07  INFO      Fetching trip_agg page: 4
+2026-04-15 08:07:08  INFO      Fetching trip_agg page: 5
+2026-04-15 08:07:09  INFO      Fetching trip_agg page: 6
+2026-04-15 08:07:10  INFO      Fetching trip_agg page: 7
+2026-04-15 08:07:11  INFO      Fetching trip_agg page: 8
+2026-04-15 08:07:13  INFO      Fetching trip_agg page: 9
+2026-04-15 08:07:15  INFO      Fetching trip_agg page: 10
+2026-04-15 08:07:18  INFO      Total trip-agg records collected: 4689
+2026-04-15 08:07:29  ERROR     Request failed after 3 attempts: http://internal-apis.intangles.com/trips/1474049812662845440/gettripsintime/1776018600000/1776104999000 | error: 502 Server Error: Bad Gateway for url: http://internal-apis.intangles.com/trips/1474049812662845440/gettripsintime/1776018600000/1776104999000
+2026-04-15 08:07:47  WARNING   Failed to fetch trips for 1/1906 vehicles
+2026-04-15 08:07:47  INFO      Total trips collected for account 632578958264631296: 4689
+2026-04-15 08:08:53  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-13/632578958264631296/summary.json
+2026-04-15 08:08:53  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-04-15 08:08:53  INFO      Trips after merge/filters: 2274
+2026-04-15 08:08:53  INFO      Completely processed trips: 2274
+2026-04-15 08:08:53  INFO      Missing trips in trip_agg: 33
+2026-04-15 08:08:53  INFO      Unbroken unmatched trips: 3
+2026-04-15 08:08:53  INFO      Broken unmatched trips: 0
+2026-04-15 08:08:53  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+             idling               7                4656          0.15
+         fuel_chori               3                4656          0.06
+unscheduled_driving               2                4656          0.04
+       slow_running               1                4656          0.02
+         over_speed               0                4656          0.00
+2026-04-15 08:08:53  INFO      ----- Step Timings -----
+2026-04-15 08:08:53  INFO        fetch_trip_agg_data                  21.37s
+2026-04-15 08:08:53  INFO        get_trips_for_account                49.97s
+2026-04-15 08:08:53  INFO        prepare_dataframes                    0.45s
+2026-04-15 08:08:53  INFO        analyze_trip_agg                      0.22s
+2026-04-15 08:08:53  INFO        analyze_alerts                       65.58s
+2026-04-15 08:08:53  INFO        total                               137.59s
+2026-04-15 08:08:53  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-13/632578958264631296
