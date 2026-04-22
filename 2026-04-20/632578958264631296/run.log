@@ -1,0 +1,40 @@
+2026-04-22 08:06:29  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-04-22 08:06:29  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-04-22 08:06:29  INFO      Fetching trip_agg page: 1
+2026-04-22 08:06:29  INFO      Fetching vehicle page: 1
+2026-04-22 08:06:29  INFO      Fetching vehicle page: 2
+2026-04-22 08:06:29  INFO      Fetching vehicle page: 3
+2026-04-22 08:06:30  INFO      Fetching vehicle page: 4
+2026-04-22 08:06:30  INFO      Total vehicles collected for account 632578958264631296: 1918
+2026-04-22 08:06:31  INFO      Fetching trip_agg page: 2
+2026-04-22 08:06:32  INFO      Fetching trip_agg page: 3
+2026-04-22 08:06:34  INFO      Fetching trip_agg page: 4
+2026-04-22 08:06:36  INFO      Fetching trip_agg page: 5
+2026-04-22 08:07:37  INFO      Fetching trip_agg page: 6
+2026-04-22 08:07:39  INFO      Fetching trip_agg page: 7
+2026-04-22 08:07:40  INFO      Fetching trip_agg page: 8
+2026-04-22 08:08:08  INFO      Fetching trip_agg page: 9
+2026-04-22 08:08:12  INFO      Total trip-agg records collected: 4496
+2026-04-22 08:08:18  INFO      Total trips collected for account 632578958264631296: 4515
+2026-04-22 08:08:53  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-20/632578958264631296/summary.json
+2026-04-22 08:08:53  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-04-22 08:08:53  INFO      Trips after merge/filters: 2202
+2026-04-22 08:08:53  INFO      Completely processed trips: 2202
+2026-04-22 08:08:53  INFO      Missing trips in trip_agg: 44
+2026-04-22 08:08:53  INFO      Unbroken unmatched trips: 32
+2026-04-22 08:08:53  INFO      Broken unmatched trips: 0
+2026-04-22 08:08:53  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+             idling             210                4471          4.70
+unscheduled_driving              10                4471          0.22
+         fuel_chori               3                4471          0.07
+         over_speed               0                4471          0.00
+            freerun               0                4471          0.00
+2026-04-22 08:08:53  INFO      ----- Step Timings -----
+2026-04-22 08:08:53  INFO        fetch_trip_agg_data                 102.86s
+2026-04-22 08:08:53  INFO        get_trips_for_account               109.45s
+2026-04-22 08:08:53  INFO        prepare_dataframes                    0.22s
+2026-04-22 08:08:53  INFO        analyze_trip_agg                      0.09s
+2026-04-22 08:08:53  INFO        analyze_alerts                       34.52s
+2026-04-22 08:08:53  INFO        total                               247.14s
+2026-04-22 08:08:53  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-04-20/632578958264631296
