@@ -1,0 +1,23 @@
+2026-05-08 08:02:44  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-05-08 08:02:44  INFO      Account name: RajRatan Travels
+2026-05-08 08:02:44  INFO      Fetching trip_agg page: 1
+2026-05-08 08:02:44  INFO      Fetching vehicle page: 1
+2026-05-08 08:02:44  INFO      Total vehicles collected for account 649034868264558592: 126
+2026-05-08 08:02:47  INFO      Total trips collected for account 649034868264558592: 297
+2026-05-08 08:03:04  INFO      Total trip-agg records collected: 426
+2026-05-08 08:03:26  WARNING   Alert count fetch failed for 297/297 trips
+2026-05-08 08:03:26  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-05-06/649034868264558592/summary.json
+2026-05-08 08:03:26  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-05-08 08:03:26  INFO      Trips after merge/filters: 168
+2026-05-08 08:03:26  INFO      Completely processed trips: 167
+2026-05-08 08:03:26  INFO      Missing trips in trip_agg: 1
+2026-05-08 08:03:26  INFO      Unbroken unmatched trips: 0
+2026-05-08 08:03:26  INFO      Broken unmatched trips: 1
+2026-05-08 08:03:26  INFO      ----- Step Timings -----
+2026-05-08 08:03:26  INFO        fetch_trip_agg_data                  20.07s
+2026-05-08 08:03:26  INFO        get_trips_for_account                 2.58s
+2026-05-08 08:03:26  INFO        prepare_dataframes                    0.03s
+2026-05-08 08:03:26  INFO        analyze_trip_agg                     19.31s
+2026-05-08 08:03:26  INFO        analyze_alerts                        2.06s
+2026-05-08 08:03:26  INFO        total                                44.04s
+2026-05-08 08:03:26  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-05-06/649034868264558592

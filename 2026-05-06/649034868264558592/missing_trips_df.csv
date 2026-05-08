@@ -1,0 +1,2 @@
+account_id,start_time,vehicle_id,vehicle_plate,duration,end_time,carbon_emission,distance,engine_hours,fuel_consumed,mileage,odo_distance_km,raw_fuel_consumed,id
+649034868264558592,1778081481000,1537489465788858368,MP09BJ9990,71000,1778081552000,0.00264,,,0.001,,,0.001,1778081481000-649034868264558592-1537489465788858368
