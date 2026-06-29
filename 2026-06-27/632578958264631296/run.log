@@ -1,39 +1,45 @@
-2026-06-29 13:49:00  INFO      === Starting analysis for account: 632578958264631296 ===
-2026-06-29 13:49:00  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
-2026-06-29 13:49:00  INFO      Fetching trip_agg page: 1
-2026-06-29 13:49:00  INFO      Fetching vehicle page: 1
-2026-06-29 13:49:01  INFO      Fetching vehicle page: 2
-2026-06-29 13:49:01  INFO      Fetching vehicle page: 3
-2026-06-29 13:49:02  INFO      Fetching vehicle page: 4
-2026-06-29 13:49:03  INFO      Total vehicles collected for account 632578958264631296: 1980
-2026-06-29 13:49:07  INFO      Fetching trip_agg page: 2
-2026-06-29 13:49:08  INFO      Fetching trip_agg page: 3
-2026-06-29 13:49:10  INFO      Fetching trip_agg page: 4
-2026-06-29 13:49:11  INFO      Fetching trip_agg page: 5
-2026-06-29 13:49:15  INFO      Fetching trip_agg page: 6
-2026-06-29 13:49:16  INFO      Fetching trip_agg page: 7
-2026-06-29 13:49:18  INFO      Fetching trip_agg page: 8
-2026-06-29 13:49:18  INFO      Total trips collected for account 632578958264631296: 6631
-2026-06-29 13:49:19  INFO      Fetching trip_agg page: 9
-2026-06-29 13:49:20  INFO      Fetching trip_agg page: 10
-2026-06-29 13:49:21  INFO      Fetching trip_agg page: 11
-2026-06-29 13:49:22  INFO      Fetching trip_agg page: 12
-2026-06-29 13:49:23  INFO      Fetching trip_agg page: 13
-2026-06-29 13:49:24  INFO      Fetching trip_agg page: 14
-2026-06-29 13:49:28  INFO      Total trip-agg records collected: 6644
-2026-06-29 13:49:55  WARNING   Alert count fetch failed for 6631/6631 trips
-2026-06-29 13:49:55  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-06-27/632578958264631296/summary.json
-2026-06-29 13:49:55  INFO      ===== Trip Aggregation Analysis Summary =====
-2026-06-29 13:49:55  INFO      Trips after merge/filters: 3340
-2026-06-29 13:49:55  INFO      Completely processed trips: 3340
-2026-06-29 13:49:55  INFO      Missing trips in trip_agg: 31
-2026-06-29 13:49:55  INFO      Unbroken unmatched trips: 0
-2026-06-29 13:49:55  INFO      Broken unmatched trips: 0
-2026-06-29 13:49:55  INFO      ----- Step Timings -----
-2026-06-29 13:49:55  INFO        fetch_trip_agg_data                  27.48s
-2026-06-29 13:49:55  INFO        get_trips_for_account                17.37s
-2026-06-29 13:49:55  INFO        prepare_dataframes                    0.24s
-2026-06-29 13:49:55  INFO        analyze_trip_agg                      0.10s
-2026-06-29 13:49:55  INFO        analyze_alerts                       26.48s
-2026-06-29 13:49:55  INFO        total                                71.67s
-2026-06-29 13:49:55  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-06-27/632578958264631296
+2026-06-29 14:11:38  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-06-29 14:11:38  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-06-29 14:11:38  INFO      Fetching trip_agg page: 1
+2026-06-29 14:11:38  INFO      Fetching vehicle page: 1
+2026-06-29 14:11:38  INFO      Fetching vehicle page: 2
+2026-06-29 14:11:39  INFO      Fetching vehicle page: 3
+2026-06-29 14:11:40  INFO      Fetching vehicle page: 4
+2026-06-29 14:11:40  INFO      Fetching trip_agg page: 2
+2026-06-29 14:11:41  INFO      Total vehicles collected for account 632578958264631296: 1980
+2026-06-29 14:11:42  INFO      Fetching trip_agg page: 3
+2026-06-29 14:11:43  INFO      Fetching trip_agg page: 4
+2026-06-29 14:11:45  INFO      Fetching trip_agg page: 5
+2026-06-29 14:11:46  INFO      Fetching trip_agg page: 6
+2026-06-29 14:11:48  INFO      Fetching trip_agg page: 7
+2026-06-29 14:11:49  INFO      Fetching trip_agg page: 8
+2026-06-29 14:11:50  INFO      Fetching trip_agg page: 9
+2026-06-29 14:11:51  INFO      Fetching trip_agg page: 10
+2026-06-29 14:11:53  INFO      Fetching trip_agg page: 11
+2026-06-29 14:11:54  INFO      Fetching trip_agg page: 12
+2026-06-29 14:11:56  INFO      Fetching trip_agg page: 13
+2026-06-29 14:11:56  INFO      Total trips collected for account 632578958264631296: 6631
+2026-06-29 14:11:57  INFO      Fetching trip_agg page: 14
+2026-06-29 14:12:01  INFO      Total trip-agg records collected: 6644
+2026-06-29 14:12:40  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-06-27/632578958264631296/summary.json
+2026-06-29 14:12:40  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-06-29 14:12:40  INFO      Trips after merge/filters: 3340
+2026-06-29 14:12:40  INFO      Completely processed trips: 3340
+2026-06-29 14:12:40  INFO      Missing trips in trip_agg: 31
+2026-06-29 14:12:40  INFO      Unbroken unmatched trips: 0
+2026-06-29 14:12:40  INFO      Broken unmatched trips: 0
+2026-06-29 14:12:40  INFO      Top alert mismatches:
+alert_name  mismatch_count  total_joined_trips  mismatch_pct
+fuel_chori               1                6600          0.02
+    idling               0                6600          0.00
+over_speed               0                6600          0.00
+   freerun               0                6600          0.00
+  over_acc               0                6600          0.00
+2026-06-29 14:12:40  INFO      ----- Step Timings -----
+2026-06-29 14:12:40  INFO        fetch_trip_agg_data                  22.94s
+2026-06-29 14:12:40  INFO        get_trips_for_account                18.14s
+2026-06-29 14:12:40  INFO        prepare_dataframes                    0.32s
+2026-06-29 14:12:40  INFO        analyze_trip_agg                      0.11s
+2026-06-29 14:12:40  INFO        analyze_alerts                       37.69s
+2026-06-29 14:12:40  INFO        total                                79.20s
+2026-06-29 14:12:40  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-06-27/632578958264631296

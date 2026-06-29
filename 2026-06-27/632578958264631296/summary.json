@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-06-29 13:49:55",
+  "run_timestamp": "2026-06-29 14:12:40",
   "account_id": "632578958264631296",
   "account_name": "K M Translogistics  Pvt Ltd ( KMT)",
   "date_range": {
@@ -22,9 +22,24 @@
     "verdict": "WARN"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 0,
-    "mismatched_alerts": [],
-    "passed_alerts": []
+    "total_joined_trips_for_alert_comparison": 6600,
+    "mismatched_alerts": [
+      {
+        "alert_name": "fuel_chori",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.02
+      }
+    ],
+    "passed_alerts": [
+      "idling",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake",
+      "unscheduled_driving",
+      "slow_running",
+      "continuous_driving"
+    ]
   },
   "api_health": {
     "vehicles_fetched": 1980,
@@ -32,14 +47,14 @@
     "vehicle_trip_fetch_failures": 0,
     "trip_agg_pagination_aborted": false,
     "partial_trip_refetch_failures": 0,
-    "alert_fetch_failures": 6631,
+    "alert_fetch_failures": 0,
     "alert_fetch_total": 6631
   },
   "step_timings": {
-    "fetch_trip_agg_data": 27.48,
-    "get_trips_for_account": 17.37,
-    "prepare_dataframes": 0.24,
-    "analyze_trip_agg": 0.1,
-    "analyze_alerts": 26.48
+    "fetch_trip_agg_data": 22.94,
+    "get_trips_for_account": 18.14,
+    "prepare_dataframes": 0.32,
+    "analyze_trip_agg": 0.11,
+    "analyze_alerts": 37.69
   }
 }
