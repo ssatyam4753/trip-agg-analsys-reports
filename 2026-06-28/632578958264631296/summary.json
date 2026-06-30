@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-06-30 08:06:09",
+  "run_timestamp": "2026-06-30 13:42:33",
   "account_id": "632578958264631296",
   "account_name": "K M Translogistics  Pvt Ltd ( KMT)",
   "date_range": {
@@ -50,10 +50,10 @@
     "alert_fetch_total": 5966
   },
   "step_timings": {
-    "fetch_trip_agg_data": 86.57,
-    "get_trips_for_account": 33.13,
-    "prepare_dataframes": 0.58,
-    "analyze_trip_agg": 0.24,
-    "analyze_alerts": 61.51
+    "fetch_trip_agg_data": 57.49,
+    "get_trips_for_account": 18.3,
+    "prepare_dataframes": 0.27,
+    "analyze_trip_agg": 0.12,
+    "analyze_alerts": 32.43
   }
 }
