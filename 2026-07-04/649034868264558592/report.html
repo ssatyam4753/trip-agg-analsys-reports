@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Aggregation Report — RajRatan Travels — 2026-07-04</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #212529;
+    }
+    h1 { font-size: 1.4rem; margin-bottom: 4px; }
+    a { color: #0d6efd; }
+    table { font-size: 0.95rem; }
+  </style>
+  <script>
+    function toggleTimestamps(btn, tableId) {
+      var table = document.getElementById(tableId);
+      if (!table) return;
+      var headers = table.querySelectorAll('thead th');
+      var tsIdxs = [];
+      headers.forEach(function(th, i) {
+        var t = th.textContent.trim().toLowerCase();
+        if (t.indexOf('start_time') !== -1 || t.indexOf('end_time') !== -1) tsIdxs.push(i);
+      });
+      if (tsIdxs.length === 0) return;
+      var converted = btn.dataset.converted === '1';
+      table.querySelectorAll('tbody tr').forEach(function(tr) {
+        tsIdxs.forEach(function(idx) {
+          var td = tr.cells[idx];
+          if (!td) return;
+          if (!converted) {
+            var raw = td.textContent.trim();
+            td.dataset.orig = raw;
+            var ms = Number(raw);
+            if (!isNaN(ms) && ms > 1e10) {
+              var d = new Date(ms);
+              td.textContent = d.getFullYear() + '-' +
+                String(d.getMonth()+1).padStart(2,'0') + '-' +
+                String(d.getDate()).padStart(2,'0') + ' ' +
+                String(d.getHours()).padStart(2,'0') + ':' +
+                String(d.getMinutes()).padStart(2,'0') + ':' +
+                String(d.getSeconds()).padStart(2,'0');
+            }
+          } else {
+            td.textContent = td.dataset.orig || td.textContent;
+          }
+        });
+      });
+      btn.dataset.converted = converted ? '0' : '1';
+      btn.textContent = converted ? '⏰ timestamps' : '⏰ raw';
+    }
+  </script>
+</head>
+<body>
+  <h1>Trip Aggregation Report</h1>
+  
+<div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+  <div style="font-size:1rem;color:#555;line-height:1.7;">
+    <strong>Account:</strong> RajRatan Travels <span style='color:#888;font-size:0.9em;'>(649034868264558592)</span><br>
+    <strong>Period:</strong> 2026-07-04 00:00:00 &ndash; 2026-07-04 23:59:59<br>
+    <strong>Run:</strong> 2026-07-06 08:03:17
+  </div>
+  <div style="margin-left:auto;background:#198754;color:white;
+              padding:10px 24px;border-radius:6px;font-size:1.4rem;font-weight:bold;">
+    PASS
+  </div>
+</div>
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Base Indicators</h2>
+  <div style='display:grid;grid-template-columns:repeat(3,1fr);gap:14px;'><div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid #0d6efd;border-radius:6px;padding:14px 16px;min-width:0;'><div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-bottom:10px;'>Trip Collection</div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Total</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Excl. — no end_time</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Eligible for comparison</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div></div><div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid #6610f2;border-radius:6px;padding:14px 16px;min-width:0;'><div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-bottom:10px;'>trip_agg</div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Total Rows</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Unique Trips</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Fragmented (>1 seg)</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div></div><div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid #198754;border-radius:6px;padding:14px 16px;min-width:0;'><div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-bottom:10px;'>Trip Breakdown</div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Eligible</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Compared</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0&ensp;<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>(0.0%)</span></span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Missing from agg</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0&ensp;<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>(0.0%)</span></span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Short (< 1 km)</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0&ensp;<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>(0.0%)</span></span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Partial after refetch</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0&ensp;<span style='color:#aaa;font-size:0.8rem;font-weight:400;'>(0.0%)</span></span></div></div><div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid #dc3545;border-radius:6px;padding:14px 16px;min-width:0;'><div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-bottom:10px;'>Mismatches</div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Missing from agg</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Unbroken Unmatched</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Broken Unmatched</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div></div><div style='background:#fff;border:1px solid #e9ecef;border-top:3px solid #fd7e14;border-radius:6px;padding:14px 16px;min-width:0;'><div style='font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#888;margin-bottom:10px;'>Exclusions</div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Distance < 1 km</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div><div style='display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f0f0f0;'><span style='color:#555;font-size:0.82rem;'>Partial after refetch</span><span style='font-weight:700;font-size:0.9rem;margin-left:12px;white-space:nowrap;'>0</span></div></div></div>
+</section>
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">API Health</h2>
+  <table style="border-collapse:collapse;width:100%;max-width:480px;">
+    <tbody><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Vehicles Fetched</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>128</td></tr><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Vehicle Pagination Aborted</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>No</td></tr><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Vehicle Trip Fetch Failures</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>0</td></tr><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Trip Agg Pagination Aborted</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>No</td></tr><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Partial Trip Refetch Failures</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>0</td></tr><tr><td style='padding:6px 12px;color:#555;border-bottom:1px solid #f0f0f0;'>Alert Fetch Failures</td><td style='padding:6px 12px;font-weight:600;border-bottom:1px solid #f0f0f0;'>0 / 0</td></tr></tbody>
+  </table>
+</section>
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Step Timings</h2>
+  <table style="border-collapse:collapse;width:100%;max-width:560px;">
+    <tbody><tr><td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>fetch_trip_agg_data</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>193.74s</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'><div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'><div style='background:#0d6efd;border-radius:3px;height:10px;width:156.0px;'></div></div></td></tr><tr><td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>get_trips_for_account</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>5.00s</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'><div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'><div style='background:#0d6efd;border-radius:3px;height:10px;width:4.0px;'></div></div></td></tr><tr><td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>prepare_dataframes</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>0.01s</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'><div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'><div style='background:#0d6efd;border-radius:3px;height:10px;width:0.0px;'></div></div></td></tr><tr><td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>analyze_trip_agg</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>0.00s</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'><div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'><div style='background:#0d6efd;border-radius:3px;height:10px;width:0.0px;'></div></div></td></tr><tr><td style='padding:5px 12px;color:#555;border-bottom:1px solid #f0f0f0;font-family:monospace;'>analyze_alerts</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;text-align:right;'>0.00s</td><td style='padding:5px 12px;border-bottom:1px solid #f0f0f0;'><div style='background:#e9ecef;border-radius:3px;height:10px;width:160px;display:inline-block;vertical-align:middle;'><div style='background:#0d6efd;border-radius:3px;height:10px;width:0.0px;'></div></div></td></tr><tr style='font-weight:600;background:#f8f9fa;'><td style='padding:5px 12px;border-top:2px solid #dee2e6;'>total</td><td style='padding:5px 12px;border-top:2px solid #dee2e6;text-align:right;'>198.75s</td><td style='padding:5px 12px;border-top:2px solid #dee2e6;'></td></tr></tbody>
+  </table>
+</section>
+<section>
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:32px;">Alert Mismatches</h2>
+  <p style='color:#198754;'>&#x2713; No alert mismatches found.</p>
+  
+</section>
+<section style="margin-top:32px;border-top:1px solid #dee2e6;padding-top:16px;">
+  <h2 style="font-size:1.05rem;color:#333;border-bottom:2px solid #dee2e6;padding-bottom:6px;margin-top:0;">Data Files</h2>
+  
+  <details style="margin-bottom:16px;" id="log-details">
+    <summary style="cursor:pointer;font-size:0.9rem;font-weight:600;color:#333;padding:4px 0;">&#x1F4CB; Execution Log</summary>
+    <div style="margin-top:8px;">
+      <pre id="log-content" style="background:#1e1e1e;color:#d4d4d4;padding:14px 16px;border-radius:6px;font-size:0.73rem;line-height:1.5;max-height:520px;overflow-y:auto;white-space:pre-wrap;word-break:break-all;">Loading…</pre>
+    </div>
+  </details>
+  <script>
+    (function() {
+      var det = document.getElementById('log-details');
+      var pre = document.getElementById('log-content');
+      var loaded = false;
+      det.addEventListener('toggle', function() {
+        if (det.open && !loaded) {
+          loaded = true;
+          fetch('run.log').then(function(r) { return r.text(); }).then(function(t) {
+            pre.textContent = t;
+          }).catch(function() {
+            pre.textContent = 'Failed to load log.';
+          });
+        }
+      });
+    })();
+  </script>
+</section>
+</body>
+</html>
