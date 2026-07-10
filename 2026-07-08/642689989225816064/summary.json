@@ -1,0 +1,57 @@
+{
+  "run_timestamp": "2026-07-10 02:34:47",
+  "account_id": "642689989225816064",
+  "account_name": "Indore Intercity",
+  "date_range": {
+    "start": "2026-07-08 00:00:00",
+    "end": "2026-07-08 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 917,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 972,
+    "total_trips_in_trip_agg": 937,
+    "fragmented_trips_in_trip_agg": 25,
+    "missing_trip_count": 2,
+    "trip_coverage_pct": 99.78,
+    "complete_trips": 370,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 4,
+    "short_trips_excluded": 545,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 915,
+    "mismatched_alerts": [],
+    "passed_alerts": [
+      "distracted_driving",
+      "drowsiness",
+      "eyes_closed",
+      "fcw",
+      "mobile_phone",
+      "tailgating",
+      "idling",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 229,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 917
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 35.23,
+    "get_trips_for_account": 4.05,
+    "prepare_dataframes": 0.04,
+    "analyze_trip_agg": 2.64,
+    "analyze_alerts": 5.24
+  }
+}
