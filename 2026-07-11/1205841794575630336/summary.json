@@ -1,0 +1,70 @@
+{
+  "run_timestamp": "2026-07-13 02:40:16",
+  "account_id": "1205841794575630336",
+  "account_name": "Chartered Speed-OSRTC",
+  "date_range": {
+    "start": "2026-07-11 00:00:00",
+    "end": "2026-07-11 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 8494,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 8618,
+    "total_trips_in_trip_agg": 8562,
+    "fragmented_trips_in_trip_agg": 42,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 7205,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 5,
+    "short_trips_excluded": 1285,
+    "partial_trips_after_refetch": 4,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 8494,
+    "mismatched_alerts": [
+      {
+        "alert_name": "eyes_closed",
+        "mismatch_count": 4,
+        "mismatch_pct": 0.05
+      },
+      {
+        "alert_name": "seatbelt_violation",
+        "mismatch_count": 3,
+        "mismatch_pct": 0.04
+      }
+    ],
+    "passed_alerts": [
+      "distracted_driving",
+      "drowsiness",
+      "emergency_recording",
+      "fcw",
+      "mobile_phone",
+      "pcw",
+      "tailgating",
+      "idling",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake",
+      "fuel_chori"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 1184,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 8494
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 53.17,
+    "get_trips_for_account": 47.71,
+    "prepare_dataframes": 1.08,
+    "analyze_trip_agg": 4.46,
+    "analyze_alerts": 114.47
+  }
+}

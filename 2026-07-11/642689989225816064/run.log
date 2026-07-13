@@ -1,0 +1,31 @@
+2026-07-13 02:36:31  INFO      === Starting analysis for account: 642689989225816064 ===
+2026-07-13 02:36:31  INFO      Account name: Indore Intercity
+2026-07-13 02:36:31  INFO      Fetching trip_agg page: 1
+2026-07-13 02:36:31  INFO      Fetching vehicle page: 1
+2026-07-13 02:36:32  INFO      Total vehicles collected for account 642689989225816064: 229
+2026-07-13 02:36:37  INFO      Fetching trip_agg page: 2
+2026-07-13 02:36:38  INFO      Fetching trip_agg page: 3
+2026-07-13 02:36:40  INFO      Total trips collected for account 642689989225816064: 1171
+2026-07-13 02:36:43  INFO      Total trip-agg records collected: 1239
+2026-07-13 02:37:08  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-07-11/642689989225816064/summary.json
+2026-07-13 02:37:08  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-07-13 02:37:08  INFO      Trips after merge/filters: 569
+2026-07-13 02:37:08  INFO      Completely processed trips: 569
+2026-07-13 02:37:08  INFO      Missing trips in trip_agg: 2
+2026-07-13 02:37:08  INFO      Unbroken unmatched trips: 0
+2026-07-13 02:37:08  INFO      Broken unmatched trips: 5
+2026-07-13 02:37:08  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+ distracted_driving               0                1169           0.0
+         drowsiness               0                1169           0.0
+emergency_recording               0                1169           0.0
+        eyes_closed               0                1169           0.0
+                fcw               0                1169           0.0
+2026-07-13 02:37:08  INFO      ----- Step Timings -----
+2026-07-13 02:37:08  INFO        fetch_trip_agg_data                  12.61s
+2026-07-13 02:37:08  INFO        get_trips_for_account                 9.95s
+2026-07-13 02:37:08  INFO        prepare_dataframes                    0.14s
+2026-07-13 02:37:08  INFO        analyze_trip_agg                      5.77s
+2026-07-13 02:37:08  INFO        analyze_alerts                       18.62s
+2026-07-13 02:37:08  INFO        total                                47.10s
+2026-07-13 02:37:08  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-07-11/642689989225816064
