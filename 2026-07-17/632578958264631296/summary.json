@@ -1,0 +1,59 @@
+{
+  "run_timestamp": "2026-07-19 02:34:06",
+  "account_id": "632578958264631296",
+  "account_name": "K M Translogistics  Pvt Ltd ( KMT)",
+  "date_range": {
+    "start": "2026-07-17 00:00:00",
+    "end": "2026-07-17 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 6288,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 6374,
+    "total_trips_in_trip_agg": 6374,
+    "fragmented_trips_in_trip_agg": 0,
+    "missing_trip_count": 17,
+    "trip_coverage_pct": 99.73,
+    "complete_trips": 2954,
+    "unbroken_unmatched_count": 6,
+    "broken_unmatched_count": 0,
+    "short_trips_excluded": 3317,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 6271,
+    "mismatched_alerts": [
+      {
+        "alert_name": "fuel_chori",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.02
+      }
+    ],
+    "passed_alerts": [
+      "idling",
+      "over_speed",
+      "freerun",
+      "hard_brake",
+      "unscheduled_driving",
+      "slow_running",
+      "continuous_driving"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 1981,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 6288
+  },
+  "step_timings": {
+    "fetch_trip_agg_data": 175.47,
+    "get_trips_for_account": 10.13,
+    "prepare_dataframes": 0.15,
+    "analyze_trip_agg": 2.22,
+    "analyze_alerts": 23.06
+  }
+}
