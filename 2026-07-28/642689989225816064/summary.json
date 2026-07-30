@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-07-30 02:36:35",
+  "run_timestamp": "2026-07-30 11:47:50",
   "account_id": "642689989225816064",
   "account_name": "Indore Intercity",
   "date_range": {
@@ -9,20 +9,20 @@
   "base_indicators": {
     "total_trips_in_collection": 885,
     "trips_without_end_time": 0,
-    "trip_agg_total_rows": 932,
-    "total_trips_in_trip_agg": 894,
-    "fragmented_trips_in_trip_agg": 30,
-    "missing_trip_count": 13,
-    "trip_coverage_pct": 98.53,
-    "complete_trips": 430,
+    "trip_agg_total_rows": 947,
+    "total_trips_in_trip_agg": 907,
+    "fragmented_trips_in_trip_agg": 31,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 433,
     "unbroken_unmatched_count": 0,
-    "broken_unmatched_count": 20,
-    "short_trips_excluded": 442,
+    "broken_unmatched_count": 21,
+    "short_trips_excluded": 452,
     "partial_trips_after_refetch": 0,
-    "verdict": "FAIL"
+    "verdict": "WARN"
   },
   "detailed_summary": {
-    "total_joined_trips_for_alert_comparison": 872,
+    "total_joined_trips_for_alert_comparison": 885,
     "mismatched_alerts": [],
     "passed_alerts": [
       "distracted_driving",
@@ -48,10 +48,11 @@
     "alert_fetch_total": 885
   },
   "step_timings": {
-    "fetch_trip_agg_data": 14.26,
-    "get_trips_for_account": 4.3,
-    "prepare_dataframes": 0.15,
-    "analyze_trip_agg": 1.4,
-    "analyze_alerts": 9.54
+    "fetch_accounts_with_access": 0.05,
+    "fetch_trip_agg_data": 13.81,
+    "get_trips_for_account": 2.29,
+    "prepare_dataframes": 0.03,
+    "analyze_trip_agg": 1.29,
+    "analyze_alerts": 3.7
   }
 }
