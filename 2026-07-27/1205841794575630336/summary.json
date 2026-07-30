@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-07-29 02:36:19",
+  "run_timestamp": "2026-07-30 11:37:49",
   "account_id": "1205841794575630336",
   "account_name": "Chartered Speed-OSRTC",
   "date_range": {
@@ -31,8 +31,8 @@
       },
       {
         "alert_name": "fuel_chori",
-        "mismatch_count": 4,
-        "mismatch_pct": 0.05
+        "mismatch_count": 5,
+        "mismatch_pct": 0.06
       },
       {
         "alert_name": "seatbelt_violation",
@@ -65,10 +65,11 @@
     "alert_fetch_total": 8464
   },
   "step_timings": {
-    "fetch_trip_agg_data": 26.88,
-    "get_trips_for_account": 11.35,
-    "prepare_dataframes": 0.18,
-    "analyze_trip_agg": 4.46,
-    "analyze_alerts": 36.93
+    "fetch_accounts_with_access": 0.03,
+    "fetch_trip_agg_data": 107.06,
+    "get_trips_for_account": 12.47,
+    "prepare_dataframes": 0.34,
+    "analyze_trip_agg": 2.58,
+    "analyze_alerts": 28.29
   }
 }

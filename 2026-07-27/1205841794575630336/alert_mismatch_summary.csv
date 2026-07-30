@@ -1,6 +1,6 @@
 alert_name,mismatch_count,total_joined_trips,mismatch_pct
 emergency_recording,6,8464,0.07
-fuel_chori,4,8464,0.05
+fuel_chori,5,8464,0.06
 seatbelt_violation,1,8464,0.01
 distracted_driving,0,8464,0.0
 drowsiness,0,8464,0.0
