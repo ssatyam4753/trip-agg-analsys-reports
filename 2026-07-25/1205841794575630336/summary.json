@@ -1,5 +1,5 @@
 {
-  "run_timestamp": "2026-07-27 02:39:39",
+  "run_timestamp": "2026-07-30 11:18:24",
   "account_id": "1205841794575630336",
   "account_name": "Chartered Speed-OSRTC",
   "date_range": {
@@ -76,10 +76,11 @@
     "alert_fetch_total": 8481
   },
   "step_timings": {
-    "fetch_trip_agg_data": 57.97,
-    "get_trips_for_account": 15.72,
-    "prepare_dataframes": 0.24,
-    "analyze_trip_agg": 4.71,
-    "analyze_alerts": 41.44
+    "fetch_accounts_with_access": 0.03,
+    "fetch_trip_agg_data": 133.46,
+    "get_trips_for_account": 12.66,
+    "prepare_dataframes": 0.38,
+    "analyze_trip_agg": 6.93,
+    "analyze_alerts": 30.7
   }
 }
