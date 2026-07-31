@@ -2,11 +2,11 @@ alert_name,mismatch_count,total_joined_trips,mismatch_pct
 eyes_closed,9,7994,0.11
 seatbelt_violation,5,7994,0.06
 fcw,1,7994,0.01
+mobile_phone,1,7994,0.01
 over_speed,1,7994,0.01
 distracted_driving,0,7994,0.0
 drowsiness,0,7994,0.0
 emergency_recording,0,7994,0.0
-mobile_phone,0,7994,0.0
 pcw,0,7994,0.0
 sd_card_tampered,0,7994,0.0
 tailgating,0,7994,0.0

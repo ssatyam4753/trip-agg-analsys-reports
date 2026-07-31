@@ -1,7 +1,7 @@
 {
-  "run_timestamp": "2026-07-31 02:37:37",
+  "run_timestamp": "2026-07-31 04:32:36",
   "account_id": "1205841794575630336",
-  "account_name": "Chartered Speed-OSRTC",
+  "account_name": null,
   "date_range": {
     "start": "2026-07-29 00:00:00",
     "end": "2026-07-29 23:59:59"
@@ -40,6 +40,11 @@
         "mismatch_pct": 0.01
       },
       {
+        "alert_name": "mobile_phone",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.01
+      },
+      {
         "alert_name": "over_speed",
         "mismatch_count": 1,
         "mismatch_pct": 0.01
@@ -49,7 +54,6 @@
       "distracted_driving",
       "drowsiness",
       "emergency_recording",
-      "mobile_phone",
       "pcw",
       "sd_card_tampered",
       "tailgating",
@@ -70,10 +74,11 @@
     "alert_fetch_total": 7994
   },
   "step_timings": {
-    "fetch_trip_agg_data": 36.75,
-    "get_trips_for_account": 13.16,
-    "prepare_dataframes": 0.19,
-    "analyze_trip_agg": 5.25,
-    "analyze_alerts": 31.7
+    "fetch_accounts_with_access": 0.05,
+    "fetch_trip_agg_data": 128.85,
+    "get_trips_for_account": 30.26,
+    "prepare_dataframes": 0.72,
+    "analyze_trip_agg": 5.49,
+    "analyze_alerts": 76.26
   }
 }
