@@ -1,0 +1,34 @@
+2026-08-03 02:30:12  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-08-03 02:30:12  INFO      Account name: RajRatan Travels
+2026-08-03 02:30:12  INFO      Resolved 2 accounts_with_access for 649034868264558592
+2026-08-03 02:30:12  INFO      [1/2] Fetching trip_agg for account: 64903486826455859
+2026-08-03 02:30:12  INFO      Fetching vehicle page: 1
+2026-08-03 02:30:12  INFO      Total vehicles collected for account 649034868264558592: 128
+2026-08-03 02:30:13  INFO        account 64903486826455859: fetched 0 records (1 pages)
+2026-08-03 02:30:13  INFO      [2/2] Fetching trip_agg for account: 649034868264558592
+2026-08-03 02:30:20  INFO      Total trips collected for account 649034868264558592: 288
+2026-08-03 02:34:30  INFO        account 649034868264558592: fetched 457 records (5 pages)
+2026-08-03 02:34:30  INFO      Total trip-agg records collected across 2 accounts: 457
+2026-08-03 02:34:34  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-01/649034868264558592/summary.json
+2026-08-03 02:34:34  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-08-03 02:34:34  INFO      Trips after merge/filters: 159
+2026-08-03 02:34:34  INFO      Completely processed trips: 159
+2026-08-03 02:34:34  INFO      Missing trips in trip_agg: 0
+2026-08-03 02:34:34  INFO      Unbroken unmatched trips: 0
+2026-08-03 02:34:34  INFO      Broken unmatched trips: 12
+2026-08-03 02:34:34  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+ distracted_driving               0                 288           0.0
+         drowsiness               0                 288           0.0
+emergency_recording               0                 288           0.0
+        eyes_closed               0                 288           0.0
+                fcw               0                 288           0.0
+2026-08-03 02:34:34  INFO      ----- Step Timings -----
+2026-08-03 02:34:34  INFO        fetch_accounts_with_access            0.21s
+2026-08-03 02:34:34  INFO        fetch_trip_agg_data                 257.61s
+2026-08-03 02:34:34  INFO        get_trips_for_account                 7.98s
+2026-08-03 02:34:34  INFO        prepare_dataframes                    0.09s
+2026-08-03 02:34:34  INFO        analyze_trip_agg                      1.25s
+2026-08-03 02:34:34  INFO        analyze_alerts                        2.41s
+2026-08-03 02:34:34  INFO        total                               269.54s
+2026-08-03 02:34:34  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-01/649034868264558592
