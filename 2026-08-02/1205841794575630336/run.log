@@ -1,0 +1,46 @@
+2026-08-04 02:37:55  INFO      === Starting analysis for account: 1205841794575630336 ===
+2026-08-04 02:37:55  INFO      Account name: Chartered Speed-OSRTC
+2026-08-04 02:37:55  INFO      Resolved 7 accounts_with_access for 1205841794575630336
+2026-08-04 02:37:55  INFO      [1/7] Fetching trip_agg for account: 1207408429103054848
+2026-08-04 02:37:55  INFO      Fetching vehicle page: 1
+2026-08-04 02:37:55  INFO        account 1207408429103054848: fetched 0 records (1 pages)
+2026-08-04 02:37:55  INFO      [2/7] Fetching trip_agg for account: 1205841794575630336
+2026-08-04 02:37:55  INFO      Fetching vehicle page: 2
+2026-08-04 02:37:55  INFO      Fetching vehicle page: 3
+2026-08-04 02:37:55  INFO      Total vehicles collected for account 1205841794575630336: 1184
+2026-08-04 02:38:06  INFO      Total trips collected for account 1205841794575630336: 8380
+2026-08-04 02:40:38  INFO        account 1205841794575630336: fetched 8476 records (85 pages)
+2026-08-04 02:40:38  INFO      [3/7] Fetching trip_agg for account: 475691480292397056
+2026-08-04 02:40:38  INFO        account 475691480292397056: fetched 0 records (1 pages)
+2026-08-04 02:40:38  INFO      [4/7] Fetching trip_agg for account: 1128685188746838016
+2026-08-04 02:40:38  INFO        account 1128685188746838016: fetched 0 records (1 pages)
+2026-08-04 02:40:38  INFO      [5/7] Fetching trip_agg for account: 1534905707361468416
+2026-08-04 02:40:39  INFO        account 1534905707361468416: fetched 0 records (1 pages)
+2026-08-04 02:40:39  INFO      [6/7] Fetching trip_agg for account: 1536063812182999040
+2026-08-04 02:40:39  INFO        account 1536063812182999040: fetched 0 records (1 pages)
+2026-08-04 02:40:39  INFO      [7/7] Fetching trip_agg for account: 1580612727364124672
+2026-08-04 02:40:39  INFO        account 1580612727364124672: fetched 0 records (1 pages)
+2026-08-04 02:40:39  INFO      Total trip-agg records collected across 7 accounts: 8476
+2026-08-04 02:41:25  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-02/1205841794575630336/summary.json
+2026-08-04 02:41:25  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-08-04 02:41:25  INFO      Trips after merge/filters: 7027
+2026-08-04 02:41:25  INFO      Completely processed trips: 7021
+2026-08-04 02:41:25  INFO      Missing trips in trip_agg: 0
+2026-08-04 02:41:25  INFO      Unbroken unmatched trips: 0
+2026-08-04 02:41:25  INFO      Broken unmatched trips: 14
+2026-08-04 02:41:25  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+       eyes_closed               8                8380          0.10
+        fuel_chori               2                8380          0.02
+seatbelt_violation               1                8380          0.01
+distracted_driving               0                8380          0.00
+        drowsiness               0                8380          0.00
+2026-08-04 02:41:25  INFO      ----- Step Timings -----
+2026-08-04 02:41:25  INFO        fetch_accounts_with_access            0.03s
+2026-08-04 02:41:25  INFO        fetch_trip_agg_data                 164.40s
+2026-08-04 02:41:25  INFO        get_trips_for_account                11.64s
+2026-08-04 02:41:25  INFO        prepare_dataframes                    0.24s
+2026-08-04 02:41:25  INFO        analyze_trip_agg                     10.64s
+2026-08-04 02:41:25  INFO        analyze_alerts                       34.32s
+2026-08-04 02:41:25  INFO        total                               221.26s
+2026-08-04 02:41:25  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-02/1205841794575630336

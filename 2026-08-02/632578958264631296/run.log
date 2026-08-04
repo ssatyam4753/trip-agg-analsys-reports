@@ -1,0 +1,693 @@
+2026-08-04 02:31:38  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-08-04 02:31:38  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-08-04 02:31:38  INFO      Resolved 329 accounts_with_access for 632578958264631296
+2026-08-04 02:31:38  INFO      [1/329] Fetching trip_agg for account: 617025595422801920
+2026-08-04 02:31:38  INFO      Fetching vehicle page: 1
+2026-08-04 02:31:38  INFO      Fetching vehicle page: 2
+2026-08-04 02:31:38  INFO        account 617025595422801920: fetched 0 records (1 pages)
+2026-08-04 02:31:38  INFO      [2/329] Fetching trip_agg for account: 626450357429469184
+2026-08-04 02:31:39  INFO        account 626450357429469184: fetched 0 records (1 pages)
+2026-08-04 02:31:39  INFO      [3/329] Fetching trip_agg for account: 632578958264631296
+2026-08-04 02:31:39  INFO      Fetching vehicle page: 3
+2026-08-04 02:31:39  INFO      Fetching vehicle page: 4
+2026-08-04 02:31:39  INFO      Total vehicles collected for account 632578958264631296: 1983
+2026-08-04 02:31:52  INFO      Total trips collected for account 632578958264631296: 5722
+2026-08-04 02:35:07  INFO        account 632578958264631296: fetched 5797 records (58 pages)
+2026-08-04 02:35:07  INFO      [4/329] Fetching trip_agg for account: undefined
+2026-08-04 02:35:07  INFO        account undefined: fetched 0 records (1 pages)
+2026-08-04 02:35:07  INFO      [5/329] Fetching trip_agg for account: 902855557075959808
+2026-08-04 02:35:08  INFO        account 902855557075959808: fetched 1 records (1 pages)
+2026-08-04 02:35:08  INFO      [6/329] Fetching trip_agg for account: 901025643674730496
+2026-08-04 02:35:08  INFO        account 901025643674730496: fetched 26 records (1 pages)
+2026-08-04 02:35:08  INFO      [7/329] Fetching trip_agg for account: 907979122293080064
+2026-08-04 02:35:08  INFO        account 907979122293080064: fetched 0 records (1 pages)
+2026-08-04 02:35:08  INFO      [8/329] Fetching trip_agg for account: 907979285229207552
+2026-08-04 02:35:08  INFO        account 907979285229207552: fetched 0 records (1 pages)
+2026-08-04 02:35:08  INFO      [9/329] Fetching trip_agg for account: 708413747579846656
+2026-08-04 02:35:08  INFO        account 708413747579846656: fetched 0 records (1 pages)
+2026-08-04 02:35:08  INFO      [10/329] Fetching trip_agg for account: 626747887283380224
+2026-08-04 02:35:08  INFO        account 626747887283380224: fetched 0 records (1 pages)
+2026-08-04 02:35:08  INFO      [11/329] Fetching trip_agg for account: 765956836284170240
+2026-08-04 02:35:09  INFO        account 765956836284170240: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [12/329] Fetching trip_agg for account: 1090906880244449280
+2026-08-04 02:35:09  INFO        account 1090906880244449280: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [13/329] Fetching trip_agg for account: 710168167653048320
+2026-08-04 02:35:09  INFO        account 710168167653048320: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [14/329] Fetching trip_agg for account: 710168169704062976
+2026-08-04 02:35:09  INFO        account 710168169704062976: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [15/329] Fetching trip_agg for account: 710168436180779008
+2026-08-04 02:35:09  INFO        account 710168436180779008: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [16/329] Fetching trip_agg for account: 1043495909662392320
+2026-08-04 02:35:09  INFO        account 1043495909662392320: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [17/329] Fetching trip_agg for account: 710168431290220544
+2026-08-04 02:35:09  INFO        account 710168431290220544: fetched 0 records (1 pages)
+2026-08-04 02:35:09  INFO      [18/329] Fetching trip_agg for account: 690579273177698304
+2026-08-04 02:35:10  INFO        account 690579273177698304: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [19/329] Fetching trip_agg for account: 710168504736677888
+2026-08-04 02:35:10  INFO        account 710168504736677888: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [20/329] Fetching trip_agg for account: 710168155623784448
+2026-08-04 02:35:10  INFO        account 710168155623784448: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [21/329] Fetching trip_agg for account: 655416183197007872
+2026-08-04 02:35:10  INFO        account 655416183197007872: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [22/329] Fetching trip_agg for account: 1118993497857196032
+2026-08-04 02:35:10  INFO        account 1118993497857196032: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [23/329] Fetching trip_agg for account: 616373927383461888
+2026-08-04 02:35:10  INFO        account 616373927383461888: fetched 0 records (1 pages)
+2026-08-04 02:35:10  INFO      [24/329] Fetching trip_agg for account: 693506559778488320
+2026-08-04 02:35:11  INFO        account 693506559778488320: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [25/329] Fetching trip_agg for account: 1001277748557119488
+2026-08-04 02:35:11  INFO        account 1001277748557119488: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [26/329] Fetching trip_agg for account: 710168351711690752
+2026-08-04 02:35:11  INFO        account 710168351711690752: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [27/329] Fetching trip_agg for account: 710168313044402176
+2026-08-04 02:35:11  INFO        account 710168313044402176: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [28/329] Fetching trip_agg for account: 637702428480843776
+2026-08-04 02:35:11  INFO        account 637702428480843776: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [29/329] Fetching trip_agg for account: 765956851777929216
+2026-08-04 02:35:11  INFO        account 765956851777929216: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [30/329] Fetching trip_agg for account: 686624763883352064
+2026-08-04 02:35:11  INFO        account 686624763883352064: fetched 0 records (1 pages)
+2026-08-04 02:35:11  INFO      [31/329] Fetching trip_agg for account: 662633057592872960
+2026-08-04 02:35:12  INFO        account 662633057592872960: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [32/329] Fetching trip_agg for account: 710168354932916224
+2026-08-04 02:35:12  INFO        account 710168354932916224: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [33/329] Fetching trip_agg for account: 694892605292412928
+2026-08-04 02:35:12  INFO        account 694892605292412928: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [34/329] Fetching trip_agg for account: 660216811228233728
+2026-08-04 02:35:12  INFO        account 660216811228233728: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [35/329] Fetching trip_agg for account: 830452310038544384
+2026-08-04 02:35:12  INFO        account 830452310038544384: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [36/329] Fetching trip_agg for account: 710168217074532352
+2026-08-04 02:35:12  INFO        account 710168217074532352: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [37/329] Fetching trip_agg for account: 632187352659263488
+2026-08-04 02:35:12  INFO        account 632187352659263488: fetched 0 records (1 pages)
+2026-08-04 02:35:12  INFO      [38/329] Fetching trip_agg for account: 710168523732680704
+2026-08-04 02:35:13  INFO        account 710168523732680704: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [39/329] Fetching trip_agg for account: 622060152912142336
+2026-08-04 02:35:13  INFO        account 622060152912142336: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [40/329] Fetching trip_agg for account: 1102021686393307136
+2026-08-04 02:35:13  INFO        account 1102021686393307136: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [41/329] Fetching trip_agg for account: 636617099166351360
+2026-08-04 02:35:13  INFO        account 636617099166351360: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [42/329] Fetching trip_agg for account: 614851491399766016
+2026-08-04 02:35:13  INFO        account 614851491399766016: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [43/329] Fetching trip_agg for account: 617813021800009728
+2026-08-04 02:35:13  INFO        account 617813021800009728: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [44/329] Fetching trip_agg for account: 710168149349105664
+2026-08-04 02:35:13  INFO        account 710168149349105664: fetched 0 records (1 pages)
+2026-08-04 02:35:13  INFO      [45/329] Fetching trip_agg for account: 893558190245937152
+2026-08-04 02:35:14  INFO        account 893558190245937152: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [46/329] Fetching trip_agg for account: 710168212506935296
+2026-08-04 02:35:14  INFO        account 710168212506935296: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [47/329] Fetching trip_agg for account: 1001277754680803328
+2026-08-04 02:35:14  INFO        account 1001277754680803328: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [48/329] Fetching trip_agg for account: 710168404358594560
+2026-08-04 02:35:14  INFO        account 710168404358594560: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [49/329] Fetching trip_agg for account: 710168401812652032
+2026-08-04 02:35:14  INFO        account 710168401812652032: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [50/329] Fetching trip_agg for account: 710168140310380544
+2026-08-04 02:35:14  INFO        account 710168140310380544: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [51/329] Fetching trip_agg for account: 639430930120916992
+2026-08-04 02:35:14  INFO        account 639430930120916992: fetched 0 records (1 pages)
+2026-08-04 02:35:14  INFO      [52/329] Fetching trip_agg for account: 616658963378782208
+2026-08-04 02:35:15  INFO        account 616658963378782208: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [53/329] Fetching trip_agg for account: 634800077067571200
+2026-08-04 02:35:15  INFO        account 634800077067571200: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [54/329] Fetching trip_agg for account: 654255715807920128
+2026-08-04 02:35:15  INFO        account 654255715807920128: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [55/329] Fetching trip_agg for account: 765956840231010304
+2026-08-04 02:35:15  INFO        account 765956840231010304: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [56/329] Fetching trip_agg for account: 710168389498175488
+2026-08-04 02:35:15  INFO        account 710168389498175488: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [57/329] Fetching trip_agg for account: 626748081471225856
+2026-08-04 02:35:15  INFO        account 626748081471225856: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [58/329] Fetching trip_agg for account: 639777485449375744
+2026-08-04 02:35:15  INFO        account 639777485449375744: fetched 0 records (1 pages)
+2026-08-04 02:35:15  INFO      [59/329] Fetching trip_agg for account: 631896135375532032
+2026-08-04 02:35:16  INFO        account 631896135375532032: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [60/329] Fetching trip_agg for account: 710168279523524608
+2026-08-04 02:35:16  INFO        account 710168279523524608: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [61/329] Fetching trip_agg for account: 765956845578747904
+2026-08-04 02:35:16  INFO        account 765956845578747904: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [62/329] Fetching trip_agg for account: 634802475198578688
+2026-08-04 02:35:16  INFO        account 634802475198578688: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [63/329] Fetching trip_agg for account: 710168225618329600
+2026-08-04 02:35:16  INFO        account 710168225618329600: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [64/329] Fetching trip_agg for account: 666246851778854912
+2026-08-04 02:35:16  INFO        account 666246851778854912: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [65/329] Fetching trip_agg for account: 710168487888158720
+2026-08-04 02:35:16  INFO        account 710168487888158720: fetched 0 records (1 pages)
+2026-08-04 02:35:16  INFO      [66/329] Fetching trip_agg for account: 710168414416535552
+2026-08-04 02:35:17  INFO        account 710168414416535552: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [67/329] Fetching trip_agg for account: 710168222241914880
+2026-08-04 02:35:17  INFO        account 710168222241914880: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [68/329] Fetching trip_agg for account: 601120288024825856
+2026-08-04 02:35:17  INFO        account 601120288024825856: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [69/329] Fetching trip_agg for account: 622051442437447680
+2026-08-04 02:35:17  INFO        account 622051442437447680: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [70/329] Fetching trip_agg for account: 710168315703590912
+2026-08-04 02:35:17  INFO        account 710168315703590912: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [71/329] Fetching trip_agg for account: 634871152950378496
+2026-08-04 02:35:17  INFO        account 634871152950378496: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [72/329] Fetching trip_agg for account: 932336354258321408
+2026-08-04 02:35:17  INFO        account 932336354258321408: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [73/329] Fetching trip_agg for account: 626757352988606464
+2026-08-04 02:35:17  INFO        account 626757352988606464: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [74/329] Fetching trip_agg for account: 939432721510301696
+2026-08-04 02:35:17  INFO        account 939432721510301696: fetched 0 records (1 pages)
+2026-08-04 02:35:17  INFO      [75/329] Fetching trip_agg for account: 651759108604575744
+2026-08-04 02:35:18  INFO        account 651759108604575744: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [76/329] Fetching trip_agg for account: 653228896300302336
+2026-08-04 02:35:18  INFO        account 653228896300302336: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [77/329] Fetching trip_agg for account: 710168493940539392
+2026-08-04 02:35:18  INFO        account 710168493940539392: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [78/329] Fetching trip_agg for account: 710168457349431296
+2026-08-04 02:35:18  INFO        account 710168457349431296: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [79/329] Fetching trip_agg for account: 1018672429150502912
+2026-08-04 02:35:18  INFO        account 1018672429150502912: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [80/329] Fetching trip_agg for account: 1000076513619476480
+2026-08-04 02:35:18  INFO        account 1000076513619476480: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [81/329] Fetching trip_agg for account: 710168396691406848
+2026-08-04 02:35:18  INFO        account 710168396691406848: fetched 0 records (1 pages)
+2026-08-04 02:35:18  INFO      [82/329] Fetching trip_agg for account: 639162781278404608
+2026-08-04 02:35:19  INFO        account 639162781278404608: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [83/329] Fetching trip_agg for account: 710168484809539584
+2026-08-04 02:35:19  INFO        account 710168484809539584: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [84/329] Fetching trip_agg for account: 710168245860040704
+2026-08-04 02:35:19  INFO        account 710168245860040704: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [85/329] Fetching trip_agg for account: 614846731539984384
+2026-08-04 02:35:19  INFO        account 614846731539984384: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [86/329] Fetching trip_agg for account: 1046636663771496448
+2026-08-04 02:35:19  INFO        account 1046636663771496448: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [87/329] Fetching trip_agg for account: 622077671731363840
+2026-08-04 02:35:19  INFO        account 622077671731363840: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [88/329] Fetching trip_agg for account: 710168345923551232
+2026-08-04 02:35:19  INFO        account 710168345923551232: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [89/329] Fetching trip_agg for account: 710168318819958784
+2026-08-04 02:35:19  INFO        account 710168318819958784: fetched 0 records (1 pages)
+2026-08-04 02:35:19  INFO      [90/329] Fetching trip_agg for account: 647791626852237312
+2026-08-04 02:35:20  INFO        account 647791626852237312: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [91/329] Fetching trip_agg for account: 623837548891930624
+2026-08-04 02:35:20  INFO        account 623837548891930624: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [92/329] Fetching trip_agg for account: 710168184828723200
+2026-08-04 02:35:20  INFO        account 710168184828723200: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [93/329] Fetching trip_agg for account: 710168310326493184
+2026-08-04 02:35:20  INFO        account 710168310326493184: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [94/329] Fetching trip_agg for account: 660813775028355072
+2026-08-04 02:35:20  INFO        account 660813775028355072: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [95/329] Fetching trip_agg for account: 659739010289164288
+2026-08-04 02:35:20  INFO        account 659739010289164288: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [96/329] Fetching trip_agg for account: 765956849089380352
+2026-08-04 02:35:20  INFO        account 765956849089380352: fetched 0 records (1 pages)
+2026-08-04 02:35:20  INFO      [97/329] Fetching trip_agg for account: 648126632187412480
+2026-08-04 02:35:21  INFO        account 648126632187412480: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [98/329] Fetching trip_agg for account: 710168451628400640
+2026-08-04 02:35:21  INFO        account 710168451628400640: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [99/329] Fetching trip_agg for account: 1017222875821637632
+2026-08-04 02:35:21  INFO        account 1017222875821637632: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [100/329] Fetching trip_agg for account: 710168276977582080
+2026-08-04 02:35:21  INFO        account 710168276977582080: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [101/329] Fetching trip_agg for account: 765956825592889344
+2026-08-04 02:35:21  INFO        account 765956825592889344: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [102/329] Fetching trip_agg for account: 893558259586170880
+2026-08-04 02:35:21  INFO        account 893558259586170880: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [103/329] Fetching trip_agg for account: 710168407445602304
+2026-08-04 02:35:21  INFO        account 710168407445602304: fetched 0 records (1 pages)
+2026-08-04 02:35:21  INFO      [104/329] Fetching trip_agg for account: 645207424822673408
+2026-08-04 02:35:22  INFO        account 645207424822673408: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [105/329] Fetching trip_agg for account: 934026195438141440
+2026-08-04 02:35:22  INFO        account 934026195438141440: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [106/329] Fetching trip_agg for account: 710168339661455360
+2026-08-04 02:35:22  INFO        account 710168339661455360: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [107/329] Fetching trip_agg for account: 710168470456631296
+2026-08-04 02:35:22  INFO        account 710168470456631296: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [108/329] Fetching trip_agg for account: 710168474122452992
+2026-08-04 02:35:22  INFO        account 710168474122452992: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [109/329] Fetching trip_agg for account: 643102328731283456
+2026-08-04 02:35:22  INFO        account 643102328731283456: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [110/329] Fetching trip_agg for account: 710168520222048256
+2026-08-04 02:35:22  INFO        account 710168520222048256: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [111/329] Fetching trip_agg for account: 710168482066464768
+2026-08-04 02:35:22  INFO        account 710168482066464768: fetched 0 records (1 pages)
+2026-08-04 02:35:22  INFO      [112/329] Fetching trip_agg for account: 710125843673812992
+2026-08-04 02:35:23  INFO        account 710125843673812992: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [113/329] Fetching trip_agg for account: 710168374839083008
+2026-08-04 02:35:23  INFO        account 710168374839083008: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [114/329] Fetching trip_agg for account: 1263201250237743104
+2026-08-04 02:35:23  INFO        account 1263201250237743104: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [115/329] Fetching trip_agg for account: 1216475845497978880
+2026-08-04 02:35:23  INFO        account 1216475845497978880: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [116/329] Fetching trip_agg for account: 661993139065585664
+2026-08-04 02:35:23  INFO        account 661993139065585664: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [117/329] Fetching trip_agg for account: 710168372402192384
+2026-08-04 02:35:23  INFO        account 710168372402192384: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [118/329] Fetching trip_agg for account: 626757577375481856
+2026-08-04 02:35:23  INFO        account 626757577375481856: fetched 0 records (1 pages)
+2026-08-04 02:35:23  INFO      [119/329] Fetching trip_agg for account: 637799855904784384
+2026-08-04 02:35:24  INFO        account 637799855904784384: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [120/329] Fetching trip_agg for account: 710168422868058112
+2026-08-04 02:35:24  INFO        account 710168422868058112: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [121/329] Fetching trip_agg for account: 1274880890270384128
+2026-08-04 02:35:24  INFO        account 1274880890270384128: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [122/329] Fetching trip_agg for account: 1268961782400024576
+2026-08-04 02:35:24  INFO        account 1268961782400024576: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [123/329] Fetching trip_agg for account: 1204033772203278336
+2026-08-04 02:35:24  INFO        account 1204033772203278336: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [124/329] Fetching trip_agg for account: 1216529580483936256
+2026-08-04 02:35:24  INFO        account 1216529580483936256: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [125/329] Fetching trip_agg for account: 1216475718876135424
+2026-08-04 02:35:24  INFO        account 1216475718876135424: fetched 0 records (1 pages)
+2026-08-04 02:35:24  INFO      [126/329] Fetching trip_agg for account: 1246118177964818432
+2026-08-04 02:35:25  INFO        account 1246118177964818432: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [127/329] Fetching trip_agg for account: 1195094815495159808
+2026-08-04 02:35:25  INFO        account 1195094815495159808: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [128/329] Fetching trip_agg for account: 710168208715284480
+2026-08-04 02:35:25  INFO        account 710168208715284480: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [129/329] Fetching trip_agg for account: 1144656117079474176
+2026-08-04 02:35:25  INFO        account 1144656117079474176: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [130/329] Fetching trip_agg for account: 1301567705056280576
+2026-08-04 02:35:25  INFO        account 1301567705056280576: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [131/329] Fetching trip_agg for account: 1301567412612628480
+2026-08-04 02:35:25  INFO        account 1301567412612628480: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [132/329] Fetching trip_agg for account: 1301567764170801152
+2026-08-04 02:35:25  INFO        account 1301567764170801152: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [133/329] Fetching trip_agg for account: 1301567503318646784
+2026-08-04 02:35:25  INFO        account 1301567503318646784: fetched 0 records (1 pages)
+2026-08-04 02:35:25  INFO      [134/329] Fetching trip_agg for account: 1301567506581815296
+2026-08-04 02:35:26  INFO        account 1301567506581815296: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [135/329] Fetching trip_agg for account: 1301567451053424640
+2026-08-04 02:35:26  INFO        account 1301567451053424640: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [136/329] Fetching trip_agg for account: 1301567674861486080
+2026-08-04 02:35:26  INFO        account 1301567674861486080: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [137/329] Fetching trip_agg for account: 1301567699339444224
+2026-08-04 02:35:26  INFO        account 1301567699339444224: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [138/329] Fetching trip_agg for account: 1301567797515517952
+2026-08-04 02:35:26  INFO        account 1301567797515517952: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [139/329] Fetching trip_agg for account: 1301567885453295616
+2026-08-04 02:35:26  INFO        account 1301567885453295616: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [140/329] Fetching trip_agg for account: 1301567732629635072
+2026-08-04 02:35:26  INFO        account 1301567732629635072: fetched 0 records (1 pages)
+2026-08-04 02:35:26  INFO      [141/329] Fetching trip_agg for account: 1301567752225423360
+2026-08-04 02:35:27  INFO        account 1301567752225423360: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [142/329] Fetching trip_agg for account: 1301567676585345024
+2026-08-04 02:35:27  INFO        account 1301567676585345024: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [143/329] Fetching trip_agg for account: 1301567701533065216
+2026-08-04 02:35:27  INFO        account 1301567701533065216: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [144/329] Fetching trip_agg for account: 1301567696722198528
+2026-08-04 02:35:27  INFO        account 1301567696722198528: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [145/329] Fetching trip_agg for account: 1301567776128761856
+2026-08-04 02:35:27  INFO        account 1301567776128761856: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [146/329] Fetching trip_agg for account: 1001277697621491712
+2026-08-04 02:35:27  INFO        account 1001277697621491712: fetched 0 records (1 pages)
+2026-08-04 02:35:27  INFO      [147/329] Fetching trip_agg for account: 1301567780587307008
+2026-08-04 02:35:28  INFO        account 1301567780587307008: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [148/329] Fetching trip_agg for account: 1301567778536292352
+2026-08-04 02:35:28  INFO        account 1301567778536292352: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [149/329] Fetching trip_agg for account: 1301567669559885824
+2026-08-04 02:35:28  INFO        account 1301567669559885824: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [150/329] Fetching trip_agg for account: 1301567706775945216
+2026-08-04 02:35:28  INFO        account 1301567706775945216: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [151/329] Fetching trip_agg for account: 1301567671199858688
+2026-08-04 02:35:28  INFO        account 1301567671199858688: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [152/329] Fetching trip_agg for account: 1301567453314154496
+2026-08-04 02:35:28  INFO        account 1301567453314154496: fetched 0 records (1 pages)
+2026-08-04 02:35:28  INFO      [153/329] Fetching trip_agg for account: 1301567434938908672
+2026-08-04 02:35:29  INFO        account 1301567434938908672: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [154/329] Fetching trip_agg for account: 1301567444904574976
+2026-08-04 02:35:29  INFO        account 1301567444904574976: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [155/329] Fetching trip_agg for account: 1301567786505469952
+2026-08-04 02:35:29  INFO        account 1301567786505469952: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [156/329] Fetching trip_agg for account: 1301567795711967232
+2026-08-04 02:35:29  INFO        account 1301567795711967232: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [157/329] Fetching trip_agg for account: 1301567456996753408
+2026-08-04 02:35:29  INFO        account 1301567456996753408: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [158/329] Fetching trip_agg for account: 1301567460922621952
+2026-08-04 02:35:29  INFO        account 1301567460922621952: fetched 0 records (1 pages)
+2026-08-04 02:35:29  INFO      [159/329] Fetching trip_agg for account: 1301567468887605248
+2026-08-04 02:35:30  INFO        account 1301567468887605248: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [160/329] Fetching trip_agg for account: 1301567875835756544
+2026-08-04 02:35:30  INFO        account 1301567875835756544: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [161/329] Fetching trip_agg for account: 1301567870072782848
+2026-08-04 02:35:30  INFO        account 1301567870072782848: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [162/329] Fetching trip_agg for account: 1301567873835073536
+2026-08-04 02:35:30  INFO        account 1301567873835073536: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [163/329] Fetching trip_agg for account: 1301567793589649408
+2026-08-04 02:35:30  INFO        account 1301567793589649408: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [164/329] Fetching trip_agg for account: 1301567788858474496
+2026-08-04 02:35:30  INFO        account 1301567788858474496: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [165/329] Fetching trip_agg for account: 1301567826535907328
+2026-08-04 02:35:30  INFO        account 1301567826535907328: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [166/329] Fetching trip_agg for account: 1301567791630909440
+2026-08-04 02:35:30  INFO        account 1301567791630909440: fetched 0 records (1 pages)
+2026-08-04 02:35:30  INFO      [167/329] Fetching trip_agg for account: 1301567883142234112
+2026-08-04 02:35:31  INFO        account 1301567883142234112: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [168/329] Fetching trip_agg for account: 1301567682528673792
+2026-08-04 02:35:31  INFO        account 1301567682528673792: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [169/329] Fetching trip_agg for account: 1301567716523507712
+2026-08-04 02:35:31  INFO        account 1301567716523507712: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [170/329] Fetching trip_agg for account: 1301567680595099648
+2026-08-04 02:35:31  INFO        account 1301567680595099648: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [171/329] Fetching trip_agg for account: 1301567718515802112
+2026-08-04 02:35:31  INFO        account 1301567718515802112: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [172/329] Fetching trip_agg for account: 1301567724404604928
+2026-08-04 02:35:31  INFO        account 1301567724404604928: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [173/329] Fetching trip_agg for account: 626748894239260672
+2026-08-04 02:35:31  INFO        account 626748894239260672: fetched 0 records (1 pages)
+2026-08-04 02:35:31  INFO      [174/329] Fetching trip_agg for account: 1301567492304404480
+2026-08-04 02:35:32  INFO        account 1301567492304404480: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [175/329] Fetching trip_agg for account: 1301567868013379584
+2026-08-04 02:35:32  INFO        account 1301567868013379584: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [176/329] Fetching trip_agg for account: 1301567404978995200
+2026-08-04 02:35:32  INFO        account 1301567404978995200: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [177/329] Fetching trip_agg for account: 1301567532502614016
+2026-08-04 02:35:32  INFO        account 1301567532502614016: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [178/329] Fetching trip_agg for account: 1301567455189008384
+2026-08-04 02:35:32  INFO        account 1301567455189008384: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [179/329] Fetching trip_agg for account: 1301567410150572032
+2026-08-04 02:35:32  INFO        account 1301567410150572032: fetched 0 records (1 pages)
+2026-08-04 02:35:32  INFO      [180/329] Fetching trip_agg for account: 1301567406702854144
+2026-08-04 02:35:33  INFO        account 1301567406702854144: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [181/329] Fetching trip_agg for account: 1301567525170970624
+2026-08-04 02:35:33  INFO        account 1301567525170970624: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [182/329] Fetching trip_agg for account: 1301567536298459136
+2026-08-04 02:35:33  INFO        account 1301567536298459136: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [183/329] Fetching trip_agg for account: 1301567414806249472
+2026-08-04 02:35:33  INFO        account 1301567414806249472: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [184/329] Fetching trip_agg for account: 1301567842226798592
+2026-08-04 02:35:33  INFO        account 1301567842226798592: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [185/329] Fetching trip_agg for account: 1301567462566789120
+2026-08-04 02:35:33  INFO        account 1301567462566789120: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [186/329] Fetching trip_agg for account: 1301567803655979008
+2026-08-04 02:35:33  INFO        account 1301567803655979008: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [187/329] Fetching trip_agg for account: 1301567811537076224
+2026-08-04 02:35:33  INFO        account 1301567811537076224: fetched 0 records (1 pages)
+2026-08-04 02:35:33  INFO      [188/329] Fetching trip_agg for account: 1301567728703766528
+2026-08-04 02:35:34  INFO        account 1301567728703766528: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [189/329] Fetching trip_agg for account: 1301567766167289856
+2026-08-04 02:35:34  INFO        account 1301567766167289856: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [190/329] Fetching trip_agg for account: 1301567768130224128
+2026-08-04 02:35:34  INFO        account 1301567768130224128: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [191/329] Fetching trip_agg for account: 1301567850640572416
+2026-08-04 02:35:34  INFO        account 1301567850640572416: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [192/329] Fetching trip_agg for account: 1301567856860725248
+2026-08-04 02:35:34  INFO        account 1301567856860725248: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [193/329] Fetching trip_agg for account: 1301567863030546432
+2026-08-04 02:35:34  INFO        account 1301567863030546432: fetched 0 records (1 pages)
+2026-08-04 02:35:34  INFO      [194/329] Fetching trip_agg for account: 1311784127686508544
+2026-08-04 02:35:35  INFO        account 1311784127686508544: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [195/329] Fetching trip_agg for account: 1301567483689304064
+2026-08-04 02:35:35  INFO        account 1301567483689304064: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [196/329] Fetching trip_agg for account: 1301567710198497280
+2026-08-04 02:35:35  INFO        account 1301567710198497280: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [197/329] Fetching trip_agg for account: 1301567464831713280
+2026-08-04 02:35:35  INFO        account 1301567464831713280: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [198/329] Fetching trip_agg for account: 710168328018067456
+2026-08-04 02:35:35  INFO        account 710168328018067456: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [199/329] Fetching trip_agg for account: 1301567708508192768
+2026-08-04 02:35:35  INFO        account 1301567708508192768: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [200/329] Fetching trip_agg for account: 1301567665285890048
+2026-08-04 02:35:35  INFO        account 1301567665285890048: fetched 0 records (1 pages)
+2026-08-04 02:35:35  INFO      [201/329] Fetching trip_agg for account: 1301567687557644288
+2026-08-04 02:35:36  INFO        account 1301567687557644288: fetched 0 records (1 pages)
+2026-08-04 02:35:36  INFO      [202/329] Fetching trip_agg for account: 1301567690002923520
+2026-08-04 02:35:36  INFO        account 1301567690002923520: fetched 0 records (1 pages)
+2026-08-04 02:35:36  INFO      [203/329] Fetching trip_agg for account: 1301567561049047040
+2026-08-04 02:36:36  INFO        account 1301567561049047040: fetched 0 records (1 pages)
+2026-08-04 02:36:36  INFO      [204/329] Fetching trip_agg for account: 1301567663314567168
+2026-08-04 02:36:36  INFO        account 1301567663314567168: fetched 0 records (1 pages)
+2026-08-04 02:36:36  INFO      [205/329] Fetching trip_agg for account: 1301567712215957504
+2026-08-04 02:36:36  INFO        account 1301567712215957504: fetched 0 records (1 pages)
+2026-08-04 02:36:36  INFO      [206/329] Fetching trip_agg for account: 1301567395604725760
+2026-08-04 02:36:37  INFO        account 1301567395604725760: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [207/329] Fetching trip_agg for account: 1301567887550447616
+2026-08-04 02:36:37  INFO        account 1301567887550447616: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [208/329] Fetching trip_agg for account: 1301567878423642112
+2026-08-04 02:36:37  INFO        account 1301567878423642112: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [209/329] Fetching trip_agg for account: 1301567722798186496
+2026-08-04 02:36:37  INFO        account 1301567722798186496: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [210/329] Fetching trip_agg for account: 1301567673087295488
+2026-08-04 02:36:37  INFO        account 1301567673087295488: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [211/329] Fetching trip_agg for account: 1301567692171378688
+2026-08-04 02:36:37  INFO        account 1301567692171378688: fetched 0 records (1 pages)
+2026-08-04 02:36:37  INFO      [212/329] Fetching trip_agg for account: 1301567694474051584
+2026-08-04 02:36:38  INFO        account 1301567694474051584: fetched 0 records (1 pages)
+2026-08-04 02:36:38  INFO      [213/329] Fetching trip_agg for account: 1301567382593994752
+2026-08-04 02:36:38  INFO        account 1301567382593994752: fetched 0 records (1 pages)
+2026-08-04 02:36:38  INFO      [214/329] Fetching trip_agg for account: 1301567384502403072
+2026-08-04 02:36:38  INFO        account 1301567384502403072: fetched 0 records (1 pages)
+2026-08-04 02:36:38  INFO      [215/329] Fetching trip_agg for account: 1301567393042006016
+2026-08-04 02:36:38  INFO        account 1301567393042006016: fetched 0 records (1 pages)
+2026-08-04 02:36:38  INFO      [216/329] Fetching trip_agg for account: 1301567475237781504
+2026-08-04 02:36:38  INFO        account 1301567475237781504: fetched 0 records (1 pages)
+2026-08-04 02:36:38  INFO      [217/329] Fetching trip_agg for account: 1301567403271913472
+2026-08-04 02:36:39  INFO        account 1301567403271913472: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [218/329] Fetching trip_agg for account: 1301567773956112384
+2026-08-04 02:36:39  INFO        account 1301567773956112384: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [219/329] Fetching trip_agg for account: 1301567782554435584
+2026-08-04 02:36:39  INFO        account 1301567782554435584: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [220/329] Fetching trip_agg for account: 1301567726585643008
+2026-08-04 02:36:39  INFO        account 1301567726585643008: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [221/329] Fetching trip_agg for account: 1301567758118420480
+2026-08-04 02:36:39  INFO        account 1301567758118420480: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [222/329] Fetching trip_agg for account: 1301567720642314240
+2026-08-04 02:36:39  INFO        account 1301567720642314240: fetched 0 records (1 pages)
+2026-08-04 02:36:39  INFO      [223/329] Fetching trip_agg for account: 1301567397647351808
+2026-08-04 02:36:40  INFO        account 1301567397647351808: fetched 0 records (1 pages)
+2026-08-04 02:36:40  INFO      [224/329] Fetching trip_agg for account: 1301567479469834240
+2026-08-04 02:36:40  INFO        account 1301567479469834240: fetched 0 records (1 pages)
+2026-08-04 02:36:40  INFO      [225/329] Fetching trip_agg for account: 1301567481369853952
+2026-08-04 02:36:40  INFO        account 1301567481369853952: fetched 0 records (1 pages)
+2026-08-04 02:36:40  INFO      [226/329] Fetching trip_agg for account: 1301567801793708032
+2026-08-04 02:36:40  INFO        account 1301567801793708032: fetched 0 records (1 pages)
+2026-08-04 02:36:40  INFO      [227/329] Fetching trip_agg for account: 1301567759942942720
+2026-08-04 02:36:40  INFO        account 1301567759942942720: fetched 0 records (1 pages)
+2026-08-04 02:36:40  INFO      [228/329] Fetching trip_agg for account: 1301567449044353024
+2026-08-04 02:36:41  INFO        account 1301567449044353024: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [229/329] Fetching trip_agg for account: 1301567595933073408
+2026-08-04 02:36:41  INFO        account 1301567595933073408: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [230/329] Fetching trip_agg for account: 1301567817367158784
+2026-08-04 02:36:41  INFO        account 1301567817367158784: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [231/329] Fetching trip_agg for account: 1105947535949692928
+2026-08-04 02:36:41  INFO        account 1105947535949692928: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [232/329] Fetching trip_agg for account: 1301567799415537664
+2026-08-04 02:36:41  INFO        account 1301567799415537664: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [233/329] Fetching trip_agg for account: 783626994897125376
+2026-08-04 02:36:41  INFO        account 783626994897125376: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [234/329] Fetching trip_agg for account: 1301567844491722752
+2026-08-04 02:36:41  INFO        account 1301567844491722752: fetched 0 records (1 pages)
+2026-08-04 02:36:41  INFO      [235/329] Fetching trip_agg for account: 1301567477553037312
+2026-08-04 02:36:42  INFO        account 1301567477553037312: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [236/329] Fetching trip_agg for account: 1274518779610529792
+2026-08-04 02:36:42  INFO        account 1274518779610529792: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [237/329] Fetching trip_agg for account: 1301567734470934528
+2026-08-04 02:36:42  INFO        account 1301567734470934528: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [238/329] Fetching trip_agg for account: 1301567880957001728
+2026-08-04 02:36:42  INFO        account 1301567880957001728: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [239/329] Fetching trip_agg for account: 1301567736329011200
+2026-08-04 02:36:42  INFO        account 1301567736329011200: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [240/329] Fetching trip_agg for account: 1301567744562429952
+2026-08-04 02:36:42  INFO        account 1301567744562429952: fetched 0 records (1 pages)
+2026-08-04 02:36:42  INFO      [241/329] Fetching trip_agg for account: 1301567418845364224
+2026-08-04 02:36:43  INFO        account 1301567418845364224: fetched 0 records (1 pages)
+2026-08-04 02:36:43  INFO      [242/329] Fetching trip_agg for account: 1301567379670564864
+2026-08-04 02:36:43  INFO        account 1301567379670564864: fetched 0 records (1 pages)
+2026-08-04 02:36:43  INFO      [243/329] Fetching trip_agg for account: 1301567421248700416
+2026-08-04 02:36:43  INFO        account 1301567421248700416: fetched 0 records (1 pages)
+2026-08-04 02:36:43  INFO      [244/329] Fetching trip_agg for account: 710168294216171520
+2026-08-04 02:36:43  INFO        account 710168294216171520: fetched 0 records (1 pages)
+2026-08-04 02:36:43  INFO      [245/329] Fetching trip_agg for account: 1301567738279362560
+2026-08-04 02:36:43  INFO        account 1301567738279362560: fetched 0 records (1 pages)
+2026-08-04 02:36:43  INFO      [246/329] Fetching trip_agg for account: 1301567746802188288
+2026-08-04 02:36:44  INFO        account 1301567746802188288: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [247/329] Fetching trip_agg for account: 675695956976467968
+2026-08-04 02:36:44  INFO        account 675695956976467968: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [248/329] Fetching trip_agg for account: 1301567858991431680
+2026-08-04 02:36:44  INFO        account 1301567858991431680: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [249/329] Fetching trip_agg for account: 1301567861252161536
+2026-08-04 02:36:44  INFO        account 1301567861252161536: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [250/329] Fetching trip_agg for account: 1301567473014800384
+2026-08-04 02:36:44  INFO        account 1301567473014800384: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [251/329] Fetching trip_agg for account: 1342828389517492224
+2026-08-04 02:36:44  INFO        account 1342828389517492224: fetched 0 records (1 pages)
+2026-08-04 02:36:44  INFO      [252/329] Fetching trip_agg for account: 1301567466920476672
+2026-08-04 02:36:45  INFO        account 1301567466920476672: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [253/329] Fetching trip_agg for account: 1301567581106208768
+2026-08-04 02:36:45  INFO        account 1301567581106208768: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [254/329] Fetching trip_agg for account: 1301567591923318784
+2026-08-04 02:36:45  INFO        account 1301567591923318784: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [255/329] Fetching trip_agg for account: 1301567684915232768
+2026-08-04 02:36:45  INFO        account 1301567684915232768: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [256/329] Fetching trip_agg for account: 1301567819506253824
+2026-08-04 02:36:45  INFO        account 1301567819506253824: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [257/329] Fetching trip_agg for account: 1301567568376496128
+2026-08-04 02:36:45  INFO        account 1301567568376496128: fetched 0 records (1 pages)
+2026-08-04 02:36:45  INFO      [258/329] Fetching trip_agg for account: 1301567559048364032
+2026-08-04 02:36:46  INFO        account 1301567559048364032: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [259/329] Fetching trip_agg for account: 1301567542522806272
+2026-08-04 02:36:46  INFO        account 1301567542522806272: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [260/329] Fetching trip_agg for account: 1301567748597350400
+2026-08-04 02:36:46  INFO        account 1301567748597350400: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [261/329] Fetching trip_agg for account: 1301567548638101504
+2026-08-04 02:36:46  INFO        account 1301567548638101504: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [262/329] Fetching trip_agg for account: 1451622538516889600
+2026-08-04 02:36:46  INFO        account 1451622538516889600: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [263/329] Fetching trip_agg for account: 1301567865022840832
+2026-08-04 02:36:46  INFO        account 1301567865022840832: fetched 0 records (1 pages)
+2026-08-04 02:36:46  INFO      [264/329] Fetching trip_agg for account: 1301567903564300288
+2026-08-04 02:36:47  INFO        account 1301567903564300288: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [265/329] Fetching trip_agg for account: 1301567838288347136
+2026-08-04 02:36:47  INFO        account 1301567838288347136: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [266/329] Fetching trip_agg for account: 1301567894500409344
+2026-08-04 02:36:47  INFO        account 1301567894500409344: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [267/329] Fetching trip_agg for account: 1301567896752750592
+2026-08-04 02:36:47  INFO        account 1301567896752750592: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [268/329] Fetching trip_agg for account: 1301567822136082432
+2026-08-04 02:36:47  INFO        account 1301567822136082432: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [269/329] Fetching trip_agg for account: 1301567828939243520
+2026-08-04 02:36:47  INFO        account 1301567828939243520: fetched 0 records (1 pages)
+2026-08-04 02:36:47  INFO      [270/329] Fetching trip_agg for account: 1301567432552349696
+2026-08-04 02:36:48  INFO        account 1301567432552349696: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [271/329] Fetching trip_agg for account: 1301567446997532672
+2026-08-04 02:36:48  INFO        account 1301567446997532672: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [272/329] Fetching trip_agg for account: 1301567901022552064
+2026-08-04 02:36:48  INFO        account 1301567901022552064: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [273/329] Fetching trip_agg for account: 1349623137381122048
+2026-08-04 02:36:48  INFO        account 1349623137381122048: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [274/329] Fetching trip_agg for account: 1301567891405012992
+2026-08-04 02:36:48  INFO        account 1301567891405012992: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [275/329] Fetching trip_agg for account: 1301567589910052864
+2026-08-04 02:36:48  INFO        account 1301567589910052864: fetched 0 records (1 pages)
+2026-08-04 02:36:48  INFO      [276/329] Fetching trip_agg for account: 1301567608683757568
+2026-08-04 02:36:49  INFO        account 1301567608683757568: fetched 0 records (1 pages)
+2026-08-04 02:36:49  INFO      [277/329] Fetching trip_agg for account: 1301567579147468800
+2026-08-04 02:36:49  INFO        account 1301567579147468800: fetched 0 records (1 pages)
+2026-08-04 02:36:49  INFO      [278/329] Fetching trip_agg for account: 1301567610864795648
+2026-08-04 02:36:50  INFO        account 1301567610864795648: fetched 0 records (1 pages)
+2026-08-04 02:36:50  INFO      [279/329] Fetching trip_agg for account: 1301567740246491136
+2026-08-04 02:36:50  INFO        account 1301567740246491136: fetched 0 records (1 pages)
+2026-08-04 02:36:50  INFO      [280/329] Fetching trip_agg for account: 1495665442885206016
+2026-08-04 02:36:50  INFO        account 1495665442885206016: fetched 0 records (1 pages)
+2026-08-04 02:36:50  INFO      [281/329] Fetching trip_agg for account: 1301567730679283712
+2026-08-04 02:36:50  INFO        account 1301567730679283712: fetched 0 records (1 pages)
+2026-08-04 02:36:50  INFO      [282/329] Fetching trip_agg for account: 1507624402320097280
+2026-08-04 02:36:50  INFO        account 1507624402320097280: fetched 0 records (1 pages)
+2026-08-04 02:36:50  INFO      [283/329] Fetching trip_agg for account: 1537702459277836288
+2026-08-04 02:36:51  INFO        account 1537702459277836288: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [284/329] Fetching trip_agg for account: 1543138259201163264
+2026-08-04 02:36:51  INFO        account 1543138259201163264: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [285/329] Fetching trip_agg for account: 1523569582923579392
+2026-08-04 02:36:51  INFO        account 1523569582923579392: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [286/329] Fetching trip_agg for account: 1529730089107849216
+2026-08-04 02:36:51  INFO        account 1529730089107849216: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [287/329] Fetching trip_agg for account: 1531179743339085824
+2026-08-04 02:36:51  INFO        account 1531179743339085824: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [288/329] Fetching trip_agg for account: 1531179746459648000
+2026-08-04 02:36:51  INFO        account 1531179746459648000: fetched 0 records (1 pages)
+2026-08-04 02:36:51  INFO      [289/329] Fetching trip_agg for account: 1523569549864075264
+2026-08-04 02:36:52  INFO        account 1523569549864075264: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [290/329] Fetching trip_agg for account: 1543138576420569088
+2026-08-04 02:36:52  INFO        account 1543138576420569088: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [291/329] Fetching trip_agg for account: 1523569586744590336
+2026-08-04 02:36:52  INFO        account 1523569586744590336: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [292/329] Fetching trip_agg for account: 1552922906558726144
+2026-08-04 02:36:52  INFO        account 1552922906558726144: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [293/329] Fetching trip_agg for account: 1543138590077222912
+2026-08-04 02:36:52  INFO        account 1543138590077222912: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [294/329] Fetching trip_agg for account: 1543138600562982912
+2026-08-04 02:36:52  INFO        account 1543138600562982912: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [295/329] Fetching trip_agg for account: 1537702591260000256
+2026-08-04 02:36:52  INFO        account 1537702591260000256: fetched 0 records (1 pages)
+2026-08-04 02:36:52  INFO      [296/329] Fetching trip_agg for account: 1377718958152482816
+2026-08-04 02:36:53  INFO        account 1377718958152482816: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [297/329] Fetching trip_agg for account: 1523569551424356352
+2026-08-04 02:36:53  INFO        account 1523569551424356352: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [298/329] Fetching trip_agg for account: 1522119981695762432
+2026-08-04 02:36:53  INFO        account 1522119981695762432: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [299/329] Fetching trip_agg for account: 1301567470858928128
+2026-08-04 02:36:53  INFO        account 1301567470858928128: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [300/329] Fetching trip_agg for account: 1543138599099170816
+2026-08-04 02:36:53  INFO        account 1543138599099170816: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [301/329] Fetching trip_agg for account: 1301567908643602432
+2026-08-04 02:36:53  INFO        account 1301567908643602432: fetched 0 records (1 pages)
+2026-08-04 02:36:53  INFO      [302/329] Fetching trip_agg for account: 1301567593886253056
+2026-08-04 02:36:54  INFO        account 1301567593886253056: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [303/329] Fetching trip_agg for account: 1301567616854261760
+2026-08-04 02:36:54  INFO        account 1301567616854261760: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [304/329] Fetching trip_agg for account: 1523569584911679488
+2026-08-04 02:36:54  INFO        account 1523569584911679488: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [305/329] Fetching trip_agg for account: 1301567401476751360
+2026-08-04 02:36:54  INFO        account 1301567401476751360: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [306/329] Fetching trip_agg for account: 1301567703206592512
+2026-08-04 02:36:54  INFO        account 1301567703206592512: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [307/329] Fetching trip_agg for account: 1529730087266549760
+2026-08-04 02:36:54  INFO        account 1529730087266549760: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [308/329] Fetching trip_agg for account: 1301567678355341312
+2026-08-04 02:36:54  INFO        account 1301567678355341312: fetched 0 records (1 pages)
+2026-08-04 02:36:54  INFO      [309/329] Fetching trip_agg for account: 1301567667542425600
+2026-08-04 02:36:55  INFO        account 1301567667542425600: fetched 0 records (1 pages)
+2026-08-04 02:36:55  INFO      [310/329] Fetching trip_agg for account: 1529730215935213568
+2026-08-04 02:36:55  INFO        account 1529730215935213568: fetched 0 records (1 pages)
+2026-08-04 02:36:55  INFO      [311/329] Fetching trip_agg for account: 1529730217218670592
+2026-08-04 02:36:55  INFO        account 1529730217218670592: fetched 0 records (1 pages)
+2026-08-04 02:36:55  INFO      [312/329] Fetching trip_agg for account: 1301567770340622336
+2026-08-04 02:36:55  INFO        account 1301567770340622336: fetched 0 records (1 pages)
+2026-08-04 02:36:55  INFO      [313/329] Fetching trip_agg for account: 1301567772165144576
+2026-08-04 02:36:55  INFO        account 1301567772165144576: fetched 0 records (1 pages)
+2026-08-04 02:36:55  INFO      [314/329] Fetching trip_agg for account: 1531179745289437184
+2026-08-04 02:36:56  INFO        account 1531179745289437184: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [315/329] Fetching trip_agg for account: 668375437084196864
+2026-08-04 02:36:56  INFO        account 668375437084196864: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [316/329] Fetching trip_agg for account: 1301567750321209344
+2026-08-04 02:36:56  INFO        account 1301567750321209344: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [317/329] Fetching trip_agg for account: 1301567784538341376
+2026-08-04 02:36:56  INFO        account 1301567784538341376: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [318/329] Fetching trip_agg for account: 1523569632793853952
+2026-08-04 02:36:56  INFO        account 1523569632793853952: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [319/329] Fetching trip_agg for account: 1529730274244427776
+2026-08-04 02:36:56  INFO        account 1529730274244427776: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [320/329] Fetching trip_agg for account: 1523569278702321664
+2026-08-04 02:36:56  INFO        account 1523569278702321664: fetched 0 records (1 pages)
+2026-08-04 02:36:56  INFO      [321/329] Fetching trip_agg for account: 1543138303056805888
+2026-08-04 02:36:57  INFO        account 1543138303056805888: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [322/329] Fetching trip_agg for account: 1543138305263009792
+2026-08-04 02:36:57  INFO        account 1543138305263009792: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [323/329] Fetching trip_agg for account: 1465587223540793344
+2026-08-04 02:36:57  INFO        account 1465587223540793344: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [324/329] Fetching trip_agg for account: 1301567528136343552
+2026-08-04 02:36:57  INFO        account 1301567528136343552: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [325/329] Fetching trip_agg for account: 1509436281803767808
+2026-08-04 02:36:57  INFO        account 1509436281803767808: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [326/329] Fetching trip_agg for account: 1301567386704412672
+2026-08-04 02:36:57  INFO        account 1301567386704412672: fetched 0 records (1 pages)
+2026-08-04 02:36:57  INFO      [327/329] Fetching trip_agg for account: 1493039637935947776
+2026-08-04 02:36:58  INFO        account 1493039637935947776: fetched 0 records (1 pages)
+2026-08-04 02:36:58  INFO      [328/329] Fetching trip_agg for account: 1301567458842247168
+2026-08-04 02:36:58  INFO        account 1301567458842247168: fetched 0 records (1 pages)
+2026-08-04 02:36:58  INFO      [329/329] Fetching trip_agg for account: 1301567495978614784
+2026-08-04 02:36:58  INFO        account 1301567495978614784: fetched 0 records (1 pages)
+2026-08-04 02:36:58  INFO      Total trip-agg records collected across 329 accounts: 5824
+2026-08-04 02:36:58  INFO      Attempting second-pass fetch for 6 missing trips by trip_id
+2026-08-04 02:36:58  INFO      Second-pass recovered 6 missing trips, 0 still missing
+2026-08-04 02:37:22  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-02/632578958264631296/summary.json
+2026-08-04 02:37:22  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-08-04 02:37:22  INFO      Trips after merge/filters: 2970
+2026-08-04 02:37:22  INFO      Completely processed trips: 2970
+2026-08-04 02:37:22  INFO      Missing trips in trip_agg: 0
+2026-08-04 02:37:22  INFO      Unbroken unmatched trips: 23
+2026-08-04 02:37:22  INFO      Broken unmatched trips: 0
+2026-08-04 02:37:22  INFO      Top alert mismatches:
+  alert_name  mismatch_count  total_joined_trips  mismatch_pct
+  fuel_chori               2                5722          0.03
+slow_running               1                5722          0.02
+      idling               0                5722          0.00
+  over_speed               0                5722          0.00
+     freerun               0                5722          0.00
+2026-08-04 02:37:22  INFO      ----- Step Timings -----
+2026-08-04 02:37:22  INFO        fetch_accounts_with_access            0.05s
+2026-08-04 02:37:22  INFO        fetch_trip_agg_data                 319.72s
+2026-08-04 02:37:22  INFO        get_trips_for_account                13.35s
+2026-08-04 02:37:22  INFO        prepare_dataframes                    0.18s
+2026-08-04 02:37:22  INFO        analyze_trip_agg                      0.22s
+2026-08-04 02:37:22  INFO        analyze_alerts                       23.85s
+2026-08-04 02:37:22  INFO        total                               357.37s
+2026-08-04 02:37:22  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-02/632578958264631296
