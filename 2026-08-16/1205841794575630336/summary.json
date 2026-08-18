@@ -1,0 +1,46 @@
+{
+  "run_timestamp": "2026-08-18 02:49:05",
+  "account_id": "1205841794575630336",
+  "account_name": "Chartered Speed-OSRTC",
+  "date_range": {
+    "start": "2026-08-16 00:00:00",
+    "end": "2026-08-16 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 8497,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 8595,
+    "total_trips_in_trip_agg": 8557,
+    "fragmented_trips_in_trip_agg": 32,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 7174,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 15,
+    "short_trips_excluded": 1317,
+    "partial_trips_after_refetch": 6,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 0,
+    "mismatched_alerts": [],
+    "passed_alerts": []
+  },
+  "api_health": {
+    "vehicles_fetched": 1184,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 8497,
+    "alert_fetch_total": 8497
+  },
+  "step_timings": {
+    "fetch_accounts_with_access": 0.02,
+    "fetch_trip_agg_data": 252.56,
+    "get_trips_for_account": 27.94,
+    "prepare_dataframes": 0.43,
+    "analyze_trip_agg": 8.22,
+    "analyze_alerts": 36.42
+  }
+}
