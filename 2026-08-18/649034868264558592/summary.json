@@ -1,0 +1,46 @@
+{
+  "run_timestamp": "2026-08-20 02:35:00",
+  "account_id": "649034868264558592",
+  "account_name": "RajRatan Travels",
+  "date_range": {
+    "start": "2026-08-18 00:00:00",
+    "end": "2026-08-18 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 412,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 539,
+    "total_trips_in_trip_agg": 434,
+    "fragmented_trips_in_trip_agg": 56,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 241,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 20,
+    "short_trips_excluded": 171,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 0,
+    "mismatched_alerts": [],
+    "passed_alerts": []
+  },
+  "api_health": {
+    "vehicles_fetched": 128,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 412,
+    "alert_fetch_total": 412
+  },
+  "step_timings": {
+    "fetch_accounts_with_access": 0.02,
+    "fetch_trip_agg_data": 289.19,
+    "get_trips_for_account": 2.91,
+    "prepare_dataframes": 0.03,
+    "analyze_trip_agg": 0.62,
+    "analyze_alerts": 2.03
+  }
+}
