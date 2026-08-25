@@ -1,0 +1,27 @@
+2026-08-25 02:47:05  INFO      === Starting analysis for account: 1205841794575630336 ===
+2026-08-25 02:47:05  INFO      Account name: Chartered Speed-OSRTC
+2026-08-25 02:47:05  INFO      [1/1] Fetching trip_agg for account: 1205841794575630336
+2026-08-25 02:47:05  INFO      Fetching vehicle page: 1
+2026-08-25 02:48:06  INFO      Fetching vehicle page: 2
+2026-08-25 02:48:07  INFO      Fetching vehicle page: 3
+2026-08-25 02:48:07  INFO      Total vehicles collected for account 1205841794575630336: 1184
+2026-08-25 02:48:29  INFO      Total trips collected for account 1205841794575630336: 8845
+2026-08-25 02:51:47  INFO        account 1205841794575630336: fetched 8951 records (90 pages)
+2026-08-25 02:51:47  INFO      Total trip-agg records collected across 1 accounts: 8951
+2026-08-25 02:53:15  WARNING   Alert count fetch failed for 8845/8845 trips
+2026-08-25 02:53:15  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-23/1205841794575630336/summary.json
+2026-08-25 02:53:15  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-08-25 02:53:15  INFO      Trips after merge/filters: 7495
+2026-08-25 02:53:15  INFO      Completely processed trips: 7484
+2026-08-25 02:53:15  INFO      Missing trips in trip_agg: 0
+2026-08-25 02:53:15  INFO      Unbroken unmatched trips: 0
+2026-08-25 02:53:15  INFO      Broken unmatched trips: 16
+2026-08-25 02:53:15  INFO      ----- Step Timings -----
+2026-08-25 02:53:15  INFO        fetch_accounts_with_access            0.01s
+2026-08-25 02:53:15  INFO        fetch_trip_agg_data                 281.66s
+2026-08-25 02:53:15  INFO        get_trips_for_account                83.91s
+2026-08-25 02:53:15  INFO        prepare_dataframes                    0.33s
+2026-08-25 02:53:15  INFO        analyze_trip_agg                     12.82s
+2026-08-25 02:53:15  INFO        analyze_alerts                       74.63s
+2026-08-25 02:53:15  INFO        total                               453.36s
+2026-08-25 02:53:15  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-08-23/1205841794575630336
