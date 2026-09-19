@@ -1,0 +1,31 @@
+2026-09-19 02:33:56  INFO      === Starting analysis for account: 632578958264631296 ===
+2026-09-19 02:33:56  INFO      Account name: K M Translogistics  Pvt Ltd ( KMT)
+2026-09-19 02:33:56  INFO      [1/1] Fetching trip_agg for account: 632578958264631296
+2026-09-19 02:33:56  INFO      Fetching vehicle page: 1
+2026-09-19 02:33:56  INFO      Fetching vehicle page: 2
+2026-09-19 02:33:56  INFO      Fetching vehicle page: 3
+2026-09-19 02:33:57  INFO      Fetching vehicle page: 4
+2026-09-19 02:33:57  INFO      Fetching vehicle page: 5
+2026-09-19 02:33:58  INFO      Total vehicles collected for account 632578958264631296: 2008
+2026-09-19 02:34:11  INFO      Total trips collected for account 632578958264631296: 5636
+2026-09-19 02:42:27  INFO        account 632578958264631296: fetched 5736 records (58 pages)
+2026-09-19 02:42:27  INFO      Total trip-agg records collected across 1 accounts: 5736
+2026-09-19 02:42:39  INFO      Attempting second-pass fetch for 18 missing trips by trip_id
+2026-09-19 02:42:39  WARNING   Second-pass fetch returned no records for 18 missing trips
+2026-09-19 02:42:53  WARNING   Alert count fetch failed for 5636/5636 trips
+2026-09-19 02:42:53  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-09-17/632578958264631296/summary.json
+2026-09-19 02:42:53  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-09-19 02:42:53  INFO      Trips after merge/filters: 2782
+2026-09-19 02:42:53  INFO      Completely processed trips: 2777
+2026-09-19 02:42:53  INFO      Missing trips in trip_agg: 18
+2026-09-19 02:42:53  INFO      Unbroken unmatched trips: 9
+2026-09-19 02:42:53  INFO      Broken unmatched trips: 0
+2026-09-19 02:42:53  INFO      ----- Step Timings -----
+2026-09-19 02:42:53  INFO        fetch_accounts_with_access            0.02s
+2026-09-19 02:42:53  INFO        fetch_trip_agg_data                 511.12s
+2026-09-19 02:42:53  INFO        get_trips_for_account                15.01s
+2026-09-19 02:42:53  INFO        prepare_dataframes                    0.13s
+2026-09-19 02:42:53  INFO        analyze_trip_agg                     12.18s
+2026-09-19 02:42:53  INFO        analyze_alerts                       13.97s
+2026-09-19 02:42:53  INFO        total                               552.43s
+2026-09-19 02:42:53  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-09-17/632578958264631296
