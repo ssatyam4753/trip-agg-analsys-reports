@@ -1,0 +1,15 @@
+alert_name,mismatch_count,total_joined_trips,mismatch_pct
+fcw,6,934,0.64
+seatbelt_violation,5,934,0.54
+eyes_closed,3,934,0.32
+distracted_driving,0,934,0.0
+drowsiness,0,934,0.0
+emergency_recording,0,934,0.0
+mobile_phone,0,934,0.0
+tailgating,0,934,0.0
+smoking,0,934,0.0
+idling,0,934,0.0
+over_speed,0,934,0.0
+freerun,0,934,0.0
+over_acc,0,934,0.0
+hard_brake,0,934,0.0

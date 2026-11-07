@@ -1,0 +1,44 @@
+2026-11-07 02:47:24  INFO      === Starting analysis for account: 642689989225816064 ===
+2026-11-07 02:47:24  INFO      Account name: Indore Intercity
+2026-11-07 02:47:24  INFO      Resolved 7 accounts_with_access for 642689989225816064
+2026-11-07 02:47:24  INFO      [1/7] Fetching trip_agg for account: 475691480292397056
+2026-11-07 02:47:24  INFO      Fetching vehicle page: 1
+2026-11-07 02:47:24  INFO      Total vehicles collected for account 642689989225816064: 228
+2026-11-07 02:47:25  INFO        account 475691480292397056: fetched 14 records (1 pages)
+2026-11-07 02:47:25  INFO      [2/7] Fetching trip_agg for account: 642689989225816064
+2026-11-07 02:48:07  INFO        account 642689989225816064: fetched 1053 records (11 pages)
+2026-11-07 02:48:07  INFO      [3/7] Fetching trip_agg for account: 907977166128414720
+2026-11-07 02:48:07  INFO        account 907977166128414720: fetched 0 records (1 pages)
+2026-11-07 02:48:07  INFO      [4/7] Fetching trip_agg for account: 1128685188746838016
+2026-11-07 02:48:07  INFO        account 1128685188746838016: fetched 0 records (1 pages)
+2026-11-07 02:48:07  INFO      [5/7] Fetching trip_agg for account: 1520500634065829888
+2026-11-07 02:48:07  INFO        account 1520500634065829888: fetched 0 records (1 pages)
+2026-11-07 02:48:07  INFO      [6/7] Fetching trip_agg for account: 1520501245561798656
+2026-11-07 02:48:07  INFO        account 1520501245561798656: fetched 0 records (1 pages)
+2026-11-07 02:48:07  INFO      [7/7] Fetching trip_agg for account: 1536063812182999040
+2026-11-07 02:48:07  INFO        account 1536063812182999040: fetched 0 records (1 pages)
+2026-11-07 02:48:07  INFO      Total trip-agg records collected across 7 accounts: 1067
+2026-11-07 02:48:33  INFO      Total trips collected for account 642689989225816064: 934
+2026-11-07 02:48:40  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-05/642689989225816064/summary.json
+2026-11-07 02:48:40  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-11-07 02:48:40  INFO      Trips after merge/filters: 604
+2026-11-07 02:48:40  INFO      Completely processed trips: 603
+2026-11-07 02:48:40  INFO      Missing trips in trip_agg: 0
+2026-11-07 02:48:40  INFO      Unbroken unmatched trips: 0
+2026-11-07 02:48:40  INFO      Broken unmatched trips: 29
+2026-11-07 02:48:40  INFO      Top alert mismatches:
+        alert_name  mismatch_count  total_joined_trips  mismatch_pct
+               fcw               6                 934          0.64
+seatbelt_violation               5                 934          0.54
+       eyes_closed               3                 934          0.32
+distracted_driving               0                 934          0.00
+        drowsiness               0                 934          0.00
+2026-11-07 02:48:40  INFO      ----- Step Timings -----
+2026-11-07 02:48:40  INFO        fetch_accounts_with_access            0.02s
+2026-11-07 02:48:40  INFO        fetch_trip_agg_data                  43.12s
+2026-11-07 02:48:40  INFO        get_trips_for_account                68.91s
+2026-11-07 02:48:40  INFO        prepare_dataframes                    0.05s
+2026-11-07 02:48:40  INFO        analyze_trip_agg                      1.71s
+2026-11-07 02:48:40  INFO        analyze_alerts                        5.32s
+2026-11-07 02:48:40  INFO        total                               119.12s
+2026-11-07 02:48:40  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-05/642689989225816064
