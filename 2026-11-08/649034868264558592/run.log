@@ -1,0 +1,38 @@
+2026-11-10 02:32:26  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-11-10 02:32:26  INFO      Account name: RajRatan Travels
+2026-11-10 02:32:27  INFO      Resolved 3 accounts_with_access for 649034868264558592
+2026-11-10 02:32:27  INFO      [1/3] Fetching trip_agg for account: 64903486826455859
+2026-11-10 02:32:27  INFO      Fetching vehicle page: 1
+2026-11-10 02:32:27  INFO        account 64903486826455859: fetched 0 records (1 pages)
+2026-11-10 02:32:27  INFO      [2/3] Fetching trip_agg for account: 649034868264558592
+2026-11-10 02:32:28  INFO      Total vehicles collected for account 649034868264558592: 137
+2026-11-10 02:32:32  INFO      Total trips collected for account 649034868264558592: 272
+2026-11-10 02:37:37  ERROR     Request failed after 3 attempts: http://internal-apis.intangles.com/trip/aggregated?account_id=649034868264558592&pnum=5&psize=100&start_time=1794096000000&end_time=1794182399000 | error: 504 Server Error: Gateway Time-out for url: http://internal-apis.intangles.com/trip/aggregated?account_id=649034868264558592&pnum=5&psize=100&start_time=1794096000000&end_time=1794182399000
+2026-11-10 02:37:37  WARNING     page 5 failed (1/3 consecutive)
+2026-11-10 02:37:38  INFO        account 649034868264558592: fetched 400 records (6 pages)
+2026-11-10 02:37:38  INFO      [3/3] Fetching trip_agg for account: 613731963425021952
+2026-11-10 02:37:39  INFO        account 613731963425021952: fetched 0 records (1 pages)
+2026-11-10 02:37:39  INFO      Total trip-agg records collected across 3 accounts: 400
+2026-11-10 02:37:43  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-08/649034868264558592/summary.json
+2026-11-10 02:37:43  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-11-10 02:37:43  INFO      Trips after merge/filters: 79
+2026-11-10 02:37:43  INFO      Completely processed trips: 79
+2026-11-10 02:37:43  INFO      Missing trips in trip_agg: 0
+2026-11-10 02:37:43  INFO      Unbroken unmatched trips: 0
+2026-11-10 02:37:43  INFO      Broken unmatched trips: 11
+2026-11-10 02:37:43  INFO      Top alert mismatches:
+         alert_name  mismatch_count  total_joined_trips  mismatch_pct
+ distracted_driving               0                 272           0.0
+         drowsiness               0                 272           0.0
+emergency_recording               0                 272           0.0
+        eyes_closed               0                 272           0.0
+                fcw               0                 272           0.0
+2026-11-10 02:37:43  INFO      ----- Step Timings -----
+2026-11-10 02:37:43  INFO        fetch_accounts_with_access            0.09s
+2026-11-10 02:37:43  INFO        fetch_trip_agg_data                 312.05s
+2026-11-10 02:37:43  INFO        get_trips_for_account                 5.17s
+2026-11-10 02:37:43  INFO        prepare_dataframes                    0.02s
+2026-11-10 02:37:43  INFO        analyze_trip_agg                      2.49s
+2026-11-10 02:37:43  INFO        analyze_alerts                        2.08s
+2026-11-10 02:37:43  INFO        total                               321.91s
+2026-11-10 02:37:43  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-08/649034868264558592
