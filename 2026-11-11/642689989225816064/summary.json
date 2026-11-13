@@ -1,0 +1,76 @@
+{
+  "run_timestamp": "2026-11-13 03:07:14",
+  "account_id": "642689989225816064",
+  "account_name": "Indore Intercity",
+  "date_range": {
+    "start": "2026-11-11 00:00:00",
+    "end": "2026-11-11 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 693,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 797,
+    "total_trips_in_trip_agg": 728,
+    "fragmented_trips_in_trip_agg": 49,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 406,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 29,
+    "short_trips_excluded": 287,
+    "partial_trips_after_refetch": 0,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 693,
+    "mismatched_alerts": [
+      {
+        "alert_name": "seatbelt_violation",
+        "mismatch_count": 9,
+        "mismatch_pct": 1.3
+      },
+      {
+        "alert_name": "fcw",
+        "mismatch_count": 6,
+        "mismatch_pct": 0.87
+      },
+      {
+        "alert_name": "eyes_closed",
+        "mismatch_count": 4,
+        "mismatch_pct": 0.58
+      },
+      {
+        "alert_name": "mobile_phone",
+        "mismatch_count": 3,
+        "mismatch_pct": 0.43
+      }
+    ],
+    "passed_alerts": [
+      "distracted_driving",
+      "drowsiness",
+      "tailgating",
+      "idling",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 228,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 693
+  },
+  "step_timings": {
+    "fetch_accounts_with_access": 0.05,
+    "fetch_trip_agg_data": 17.12,
+    "get_trips_for_account": 5.47,
+    "prepare_dataframes": 0.04,
+    "analyze_trip_agg": 1.6,
+    "analyze_alerts": 5.89
+  }
+}
