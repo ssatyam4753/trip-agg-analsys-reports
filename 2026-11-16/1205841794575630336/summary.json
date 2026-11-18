@@ -1,0 +1,75 @@
+{
+  "run_timestamp": "2026-11-18 02:56:15",
+  "account_id": "1205841794575630336",
+  "account_name": "Chartered Speed-OSRTC",
+  "date_range": {
+    "start": "2026-11-16 00:00:00",
+    "end": "2026-11-16 23:59:59"
+  },
+  "base_indicators": {
+    "total_trips_in_collection": 8257,
+    "trips_without_end_time": 0,
+    "trip_agg_total_rows": 8397,
+    "total_trips_in_trip_agg": 8328,
+    "fragmented_trips_in_trip_agg": 53,
+    "missing_trip_count": 0,
+    "trip_coverage_pct": 100.0,
+    "complete_trips": 6950,
+    "unbroken_unmatched_count": 0,
+    "broken_unmatched_count": 23,
+    "short_trips_excluded": 1300,
+    "partial_trips_after_refetch": 7,
+    "verdict": "WARN"
+  },
+  "detailed_summary": {
+    "total_joined_trips_for_alert_comparison": 8257,
+    "mismatched_alerts": [
+      {
+        "alert_name": "fuel_chori",
+        "mismatch_count": 3,
+        "mismatch_pct": 0.04
+      },
+      {
+        "alert_name": "eyes_closed",
+        "mismatch_count": 2,
+        "mismatch_pct": 0.02
+      },
+      {
+        "alert_name": "distracted_driving",
+        "mismatch_count": 1,
+        "mismatch_pct": 0.01
+      }
+    ],
+    "passed_alerts": [
+      "drowsiness",
+      "emergency_recording",
+      "fcw",
+      "mobile_phone",
+      "sd_card_tampered",
+      "seatbelt_violation",
+      "idling",
+      "over_speed",
+      "freerun",
+      "over_acc",
+      "hard_brake",
+      "unscheduled_driving"
+    ]
+  },
+  "api_health": {
+    "vehicles_fetched": 1194,
+    "vehicle_pagination_aborted": false,
+    "vehicle_trip_fetch_failures": 0,
+    "trip_agg_pagination_aborted": false,
+    "partial_trip_refetch_failures": 0,
+    "alert_fetch_failures": 0,
+    "alert_fetch_total": 8257
+  },
+  "step_timings": {
+    "fetch_accounts_with_access": 0.02,
+    "fetch_trip_agg_data": 399.94,
+    "get_trips_for_account": 18.71,
+    "prepare_dataframes": 0.26,
+    "analyze_trip_agg": 14.11,
+    "analyze_alerts": 49.79
+  }
+}
