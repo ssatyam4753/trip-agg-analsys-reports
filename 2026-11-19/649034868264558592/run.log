@@ -1,0 +1,25 @@
+2026-11-21 02:37:04  INFO      === Starting analysis for account: 649034868264558592 ===
+2026-11-21 02:37:04  INFO      Account name: RajRatan Travels
+2026-11-21 02:37:04  INFO      [1/1] Fetching trip_agg for account: 649034868264558592
+2026-11-21 02:37:04  INFO      Fetching vehicle page: 1
+2026-11-21 02:37:04  INFO      Total vehicles collected for account 649034868264558592: 137
+2026-11-21 02:37:10  INFO      Total trips collected for account 649034868264558592: 377
+2026-11-21 02:39:16  INFO        account 649034868264558592: fetched 521 records (6 pages)
+2026-11-21 02:39:16  INFO      Total trip-agg records collected across 1 accounts: 521
+2026-11-21 02:39:21  WARNING   Alert count fetch failed for 377/377 trips
+2026-11-21 02:39:21  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-19/649034868264558592/summary.json
+2026-11-21 02:39:21  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-11-21 02:39:21  INFO      Trips after merge/filters: 181
+2026-11-21 02:39:21  INFO      Completely processed trips: 181
+2026-11-21 02:39:21  INFO      Missing trips in trip_agg: 0
+2026-11-21 02:39:21  INFO      Unbroken unmatched trips: 0
+2026-11-21 02:39:21  INFO      Broken unmatched trips: 20
+2026-11-21 02:39:21  INFO      ----- Step Timings -----
+2026-11-21 02:39:21  INFO        fetch_accounts_with_access            0.02s
+2026-11-21 02:39:21  INFO        fetch_trip_agg_data                 131.78s
+2026-11-21 02:39:21  INFO        get_trips_for_account                 6.29s
+2026-11-21 02:39:21  INFO        prepare_dataframes                    0.04s
+2026-11-21 02:39:21  INFO        analyze_trip_agg                      2.42s
+2026-11-21 02:39:21  INFO        analyze_alerts                        2.38s
+2026-11-21 02:39:21  INFO        total                               142.94s
+2026-11-21 02:39:21  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-19/649034868264558592
