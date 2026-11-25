@@ -1,0 +1,30 @@
+2026-11-25 02:47:15  INFO      === Starting analysis for account: 1205841794575630336 ===
+2026-11-25 02:47:15  INFO      Account name: Chartered Speed-OSRTC
+2026-11-25 02:47:15  INFO      [1/1] Fetching trip_agg for account: 1205841794575630336
+2026-11-25 02:47:15  INFO      Fetching vehicle page: 1
+2026-11-25 02:47:16  INFO      Fetching vehicle page: 2
+2026-11-25 02:47:17  INFO      Fetching vehicle page: 3
+2026-11-25 02:47:18  INFO      Total vehicles collected for account 1205841794575630336: 1195
+2026-11-25 02:48:42  INFO      Total trips collected for account 1205841794575630336: 8007
+2026-11-25 02:54:05  INFO        account 1205841794575630336: fetched 8099 records (81 pages)
+2026-11-25 02:54:05  INFO      Total trip-agg records collected across 1 accounts: 8099
+2026-11-25 02:54:05  WARNING   Excluding 1 trips with missing end_time from comparison
+2026-11-25 02:54:19  INFO      Attempting second-pass fetch for 3 missing trips by trip_id
+2026-11-25 02:54:20  WARNING   Second-pass fetch returned no records for 3 missing trips
+2026-11-25 02:56:19  WARNING   Alert count fetch failed for 8007/8007 trips
+2026-11-25 02:56:21  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-23/1205841794575630336/summary.json
+2026-11-25 02:56:21  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-11-25 02:56:21  INFO      Trips after merge/filters: 6757
+2026-11-25 02:56:21  INFO      Completely processed trips: 6754
+2026-11-25 02:56:21  INFO      Missing trips in trip_agg: 3
+2026-11-25 02:56:21  INFO      Unbroken unmatched trips: 0
+2026-11-25 02:56:21  INFO      Broken unmatched trips: 26
+2026-11-25 02:56:21  INFO      ----- Step Timings -----
+2026-11-25 02:56:21  INFO        fetch_accounts_with_access            0.02s
+2026-11-25 02:56:21  INFO        fetch_trip_agg_data                 409.58s
+2026-11-25 02:56:21  INFO        get_trips_for_account                86.85s
+2026-11-25 02:56:21  INFO        prepare_dataframes                    0.71s
+2026-11-25 02:56:21  INFO        analyze_trip_agg                     14.71s
+2026-11-25 02:56:21  INFO        analyze_alerts                      119.25s
+2026-11-25 02:56:21  INFO        total                               631.13s
+2026-11-25 02:56:21  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-23/1205841794575630336
