@@ -1,0 +1,25 @@
+2026-11-27 02:48:47  INFO      === Starting analysis for account: 642689989225816064 ===
+2026-11-27 02:48:47  INFO      Account name: Indore Intercity
+2026-11-27 02:48:49  INFO      [1/1] Fetching trip_agg for account: 642689989225816064
+2026-11-27 02:48:49  INFO      Fetching vehicle page: 1
+2026-11-27 02:48:49  INFO      Total vehicles collected for account 642689989225816064: 228
+2026-11-27 02:48:57  INFO      Total trips collected for account 642689989225816064: 575
+2026-11-27 02:49:55  INFO        account 642689989225816064: fetched 625 records (7 pages)
+2026-11-27 02:49:55  INFO      Total trip-agg records collected across 1 accounts: 625
+2026-11-27 02:50:05  WARNING   Alert count fetch failed for 575/575 trips
+2026-11-27 02:50:05  INFO      Summary written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-25/642689989225816064/summary.json
+2026-11-27 02:50:05  INFO      ===== Trip Aggregation Analysis Summary =====
+2026-11-27 02:50:05  INFO      Trips after merge/filters: 287
+2026-11-27 02:50:05  INFO      Completely processed trips: 287
+2026-11-27 02:50:05  INFO      Missing trips in trip_agg: 0
+2026-11-27 02:50:05  INFO      Unbroken unmatched trips: 0
+2026-11-27 02:50:05  INFO      Broken unmatched trips: 11
+2026-11-27 02:50:05  INFO      ----- Step Timings -----
+2026-11-27 02:50:05  INFO        fetch_accounts_with_access            2.00s
+2026-11-27 02:50:05  INFO        fetch_trip_agg_data                  66.68s
+2026-11-27 02:50:05  INFO        get_trips_for_account                 8.10s
+2026-11-27 02:50:05  INFO        prepare_dataframes                    0.06s
+2026-11-27 02:50:05  INFO        analyze_trip_agg                      1.74s
+2026-11-27 02:50:05  INFO        analyze_alerts                        7.53s
+2026-11-27 02:50:05  INFO        total                                86.12s
+2026-11-27 02:50:05  INFO      Reports written to: /root/code/algorithms/app/scripts/camera/trip_agg_analysis_script/output/2026-11-25/642689989225816064
